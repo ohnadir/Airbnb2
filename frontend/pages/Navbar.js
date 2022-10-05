@@ -1,19 +1,9 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { CgProfile } from 'react-icons/cg';
-import { BsCartCheckFill} from 'react-icons/bs';
-import { BiSearchAlt2 } from 'react-icons/bi';
 import styles from '../styles/Navbar.module.css'
 import logo from '../assets/logo.png';
-import { Drawer } from 'antd';
-import { MdOutlineClose } from 'react-icons/md';
 import { FaUserCircle } from 'react-icons/fa';
 import { BiMenu } from 'react-icons/bi';
 import { HiSearch } from 'react-icons/hi';
-
-
-
-
 import Image from 'next/image'
 
 const Navbar = () => {
@@ -28,11 +18,12 @@ const Navbar = () => {
         
     </> */
     return (
-        <div className='border'>
-            <div className='max-w-7xl mx-auto px-2 '>
+        <div className='border py-4'>
+            <div className='max-w-7xl mx-auto px-2 relative'>
                 <div className='flex items-center justify-between text-black '>
                     <div className='flex justify-start'>
                         <Image
+                            className={styles.logo}
                             src={logo}
                             alt="Picture of the author"
                         />
@@ -61,14 +52,29 @@ const Navbar = () => {
                     </div>
                     <div className='flex gap-5 items-center'>
                          <div className={styles.userMenu} onClick={()=>setDropdown(!dropdown)}>
-                            <BiMenu className='cursor-pointer text-xl '/>
+                            <BiMenu className='cursor-pointer text-2xl '/>
                             <span onClick={()=>setCartOpen(true)} >
-                                <FaUserCircle className=' text-2xl ' />
+                                <FaUserCircle className=' text-3xl ' />
                             </span>
                         </div>
                         
                     </div>
                 </div>
+                {
+                    dropdown && <div className={styles.dropDown}>
+                        <ul>
+                            <li>Signup</li>
+                            <li>Login</li>
+                        </ul>
+                        <p className={styles.dropDownHr}></p>
+                        <ul>
+                            <li>Host Your Home</li>
+                            <li>Host an experience</li>
+                            <li>Help</li>
+                        </ul>
+                        
+                    </div>
+                }
             </div>
         </div>
     );
