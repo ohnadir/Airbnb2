@@ -1,0 +1,38 @@
+.footerList {
+    display: flex;
+    gap: 15px;
+    /* padding-left: 15px; */
+    margin-left: 15px;
+    margin-bottom: 0;
+}
+.footerList li::before{
+    content: '.';
+    position: absolute;
+    top: -17px;
+    font-size: 25px;
+    padding-right: 5px;
+}
+.footerContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    padding: 15px 0;
+    
+}
+.footerContainer p{
+    margin-bottom: 0;
+}
+.right{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+}
+.container{
+    border-top: 1px solid #eee;
+    bottom: 0;
+    position: absolute;
+    left: 0;
+    width: 100%;
+}

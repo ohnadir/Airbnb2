@@ -115,9 +115,14 @@ const Navbar = () => {
                         <div className={styles.destinationItem}>
                             <div className={styles.destinationContent} onClick={() => setOpenDate(!openDate)}>
                                 <p className={styles.optionHeader}>Check in</p>
-                                <p className={styles.optionFooter}>
-                                    {`${format(date[0].startDate, "MM/dd/yyyy")}`}
-                                </p>
+                                { (format(date[0].startDate) !== format(new Date())) 
+                                    ? 
+                                    <p className={styles.optionFooter}>Add dates</p> 
+                                    :
+                                    <p className={styles.optionFooter}>
+                                        {`${format(date[0].startDate, "MM/dd/yyyy")}`}
+                                    </p>
+                                }
                             </div>
 
                         </div>
@@ -134,13 +139,15 @@ const Navbar = () => {
                             {
                                 openDate && (
                                     <DateRange
-                                        editableDateInputs={true}
+                                        // editableDateInputs={true}
                                         onChange={(item) => setDate([item.selection])}
-                                        moveRangeOnFirstSelection={false}
-                                        ranges={date}
+                                        // showSelectionPreview={true}
+                                        // moveRangeOnFirstSelection={false}
                                         months={2}
+                                        ranges={date}
+                                        direction="horizontal"
                                         className={styles.date}
-                                        minDate={new Date()}
+                                        // minDate={new Date()}
                                     />
                                 )
                             }
