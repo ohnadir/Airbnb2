@@ -9,13 +9,14 @@ import Link from 'next/link';
 import { DateRange } from "react-date-range";
 import { format } from "date-fns";
 
+
 const Navbar = () => {
     // const navigate = useNavigate();
     const [open, setOpen] = useState(false);
     const [dropdown, setDropdown] = useState(false);
     const [destination, setDestination] = useState("");
     const [openDate, setOpenDate] = useState(false);
-    const [dates, setDates] = useState([
+    const [date, setDate] = useState([
         {
         startDate: new Date(),
         endDate: new Date(),
@@ -112,19 +113,37 @@ const Navbar = () => {
                             <p></p>
                         </div>
                         <div className={styles.destinationItem}>
-                            <div className={styles.destinationContent}>
+                            <div className={styles.destinationContent} onClick={() => setOpenDate(!openDate)}>
                                 <p className={styles.optionHeader}>Check in</p>
-                                <p className={styles.optionFooter}>Add dates</p>
+                                <p className={styles.optionFooter}>
+                                    {`${format(date[0].startDate, "MM/dd/yyyy")}`}
+                                </p>
                             </div>
+
                         </div>
                         <div className={styles.divider}>
                             <p></p>
                         </div>
-                        <div className={styles.destinationItem}>
-                            <div className={styles.destinationContent}>
+                        <div className={styles.destinationItem} >
+                            <div className={styles.destinationContent} onClick={() => setOpenDate(!openDate)}>
                                 <p className={styles.optionHeader}>Check out</p>
-                                <p className={styles.optionFooter}>Add dates</p>
+                                <p className={styles.optionFooter}>
+                                    {`${format(date[0].endDate,"MM/dd/yyyy")}`}
+                                </p>
                             </div>
+                            {
+                                openDate && (
+                                    <DateRange
+                                        editableDateInputs={true}
+                                        onChange={(item) => setDate([item.selection])}
+                                        moveRangeOnFirstSelection={false}
+                                        ranges={date}
+                                        months={2}
+                                        className={styles.date}
+                                        minDate={new Date()}
+                                    />
+                                )
+                            }
                         </div>
                         <div className={styles.divider}>
                             <p></p>

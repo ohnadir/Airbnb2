@@ -154,10 +154,12 @@
 }
 .destinationItems{
     width: 100%;
+    cursor: pointer;
 }
 .destinationItem{
     margin: 0;
     width: 100%;
+    cursor: pointer;
 }
  .destinationItem:hover, .destinationItems:hover{
     background-color: #dddddd;
@@ -192,24 +194,21 @@
     color: black;
     font-size: 16px;
 }
-  .optionItem {
-    width: 300px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 25px;
-
-  }
-  
-  .optionCounter {
+.optionItem {
+  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 25px;
+}
+.optionCounter {
     display: flex;
     align-items: center;
     gap: 10px;
     font-size: 12px;
     color: black;
-  }
-  
-  .optionCounterButton {
+}
+.optionCounterButton {
     width: 35px;
     height: 35px;
     border: 1px solid #666;
@@ -223,13 +222,21 @@
     font-weight: 600;
     cursor: pointer;
     background-color: white;
-  }
-  .optionCounterButton{
+}
+.optionCounterButton{
     color: #666;
-  }
-  .optionCounterButton:disabled {
+}
+.optionCounterButton:disabled {
     cursor: not-allowed;
-  }
+}
+.date {
+    position: absolute;
+    top: 85px;
+    left: 220px;
+    z-index: 2;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.4);
+}
 @media screen and  (max-width: 1024px) {
     .btnContainer{
         display: flex;
