@@ -4,14 +4,38 @@ import logo from '../assets/logo.png';
 import { FaUserCircle } from 'react-icons/fa';
 import { BiMenu } from 'react-icons/bi';
 import { HiSearch } from 'react-icons/hi';
-import Image from 'next/image'
+import Image from 'next/image';
+import Link from 'next/link';
+import { DateRange } from "react-date-range";
+import { format } from "date-fns";
 
 const Navbar = () => {
     // const navigate = useNavigate();
     const [open, setOpen] = useState(false);
     const [dropdown, setDropdown] = useState(false);
-    const [cartOpen, setCartOpen] = useState(false)
-    const [keyword, setKeyword] = useState('');
+    const [destination, setDestination] = useState("");
+    const [openDate, setOpenDate] = useState(false);
+    const [dates, setDates] = useState([
+        {
+        startDate: new Date(),
+        endDate: new Date(),
+        key: "selection",
+        },
+    ]);
+    const [openOptions, setOpenOptions] = useState(false);
+    const [options, setOptions] = useState({
+        adult: 0,
+        children: 0,
+        room: 0,
+    });
+    const handleOption = (name, operation) => {
+        setOptions((prev) => {
+          return {
+            ...prev,
+            [name]: operation === "i" ? options[name] + 1 : options[name] - 1,
+          };
+        });
+      };
 
     /* const menuLists = <>
         <button className='text-white block md:hidden' onClick={()=>setOpen(!open)}><BiSearchAlt2 className='text-2xl'/></button>
@@ -28,27 +52,43 @@ const Navbar = () => {
                             alt="Picture of the author"
                         />
                     </div>
-                    <div className={styles.searchContainer}>
-                        <div className='flex items-center gap-4'>
-                            <div>
-                                Anywhere
+                    <div>
+                        {
+                            open ? <div className='flex items-center gap-6'>
+                                <div className={styles.activeItem}>
+                                    Stays
+                                </div>
+                                <div className={styles.active}>
+                                    Experiences
+                                </div>
+                                <div className={styles.active}>
+                                    Online Experiences
+                                </div>
+                            </div> 
+                            : 
+                            <div className={styles.searchContainer}>
+                                <div className='flex items-center gap-4'>
+                                    <div>
+                                        Anywhere
+                                    </div>
+                                    <div className={styles.hr}>
+                                        <p></p>
+                                    </div>
+                                    <div>
+                                        Any week
+                                    </div>
+                                    <div className={styles.hr}>
+                                        <p></p>
+                                    </div>
+                                    <div>
+                                        Add Guests
+                                    </div>
+                                    <div className={styles.searchBtn} onClick={()=>setOpen(!open)}>
+                                        <HiSearch className={styles.icon} />
+                                    </div>
+                                </div>
                             </div>
-                            <div className={styles.hr}>
-                                <p></p>
-                            </div>
-                            <div>
-                                Any week
-                            </div>
-                            <div className={styles.hr}>
-                                <p></p>
-                            </div>
-                            <div>
-                                Add Guests
-                            </div>
-                            <div className={styles.searchBtn}>
-                                <HiSearch className={styles.icon} />
-                            </div>
-                        </div>
+                        }
                     </div>
                     <div className='flex gap-5 items-center'>
                          <div className={styles.userMenu} onClick={()=>setDropdown(!dropdown)}>
@@ -61,9 +101,155 @@ const Navbar = () => {
                     </div>
                 </div>
                 {
+                    open && <div className={styles.destinationContainer}>
+                        <div className={styles.destinationItems}>
+                            <div className={styles.destinationContent}>
+                                <p className={styles.optionHeader}>Where</p>
+                                <p className={styles.optionFooter}>Search destinations</p>
+                            </div>
+                        </div>
+                        <div className={styles.divider}>
+                            <p></p>
+                        </div>
+                        <div className={styles.destinationItem}>
+                            <div className={styles.destinationContent}>
+                                <p className={styles.optionHeader}>Check in</p>
+                                <p className={styles.optionFooter}>Add dates</p>
+                            </div>
+                        </div>
+                        <div className={styles.divider}>
+                            <p></p>
+                        </div>
+                        <div className={styles.destinationItem}>
+                            <div className={styles.destinationContent}>
+                                <p className={styles.optionHeader}>Check out</p>
+                                <p className={styles.optionFooter}>Add dates</p>
+                            </div>
+                        </div>
+                        <div className={styles.divider}>
+                            <p></p>
+                        </div>
+                        <div  className={styles.destinationItem}>
+                            <div className={styles.destinationContent}>
+                                <div className={styles.btnContainer} onClick={() => setOpenOptions(!openOptions)}>
+                                    <div>
+                                        <p className={styles.optionHeader}>Who</p>
+                                        <p className={styles.optionFooter}>Add Guests</p>
+                                    </div>
+                                    <div className={styles.calenderSearchBtn} onClick={()=>setOpen(!open)}>
+                                        <HiSearch className={styles.icon}/>
+                                        <span className='hidden lg:block'>Search</span>
+                                    </div>
+                                </div>
+                                { openOptions && (
+                                    <div className={styles.options}>
+                                        <div className={styles.optionItem}>
+                                            <div className='flex flex-col'>
+                                                <span className={styles.optionText}>Adult</span>
+                                                <span className={styles.optionBellowText}>Ages 13 or above</span>
+                                            </div>
+                                            <div className={styles.optionCounter}>
+                                                <button
+                                                disabled={options.adult <= 0}
+                                                className={styles.optionCounterButton}
+                                                onClick={() => handleOption("adult", "d")}
+                                                >
+                                                -
+                                                </button>
+                                                <span className={styles.optionCounterNumber}>
+                                                {options.adult}
+                                                </span>
+                                                <button
+                                                className={styles.optionCounterButton}
+                                                onClick={() => handleOption("adult", "i")}
+                                                >
+                                                +
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div className={styles.optionItem}>
+                                            <div className='flex flex-col'>
+                                                <span className={styles.optionText}>Children</span>
+                                                <span className={styles.optionBellowText}>Ages 2-12</span>
+                                            </div>
+                                            <div className={styles.optionCounter}>
+                                                <button
+                                                disabled={options.children <= 0}
+                                                className={styles.optionCounterButton}
+                                                onClick={() => handleOption("children", "d")}
+                                                >
+                                                -
+                                                </button>
+                                                <span className={styles.optionCounterNumber}>
+                                                {options.children}
+                                                </span>
+                                                <button
+                                                className={styles.optionCounterButton}
+                                                onClick={() => handleOption("children", "i")}
+                                                >
+                                                +
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div className={styles.optionItem}>
+                                            <div className='flex flex-col'>
+                                                <span className={styles.optionText}>Infants</span>
+                                                <span className={styles.optionBellowText}>Under 2</span>
+                                            </div>
+                                            <div className={styles.optionCounter}>
+                                                <button
+                                                disabled={options.room <= 0}
+                                                className={styles.optionCounterButton}
+                                                onClick={() => handleOption("infants", "d")}
+                                                >
+                                                -
+                                                </button>
+                                                <span className={styles.optionCounterNumber}>
+                                                {options.room}
+                                                </span>
+                                                <button
+                                                className={styles.optionCounterButton}
+                                                onClick={() => handleOption("infants", "i")}
+                                                >
+                                                +
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div className={styles.optionItem}>
+                                            <div className='flex flex-col'>
+                                                <span className={styles.optionText}>Pets</span>
+                                                <span className={styles.optionBellowText}>Bringing a service animal?</span>
+                                            </div>
+                                            <div className={styles.optionCounter}>
+                                                <button
+                                                disabled={options.room <= 0}
+                                                className={styles.optionCounterButton}
+                                                onClick={() => handleOption("pets", "d")}
+                                                >
+                                                -
+                                                </button>
+                                                <span className={styles.optionCounterNumber}>
+                                                {options.room}
+                                                </span>
+                                                <button
+                                                className={styles.optionCounterButton}
+                                                onClick={() => handleOption("pets", "i")}
+                                                >
+                                                +
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                )}
+                            </div>
+                        </div>
+                    </div>
+                }
+                
+                {
                     dropdown && <div className={styles.dropDown}>
                         <ul>
-                            <li>Signup</li>
+                            <li><Link href="/signup">Signup</Link> </li>
                             <li>Login</li>
                         </ul>
                         <p className={styles.dropDownHr}></p>
