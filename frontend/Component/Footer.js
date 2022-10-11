@@ -22,8 +22,8 @@ export default function Footer() {
                         <div>
                             $ USD
                         </div>
-                        <div className='flex items-center '>
-                            Support & resources <IoIosArrowUp className=''/>
+                        <div className={styles.support}>
+                            <span>Support & resources</span> <IoIosArrowUp className={styles.arrowIcon}/>
                         </div>
                     </div>
                 </div>

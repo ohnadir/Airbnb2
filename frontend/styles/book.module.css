@@ -1,0 +1,82 @@
+.headerName{
+    font-size: 32px;
+    padding: 0;
+    margin: 0;
+}
+.imageContainer{
+    display: flex;
+    /* align-items: center; */
+    gap: 20px;
+}
+
+.imageContainer img:hover{
+    opacity: 0.8;
+    cursor: pointer;
+}
+.reserveCard{
+    border: 1px solid #b0b0b0;
+    border-radius: 10px;
+    padding: 25px;
+    width: 100%;
+}
+.guest{
+    width: 100%;
+    /* border-top: 1px solid #b0b0b0; */
+    
+}
+.guest p{
+    padding: 0;
+    margin: 0;
+}  
+.checkIn{
+    width: 100%;
+    padding: 8px;
+}
+.checkIn p{
+    padding: 0;
+    margin: 0;
+}
+.checkOut p{
+    padding: 0;
+    margin: 0;
+}
+.checkOut{
+    width: 100%;
+    padding: 8px;
+    /* border: 1px soli; */
+    border-left: 1px solid #b0b0b0;
+}
+.guestContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top:1px solid #b0b0b0;
+    padding: 8px;
+}
+.reserveBtn{
+    width: 100%;
+    padding: 8px 0;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 16px;
+    margin-top: 20px;
+    background: linear-gradient(to right, rgb(230, 30, 77) 0%, rgb(227, 28, 95) 50%, rgb(215, 4, 102) 100%) !important;
+    color: rgb(255, 255, 255)
+}
+.divider{
+    width: 100%;
+    background-color: #b0b0b0;
+    height: 1px;
+}
+.pHeading{
+    font-size: 17px;
+    color: #717171;
+}
+.heading{
+    font-size: 1.17em;
+    font-weight: bold;
+}
+.ant-modal-content {
+    border-radius: 20px;
+    /* background: red; */
+}
