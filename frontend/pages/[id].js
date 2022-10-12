@@ -15,6 +15,7 @@ import MetaData from '../Component/Meta';
 import { useState } from 'react';
 import { Button, Modal } from 'antd';
 import { DateRange, DateRangePicker } from "react-date-range";
+import Footer from './footer';
 
 
 
@@ -328,7 +329,7 @@ export default function Book() {
             <div className={style.simpleDivider}>
                 <p></p>
             </div>
-            <section className='helpSection grid grid-cols-1 gap-6 my-10'>
+            <section className='helpSection grid grid-cols-1 gap-6 mt-10'>
                 <div>
                     <h2 className='text-[22px] text-[#222222] font-bold font-sans mb-2'>Support</h2>
                     <div className='grid md:grid-cols-3 text-[16px] gap-2'>
@@ -383,6 +384,7 @@ export default function Book() {
                     <p></p>
                 </div>
             </section>
+            <Footer/>
         </div>
         {
             open && <Modal
