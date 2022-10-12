@@ -18,6 +18,9 @@
     border-radius: 10px;
     padding: 25px;
     width: 100%;
+    top: 2px;
+    position: sticky;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
 }
 .guest{
     width: 100%;
@@ -79,4 +82,73 @@
 .ant-modal-content {
     border-radius: 20px;
     /* background: red; */
+}
+.simpleDivider{
+    width: 100%;
+    height: 1px;
+    background-color: #dddddd;
+}
+.roomType{
+    border-radius: 10px;
+    border: 1px solid #dddddd;
+    width: 40%;
+    padding: 20px;
+    margin-top: 20px;
+}
+.seatOption{
+    display: flex;
+    list-style-position: inside;
+    margin: 0;
+}
+.seatOption li{
+}
+.seatOption li::before {
+    content: "\2022";
+    color: #717171;
+    font-weight: bold;
+    display: inline-block; 
+    width: 1em;
+    padding-left: 8px;
+    margin-left: 0.em;
+}
+.diveHead{
+    font-size: 16px;
+    padding: 0;
+    margin: 0;
+    color: black;
+    font-weight: 600;
+}
+.diveHeader{
+    color: #717171;
+    font-weight: 400;
+    font-size: 15px;
+}
+.serviceContainer{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.serviceIcon{
+    font-size: 22px !important;
+}
+.serviceIcon, .serviceName{
+    font-size:17px;
+    color: #222222;
+}
+/* .serviceName{
+    font-size: ;
+    color: ;
+} */
+
+.airBnb{
+    background-color: #f9d2df;
+    border: 1px solid #e31c5f;
+    padding: 4px;
+    border-radius: 40% 40% 10px 10px ;
+    height: 40px;
+    width: 40px;
+}
+.hostedContainer{
+    display: flex;
+    justify-content: space-between !important;
 }
