@@ -1,0 +1,60 @@
+.checkOutDivider{
+    width: 100%;
+    height: 1px;
+    margin: 40px 0;
+    background-color: #dddddd;
+}
+.cardDivider{
+    width: 100%;
+    height: 1px;
+    margin: 15px 0;
+    background-color: #dddddd;
+}
+.countryContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border: 1px solid #dddddd; */
+    border-bottom: 1px solid #dddddd;
+}
+.authSection input{
+    border: none;
+    outline: none;
+    padding: 10px 8px;
+    font-size: 16px;
+    /* border:1px solid #dddddd; */
+}
+.numberContainer{
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+    margin-bottom: 3px;
+}
+.authBtn{
+    width: 100%;
+    color: white;
+    padding: 12px 0;
+    font-size: 17px;
+    border-radius: 8px;
+    font-weight: 600;
+    background-image: radial-gradient(circle at center center, rgb(255, 56, 92) 0%, rgb(230, 30, 77) 27.5%, rgb(227, 28, 95) 40%, rgb(215, 4, 102) 57.5%, rgb(189, 30, 89) 75%, rgb(189, 30, 89) 100%) !important;
+}
+.socialIcon, .socialMailIcon{
+    height: 50px;
+    width: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    border: 1px solid gray;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.socialMailIcon{
+    position: relative;
+    width: 100%;
+    justify-content: center;
+}
+.socialIcon:hover, .socialMailIcon:hover{
+    background-color: #dddddd;
+}
