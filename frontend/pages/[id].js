@@ -31,7 +31,7 @@ export default function Book() {
       ]);
     return (
       <div className="max-w-7xl mx-auto px-10 mt-10">
-        <MetaData title={'Address'} />
+        <MetaData title={'Book'} />
         <div>
             <div>
                 <h1 className={style.headerName}>Adaaran Club Rannalhi, Maldives, Silver All Inclu.</h1>
