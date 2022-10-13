@@ -51,21 +51,21 @@
 .sharedFooter ul{
     display: flex;
     align-items: center;
-    justify-content: center;
+    /* justify-content: center; */
     position: relative;
     gap: 25px;
     list-style: none;
     margin-left: 0;
-    padding-left: 1em;
+    padding-left: 2em;
     text-indent: -1em;
 }
 .sharedFooter li{
-    padding: 10px;
+    padding: 0 10px;
 }
 .sharedFooter li:before{
     content: ".";
-    top: 7px;
-    margin-left: -12px;
+    top: -4px;
+    margin-left: -15px;
     position: absolute;
     display: block;
 
