@@ -1,7 +1,5 @@
-.prev{
-  float: left;
+.prev, .next{
   top: 45%;
-  left: 5px;
   height: 26px;
   width: 26px;
   padding: 0 3px;
@@ -10,34 +8,38 @@
   font-size: 20px;
   position: absolute;
   z-index: 1;
-  transition: all 0.3s ease;
+  visibility: hidden;
+  transition: visibility 0.2s ease;
+}
+.prev{
+  float: left;
+  left: 5px;
 }
 .prev:hover{
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .next{
   float: right;
-  top: 45%;
   right: 5px;
-  height: 26px;
-  width: 26px;
-  padding: 0 3px;
-  background-color: #f2f2f2;
-  border-radius: 50%;
-  font-size: 20px;
-  position: absolute;
-  z-index: 1;
-  transition: all 0.3s ease;
 }
 .next:hover{
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
-
-.cardItem{
-}
-.cardItem:hover{
+.cardItem:hover  .next, .cardItem:hover .prev{
   visibility: visible;
   cursor: pointer;
+}
+.cardItem:hover{
+  cursor: pointer;
+}
+.sideDots li{
+  padding:  0 -15px !important;
+  margin: 0 -2px;
+}
+.sideDots li button:before{
+  color: white !important;
+  opacity: 0.4;
+  
 }
 
 /* .next{
