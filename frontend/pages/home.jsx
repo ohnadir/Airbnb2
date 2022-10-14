@@ -2,6 +2,7 @@ import { BiChevronRight, BiChevronLeft } from "react-icons/bi";
 import Slider from "react-slick";
 import style from '../styles/Home.module.css';
 import { FaStar } from 'react-icons/fa';
+import { BsFillMapFill } from 'react-icons/bs';
 import palace from '../Component/card.json'
 
 export default function card() {
@@ -34,6 +35,9 @@ export default function card() {
     }; 
   return (
     <div className="max-w-7xl mx-auto px-10 mt-10">
+        <div className={style.locationTiger}>
+            <div className={style.location} >Show map <BsFillMapFill/></div>
+        </div>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-10">
             {
                 palace.map((item)=> 
@@ -42,7 +46,7 @@ export default function card() {
                             <Slider {...settings}>
                                 {
                                     item.img.map((another)=>
-                                    <img className="h-[250px] rounded-xl" src={another} alt="" />
+                                    <img key={another.id} className="h-[250px] rounded-xl" src={another} alt="" />
                                     )
                                 }
                             </Slider>
