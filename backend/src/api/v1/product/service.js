@@ -1,28 +1,19 @@
 const { Product } = require('../models');
-// const shortid = require("shortid");
-const slugify = require("slugify");
-const ErrorMiddleware = require('../middleware/errors')
-const APIFeatures = require('../utils/APIFeatures')
+const  ErrorHandler = require('../utils/ErrorHandler');
+const  catchAsyncErrors = require('../middleware/catchAsyncErrors');
 
-exports.addProductService = async ({ name,price,quantity,desc, productPictures,category,  _id }) => {
-  const response = {
-    code: 201,
-    status: 'Success',
-    message: 'Product added successfully',
-  };
+exports.addProduct = catchAsyncErrors(async (req, res, next) => {
+
+  const { name,price,quantity,desc, productPictures,category,  _id } = req.body;
 
   try {
     const isNameExist = await Product.findOne({ name });
     if (isNameExist) {
-      response.code = 422;
-      response.status = 'Failed';
-      response.message = 'Name already taken';
-      return response;
+      return next(new ErrorHandler('Name Already Taken', 422))
     }
 
     const newProduct = new Product({
       name,
-      slug: slugify(name),
       price,
       quantity,
       desc,
@@ -31,40 +22,28 @@ exports.addProductService = async ({ name,price,quantity,desc, productPictures,c
       // createdBy: req.user._id,
     });
     await newProduct.save();
-    return response;
+    res.status(200).json({
+      Success: true,
+      statusCode:200,
+      message:"Add Product Successfully",
+      data: hotel
+    })
     
 
   } catch (error) {
-    response.code = 500;
-    response.status = 'failed';
-    response.message = 'Error. Try again';
-    return response;
+    return next(new ErrorHandler('Error. Try Again', 500))
   }
-};
+});
 
-exports.updateProductService = async ({
-  id,
-  name,
-  price,
-  desc
-}) => {
-  const response = {
-    code: 200,
-    status: 'Success',
-    message: 'Product updated successfully',
-    data: {},
-  };
-
+exports.updateProductService = catchAsyncErrors(async (req, res, next) => {
+  const {id, name, price, desc} = req.body
   try {
     const product = await Product.findOne({
       _id: id,
       isDelete: false,
     }).exec();
     if (!product) {
-      response.code = 422;
-      response.status = 'failed';
-      response.message = 'No product data found';
-      return response;
+      return next(new ErrorHandler('No Product Data', 422))
     }
 
     const isNameExist = await Product.findOne({ name });
@@ -73,10 +52,7 @@ exports.updateProductService = async ({
       name === isNameExist.name &&
       String(product._id) !== String(isNameExist._id)
     ) {
-      response.code = 422;
-      response.status = 'failed';
-      response.message = 'Phone number already taken';
-      return response;
+      return next(new ErrorHandler('Product Already Taken ', 422))
     }
 
     product.name = name ? name : product.name;
@@ -89,12 +65,9 @@ exports.updateProductService = async ({
     return response;
     
   } catch (error) {
-    response.code = 500;
-    response.status = 'failed';
-    response.message = 'Error. Try again';
-    return response;
+    return next(new ErrorHandler('Error. Try again', 422))
   }
-};
+});
 
 exports.deleteProductService = async ({ id }) => {
   const response = {

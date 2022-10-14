@@ -5,6 +5,7 @@ const {
     getCategoriesService
   } = require('./service');
   
+const { Hotel } = require('../models')
 exports.addCategory = async (req, res) => {
     const { status, code, message, data } = await addCategoryService({
       

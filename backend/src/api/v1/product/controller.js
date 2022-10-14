@@ -9,8 +9,11 @@ const {
   createProductReview,
   deleteReviewService
 } = require('./service');
+const  { Product} = require('../models')
+const  ErrorHandle = require('../utils/ErrorHandler');
+const  catchAsyncErrors = require('../middleware/catchAsyncErrors');
 
-exports.addProduct = async (req, res) => {
+exports.addProduct = catchAsyncErrors(async (req, res, next) => {
   const { status, code, message } = await addProductService({
     // _id:req.user._id,
     ...req.body,

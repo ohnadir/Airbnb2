@@ -2,7 +2,6 @@ const { User } = require('../models');
 const crypto = require('crypto');
 const sendToken = require('../utils/jwtToken')
 const sendEmail = require('../utils/sendEmail')
-const cloudinary = require('cloudinary');
 
 exports.addUserService = async ({ body, res }) => {
   const { firstName, lastName, password, email, phone, role } = body;
