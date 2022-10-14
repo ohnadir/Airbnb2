@@ -5,7 +5,7 @@ const {
   deleteProduct,
   getProducts,
   searchProduct,
-  getProduct,
+  getSingleProduct,
 } = require('../product/controller');
 
 
@@ -34,6 +34,6 @@ router.get('/', getProducts);
 
 router.get('/search', searchProduct);
 
-router.get('/:id', idValidator, validationResult, getProduct);
+router.get('/:id', idValidator, validationResult, getSingleProduct);
 
 module.exports = router;
