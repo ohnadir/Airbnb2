@@ -17,7 +17,7 @@ export default function Footer() {
                     </div>
                     <div className={styles.right}>
                         <div className='flex items-center gap-2'>
-                        <TbWorld />  <span className='px-2'>English (US)</span>
+                            <TbWorld />  <span className='px-2'>English (US)</span>
                         </div>
                         <div>
                             $ USD
