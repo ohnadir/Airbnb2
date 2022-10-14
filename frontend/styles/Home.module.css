@@ -8,12 +8,13 @@
   font-size: 20px;
   position: absolute;
   z-index: 1;
-  visibility: hidden;
+  display: none !important;
   transition: visibility 0.2s ease;
 }
 .prev{
   float: left;
   left: 5px;
+  /* display: none !important; */
 }
 .prev:hover{
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -26,7 +27,7 @@
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .cardItem:hover  .next, .cardItem:hover .prev{
-  visibility: visible;
+  display: block !important;
   cursor: pointer;
 }
 .cardItem:hover{
@@ -64,7 +65,6 @@
 .locationTiger:hover{
   cursor: pointer;
   padding: 12px 21px;
-  /* font-weight: 700; */
 }
 
 /* .next{

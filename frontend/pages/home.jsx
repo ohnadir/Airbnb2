@@ -3,12 +3,15 @@ import Slider from "react-slick";
 import style from '../styles/Home.module.css';
 import { FaStar } from 'react-icons/fa';
 import { BsFillMapFill } from 'react-icons/bs';
-import palace from '../Component/card.json'
+import { IoMdHeartEmpty } from 'react-icons/io';
+import palace from '../Component/card.json';
+import { message } from 'antd';
 
 export default function card() {
     const ArrowLeft = (props) => (
         <button
             {...props}
+            style={{visibility:props?.currentSlide === 0 ? "hidden" : "visible"}}
             className={style.prev}>
             <BiChevronLeft/>
         </button>
@@ -16,6 +19,7 @@ export default function card() {
     const ArrowRight = (props) => (
         <button
             {...props}
+            style={{visibility:props?.currentSlide === 5 ? "hidden" : "visible"}}
             className={style.next}>
             <BiChevronRight/>
         </button>
@@ -32,17 +36,21 @@ export default function card() {
               <ul className={style.sideDots} style={{ margin: "0px" }}> <span className={style.dots}>{dots}</span> </ul>
             </div>
           )
-    }; 
+    };
+    const handleWish=()=>{
+        message.info("Added on Wish list");
+    }
   return (
     <div className="max-w-7xl mx-auto px-10 mt-10">
         <div className={style.locationTiger}>
-            <div className={style.location} >Show map <BsFillMapFill/></div>
+            <div className={style.location} >Show map <BsFillMapFill /></div>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-10">
             {
                 palace.map((item)=> 
                     <div key={item.id} className={style.cardItem}>
-                        <div>
+                        <div className="relative">
+                            <div className="absolute text-[25px] text-white transition-all hover:text-[#717175] z-50 right-2 top-2"><IoMdHeartEmpty onClick={handleWish}/></div>
                             <Slider {...settings}>
                                 {
                                     item.img.map((another)=>
