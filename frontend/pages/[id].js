@@ -16,10 +16,12 @@ import { useState } from 'react';
 import { Button, Modal } from 'antd';
 import { DateRange, DateRangePicker } from "react-date-range";
 import Footer from './footer';
-
-
+import { useRouter } from 'next/router'
 
 export default function Book() {
+    const router = useRouter()
+    const { pid } = router.query;
+    console.log(pid);
     const [open, setOpen] = useState(false);
     const [service, setService] = useState(false);
     const [state, setState] = useState([
