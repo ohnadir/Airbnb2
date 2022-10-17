@@ -7,6 +7,8 @@ import { IoMdHeartEmpty } from 'react-icons/io';
 import palace from '../Component/card.json';
 import { message } from 'antd';
 import Link from "next/link";
+import Category from "./category";
+
 export default function card() {
     const ArrowLeft = (props) => (
         <button
@@ -42,6 +44,7 @@ export default function card() {
     }
   return (
     <div className="max-w-7xl mx-auto px-10 mt-10">
+        {/* <Category/> */}
         <div className={style.locationTiger}>
             <div className={style.location} >Show map <BsFillMapFill /></div>
         </div>
