@@ -13,7 +13,7 @@ import { RiAlarmWarningFill } from 'react-icons/ri';
 import { BiChevronRight } from 'react-icons/bi';
 import MetaData from '../Component/Meta';
 import { useState } from 'react';
-import { Button, Modal } from 'antd';
+import { Modal } from 'antd';
 import { DateRange, DateRangePicker } from "react-date-range";
 import Footer from './footer';
 import { useRouter } from 'next/router'
