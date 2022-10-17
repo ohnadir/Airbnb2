@@ -9,6 +9,7 @@ import style from '../styles/category.module.css'
 import Slider from "react-slick";
 import { BsFillMapFill } from 'react-icons/bs';
 import { IoMdHeartEmpty } from 'react-icons/io';
+import { CgOptions } from 'react-icons/cg';
 import { BiChevronLeft, BiChevronRight } from 'react-icons/bi';
 
 export default function Category() {
@@ -57,9 +58,9 @@ export default function Category() {
         slidesToScroll: 8
     }
   return (
-    <div className='max-w-7xl mx-auto px-4 mt-5'>
-        <div>
-            <div className='relative  px-8'>
+    <div className='max-w-7xl mx-auto px-4 mt-5 overflow-y-hidden'>
+        <div className='flex items-center justify-between'>
+            <div className='relative  px-8 w-[85%] overflow-y-hidden'>
             <Slider {...settings}>
                 {
                     category.map((item)=>(
@@ -67,13 +68,17 @@ export default function Category() {
                         <div className={style.iconContainer}  >
                             <div className={style.iconContainer} style={{borderBottom :keyword === item.name  ? "2px solid black" : "blue"}} onClick={()=>setKeyword(item.name) }>
                                 <div className='text-3xl'>{item.icon}</div>
-                                <p className=''>{item.name}</p>
+                                <p className='m-0'>{item.name}</p>
                             </div>
                         </div>
                     ))
                 }
                 </Slider>
-            
+            </div>
+            <div className='w-[10%] overflow-y-hidden'>
+                <div className='flex items-center gap-1 font-semibold border rounded-lg max-w-fit px-5 py-2'>
+                    <CgOptions/> <span>Filter</span>
+                </div>
             </div>
         </div>
 
