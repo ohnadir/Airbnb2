@@ -43,7 +43,7 @@ export default function Card() {
         message.info("Added on Wish list");
     }
   return (
-    <div className="max-w-7xl mx-auto px-4 mt-8">
+    <div className="max-w-7xl mx-auto px-4 mt-8 mb-8">
         {/* <Category/> */}
         <div className={style.locationTiger}>
             <div className={style.location} >Show map <BsFillMapFill /></div>
