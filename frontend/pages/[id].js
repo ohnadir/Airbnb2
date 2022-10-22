@@ -11,16 +11,17 @@ import { TbPool, TbWorld } from 'react-icons/tb';
 import { FaAirbnb } from 'react-icons/fa';
 import { RiAlarmWarningFill } from 'react-icons/ri';
 import { BiChevronRight } from 'react-icons/bi';
-import MetaData from '../Component/Meta';
+import MetaData from '../Components/Meta';
 import { useState } from 'react';
 import { Modal } from 'antd';
 import { DateRange, DateRangePicker } from "react-date-range";
-import Footer from './footer';
+import Footer from '../Components/Footer';
 import { useRouter } from 'next/router'
 
 export default function Book() {
     const router = useRouter()
     const { pid } = router.query;
+    console.log(pid);
     const [open, setOpen] = useState(false);
     const [service, setService] = useState(false);
     const [state, setState] = useState([
@@ -385,7 +386,7 @@ export default function Book() {
                     <p></p>
                 </div>
             </section>
-            <Footer/>
+            {/* <Footer/> */}
         </div>
         {
             open && <Modal

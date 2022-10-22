@@ -4,7 +4,7 @@ import { BiChevronDown } from 'react-icons/bi';
 import { FaFacebookF, FaGoogle } from 'react-icons/fa';
 import { GrApple } from 'react-icons/gr';
 import { TbMail } from 'react-icons/tb';
-import Footer from "./footer";
+// import Footer from "../Component/Footer";
 
 export default function checkOut() {
   return (
@@ -114,7 +114,7 @@ export default function checkOut() {
                 </div>
             </div>
         </div>
-        <Footer/>
+        {/* <Footer/> */}
     </div>
   )
 }

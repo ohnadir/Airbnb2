@@ -43,7 +43,7 @@ const Navbar = () => {
         
     </> */
     return (
-        <div className='border py-4'>
+        <div className='border py-4 '>
             <div className='max-w-7xl mx-auto px-2 relative'>
                 <div className='flex items-center justify-between text-black '>
                     <div className='flex justify-start'>

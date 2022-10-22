@@ -1,11 +1,15 @@
-import Footer from "../Component/Footer";
-import Navbar from "./Navbar";
+import Footer from "../Components/Footer";
+import Navbar from "../Components/Navbar";
+import Category from "../Components/category";
+import Card from "../Components/Card"
 
 export default function Home() {
   return (
     <div >
       <Navbar/>
-      <Footer/>
+      <Category/>
+      <Card/>
+      {/* <Footer/> */}
     </div>
   )
 }

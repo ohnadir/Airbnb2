@@ -62,23 +62,23 @@ export default function Category() {
     }
   return (
     <div className='max-w-7xl mx-auto px-4 mt-5 overflow-y-hidden'>
-        <div className='flex items-center justify-between'>
-            <div className='relative  px-8 w-[85%] overflow-y-hidden'>
-            <Slider {...settings}>
-                {
-                    category.map((item)=>(
-                        
-                        <div className={style.iconContainer}  >
-                            <div className={style.iconContainer} style={{borderBottom :keyword === item.name  ? "2px solid black" : "blue"}} onClick={()=>setKeyword(item.name) }>
-                                <div className='text-3xl'>{item.icon}</div>
-                                <p className='m-0'>{item.name}</p>
+        <div className='flex items-center gap-10 justify-between'>
+            <div className='relative  px-8 w-[80%] overflow-y-hidden'>
+                <Slider {...settings}>
+                    {
+                        category.map((item)=>(
+                            
+                            <div className={style.iconContainer}  >
+                                <div className={style.iconContainer} style={{color :keyword === item.name  ? " black" : ""}} onClick={()=>setKeyword(item.name) }>
+                                    <div className='text-3xl flex justify-center'>{item.icon}</div>
+                                    <p className='m-0 text-center'>{item.name}</p>
+                                </div>
                             </div>
-                        </div>
-                    ))
-                }
+                        ))
+                    }
                 </Slider>
             </div>
-            <div className='w-[10%] overflow-y-hidden'>
+            <div className='w-[10%] '>
                 <div onClick={()=>setOpen(!open)} className='cursor-pointer flex items-center gap-1 font-semibold border rounded-lg max-w-fit px-5 py-2'>
                     <CgOptions/> <span>Filter</span>
                 </div>

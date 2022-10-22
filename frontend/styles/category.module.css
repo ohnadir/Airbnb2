@@ -1,6 +1,8 @@
 .iconContainer{
     color: #838383;
     cursor: pointer;
+    padding-bottom: 8px;
+    /* width: fit-content; */
     /* display: flex; */
     /* flex-direction: column; */
     /* align-items: center; */

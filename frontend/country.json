@@ -2,526 +2,166 @@
     {
         "name": "Argentina",
         "alphaCode": "ARG",
-        "callingCodes":"54",
+        "callingCode":"54",
         "capital": "Buenos Aires",
         "region": "Americas",
         "population": "45376763",
-        "demonym": "Argentinean",
         "timezones":"UTC-03:00",
         "flags": { 
             "svg": "https://flagcdn.com/ar.svg", 
             "png": "https://flagcdn.com/w320/ar.png"
         },
-        "currencies":"$-ARS",
+        "currency":"$-ARS",
         "language": "Spanish"
     },
     {
         "name": "Belize",
         "alphaCode": "BLZ",
-        "callingCodes":"501",
-        "capital": "Belmopan",
+        "callingCode":"501",
+        "capital" :"Belmopan",
         "region": "Americas",
         "population": "397621",
         "timezones": "UTC-06:00",
         "flags": {
-        "svg": "https://flagcdn.com/bz.svg",
-        "png": "https://flagcdn.com/w320/bz.png"
+            "svg": "https://flagcdn.com/bz.svg",
+            "png": "https://flagcdn.com/w320/bz.png"
         },
-        "currencies": "$ BZD",
+        "currency": "$ BZD",
         "language": "English"
     },
     {
-    "name": "Bolivia (Plurinational State of)",
-    "alphaCode": "BOL",
-    "callingCodes":"591",
-    "capital": "Sucre",
-    "region": "Americas",
-    "population": 11673029,
-    "timezones":"UTC-04:00",
-    "flags": {
-        "svg": "https://flagcdn.com/bo.svg",
-        "png": "https://flagcdn.com/w320/bo.png"
-    },
-    "currencies":"Bs. BOB",
-    "languages":  "Spanish"
-},
-    {
-    "name": "Chile",
-    "alphaCode": "CHL",
-    "callingCodes": "56",
-    "capital": "Santiago",
-    "region": "Americas",
-    "population": 19116209,
-    "timezones": "UTC-04:00",
-    "flags": {
-        "svg": "https://flagcdn.com/cl.svg",
-        "png": "https://flagcdn.com/w320/cl.png"
-    },
-    "currency": "$ CLP",
-    "languages":"Spanish"
+        "name": "Bolivia (Plurinational State of)",
+        "alphaCode": "BOL",
+        "callingCode":"591",
+        "capital" :"Sucre",
+        "region": "Americas",
+        "population": 11673029,
+        "timezones":"UTC-04:00",
+        "flags": {
+            "svg": "https://flagcdn.com/bo.svg",
+            "png": "https://flagcdn.com/w320/bo.png"
+        },
+        "currency":"Bs. BOB",
+        "language":  "Spanish"
     },
     {
-    "name": "Colombia",
-    "alphaCode": "COL",
-    "callingCodes": "57",
-    "region": "Americas",
-    "population": 50882884,
-    "timezones": "UTC-05:00",
-    "flags": {
-    "svg": "https://flagcdn.com/co.svg",
-    "png": "https://flagcdn.com/w320/co.png"
-    },
-    "currency": "$ COP",
-    "languages": ["Spanish", "Español"]
-    },
-    {
-    "name": "Costa Rica",
-    "alphaCode": "CRI",
-    "callingCodes":"506",
-    "capital": "San José",
-    "region": "Americas",
-    "population": 5094114,
-    timezones: [
-    "UTC-06:00"
-    ],
-    borders: [
-    "NIC",
-    "PAN"
-    ],
-    nativeName: "Costa Rica",
-    numericCode: "188",
-    flags: {
-    svg: "https://flagcdn.com/cr.svg",
-    png: "https://flagcdn.com/w320/cr.png"
-    },
-    currencies: [
-    {
-    code: "CRC",
-    "name": "Costa Rican colón",
-    symbol: "₡"
-    }
-    ],
-    languages: [
-    {
-    iso639_1: "es",
-    iso639_2: "spa",
-    "name": "Spanish",
-    nativeName: "Español"
-    }
-    ],
-    translations: {
-    br: "Costa Rica",
-    pt: "Costa Rica",
-    nl: "Costa Rica",
-    hr: "Kostarika",
-    fa: "کاستاریکا",
-    de: "Costa Rica",
-    es: "Costa Rica",
-    fr: "Costa Rica",
-    ja: "コスタリカ",
-    it: "Costa Rica",
-    hu: "Costa Rica"
-    },
-    flag: "https://flagcdn.com/cr.svg",
-    regionalBlocs: [
-    {
-    acronym: "CAIS",
-    "name": "Central American Integration System",
-    otherAcronyms: [
-    "SICA"
-    ],
-    otherNames: [
-    "Sistema de la Integración Centroamericana,"
-    ]
-    }
-    ],
-    cioc: "CRC",
-    independent: true
+        "name": "Chile",
+        "alphaCode": "CHL",
+        "callingCode": "56",
+        "capital": "Santiago",
+        "region": "Americas",
+        "population": 19116209,
+        "timezones": "UTC-04:00",
+        "flags": {
+            "svg": "https://flagcdn.com/cl.svg",
+            "png": "https://flagcdn.com/w320/cl.png"
+        },
+        "currency": "$ CLP",
+        "language":"Spanish"
     },
     {
-    "name": "Cuba",
-    topLevelDomain: [
-    ".cu"
-    ],
-    alpha2Code: "CU",
-    "alphaCode": "CUB",
-    callingCodes: [
-    "53"
-    ],
-    capital: "Havana",
-    altSpellings: [
-    "CU",
-    "Republic of Cuba",
-    "República de Cuba"
-    ],
-    subregion: "Caribbean",
-    region: "Americas",
-    population: 11326616,
-    latlng: [
-    21.5,
-    -80
-    ],
-    demonym: "Cuban",
-    area: 109884,
-    timezones: [
-    "UTC-05:00"
-    ],
-    nativeName: "Cuba",
-    numericCode: "192",
-    flags: {
-    svg: "https://flagcdn.com/cu.svg",
-    png: "https://flagcdn.com/w320/cu.png"
-    },
-    currencies: [
-    {
-    code: "CUC",
-    "name": "Cuban convertible peso",
-    symbol: "$"
+        "name": "Colombia",
+        "alphaCode": "COL",
+        "callingCode": "57",
+        "region": "Americas",
+        "population": 50882884,
+        "timezones": "UTC-05:00",
+        "flags": {
+        "svg": "https://flagcdn.com/co.svg",
+        "png": "https://flagcdn.com/w320/co.png"
+        },
+        "currency": "$ COP",
+        "language": "Spanish"
     },
     {
-    code: "CUP",
-    "name": "Cuban peso",
-    symbol: "$"
-    }
-    ],
-    languages: [
-    {
-    iso639_1: "es",
-    iso639_2: "spa",
-    "name": "Spanish",
-    nativeName: "Español"
-    }
-    ],
-    translations: {
-    br: "Kuba",
-    pt: "Cuba",
-    nl: "Cuba",
-    hr: "Kuba",
-    fa: "کوبا",
-    de: "Kuba",
-    es: "Cuba",
-    fr: "Cuba",
-    ja: "キューバ",
-    it: "Cuba",
-    hu: "Kuba"
-    },
-    flag: "https://flagcdn.com/cu.svg",
-    cioc: "CUB",
-    independent: true
+        "name": "Costa Rica",
+        "alphaCode": "CRI",
+        "callingCode":"506",
+        "capital": "San José",
+        "region": "Americas",
+        "population": 5094114,
+        "timezones": "UTC-06:00",
+        "flags": {
+            "svg": "https://flagcdn.com/cr.svg",
+            "png": "https://flagcdn.com/w320/cr.png"
+        },
+        "currency": "₡-CRC",
+        "language":"Spanish"
     },
     {
-    "name": "Dominican Republic",
-    topLevelDomain: [
-    ".do"
-    ],
-    alpha2Code: "DO",
-    "alphaCode": "DOM",
-    callingCodes: [
-    "1"
-    ],
-    capital: "Santo Domingo",
-    altSpellings: [
-    "DO"
-    ],
-    subregion: "Caribbean",
-    region: "Americas",
-    population: 10847904,
-    latlng: [
-    19,
-    -70.66666666
-    ],
-    demonym: "Dominican",
-    area: 48671,
-    gini: 41.9,
-    timezones: [
-    "UTC-04:00"
-    ],
-    borders: [
-    "HTI"
-    ],
-    nativeName: "República Dominicana",
-    numericCode: "214",
-    flags: {
-    svg: "https://flagcdn.com/do.svg",
-    png: "https://flagcdn.com/w320/do.png"
-    },
-    currencies: [
-    {
-    code: "DOP",
-    "name": "Dominican peso",
-    symbol: "$"
-    }
-    ],
-    languages: [
-    {
-    iso639_1: "es",
-    iso639_2: "spa",
-    "name": "Spanish",
-    nativeName: "Español"
-    }
-    ],
-    translations: {
-    br: "Republik Dominikan",
-    pt: "República Dominicana",
-    nl: "Dominicaanse Republiek",
-    hr: "Dominikanska Republika",
-    fa: "جمهوری دومینیکن",
-    de: "Dominikanische Republik",
-    es: "República Dominicana",
-    fr: "République dominicaine",
-    ja: "ドミニカ共和国",
-    it: "Repubblica Dominicana",
-    hu: "Dominikai Köztársaság"
-    },
-    flag: "https://flagcdn.com/do.svg",
-    regionalBlocs: [
-    {
-    acronym: "CARICOM",
-    "name": "Caribbean Community",
-    otherNames: [
-    "Comunidad del Caribe",
-    "Communauté Caribéenne",
-    "Caribische Gemeenschap"
-    ]
+        "name": "Cuba",
+        "alphaCode": "CUB",
+        "callingCode": "53",
+        "capital": "Havana",
+        "region": "Americas",
+        "population": 11326616,
+        "timezones": "UTC-05:00",
+        "flags": {
+        "svg": "https://flagcdn.com/cu.svg",
+        "png": "https://flagcdn.com/w320/cu.png"
+        },
+        "currency": "$-CUC",
+        "language":  "Spanish"
     },
     {
-    acronym: "CAIS",
-    "name": "Central American Integration System",
-    otherAcronyms: [
-    "SICA"
-    ],
-    otherNames: [
-    "Sistema de la Integración Centroamericana,"
-    ]
-    }
-    ],
-    cioc: "DOM",
-    independent: true
+        "name": "Dominican Republic",
+        "alphaCode": "DOM",
+        "callingCode": "1",
+        "capital" :"Santo Domingo",
+        "region": "Americas",
+        "population": 10847904,
+        "timezones": "UTC-04:00",
+        "flags": {
+            "svg": "https://flagcdn.com/do.svg",
+            "png": "https://flagcdn.com/w320/do.png"
+        },
+        "currency": "$-DOP",
+        "language":  "Spanish"
     },
     {
-    "name": "Ecuador",
-    topLevelDomain: [
-    ".ec"
-    ],
-    alpha2Code: "EC",
-    "alphaCode": "ECU",
-    callingCodes: [
-    "593"
-    ],
-    capital: "Quito",
-    altSpellings: [
-    "EC",
-    "Republic of Ecuador",
-    "República del Ecuador"
-    ],
-    subregion: "South America",
-    region: "Americas",
-    population: 17643060,
-    latlng: [
-    -2,
-    -77.5
-    ],
-    demonym: "Ecuadorean",
-    area: 276841,
-    gini: 45.7,
-    timezones: [
-    "UTC-06:00",
-    "UTC-05:00"
-    ],
-    borders: [
-    "COL",
-    "PER"
-    ],
-    nativeName: "Ecuador",
-    numericCode: "218",
-    flags: {
-    svg: "https://flagcdn.com/ec.svg",
-    png: "https://flagcdn.com/w320/ec.png"
-    },
-    currencies: [
-    {
-    code: "USD",
-    "name": "United States dollar",
-    symbol: "$"
-    }
-    ],
-    languages: [
-    {
-    iso639_1: "es",
-    iso639_2: "spa",
-    "name": "Spanish",
-    nativeName: "Español"
-    }
-    ],
-    translations: {
-    br: "Ecuador",
-    pt: "Equador",
-    nl: "Ecuador",
-    hr: "Ekvador",
-    fa: "اکوادور",
-    de: "Ecuador",
-    es: "Ecuador",
-    fr: "Équateur",
-    ja: "エクアドル",
-    it: "Ecuador",
-    hu: "Ecuador"
-    },
-    flag: "https://flagcdn.com/ec.svg",
-    regionalBlocs: [
-    {
-    acronym: "USAN",
-    "name": "Union of South American Nations",
-    otherAcronyms: [
-    "UNASUR",
-    "UNASUL",
-    "UZAN"
-    ],
-    otherNames: [
-    "Unión de Naciones Suramericanas",
-    "União de Nações Sul-Americanas",
-    "Unie van Zuid-Amerikaanse Naties",
-    "South American Union"
-    ]
-    }
-    ],
-    cioc: "ECU",
-    independent: true
+        "name": "Ecuador",
+        "alphaCode": "ECU",
+        "callingCode": "593",
+        "capital" :"Quito",
+        "region": "Americas",
+        "population": 17643060,
+        "timezones": "UTC-06:00",
+        "flags": {
+            "svg": "https://flagcdn.com/ec.svg",
+            "png": "https://flagcdn.com/w320/ec.png"
+        },
+        "currency": "$-USD",
+        "language": "Spanish"
     },
     {
-    "name": "El Salvador",
-    topLevelDomain: [
-    ".sv"
-    ],
-    alpha2Code: "SV",
-    "alphaCode": "SLV",
-    callingCodes: [
-    "503"
-    ],
-    capital: "San Salvador",
-    altSpellings: [
-    "SV",
-    "Republic of El Salvador",
-    "República de El Salvador"
-    ],
-    subregion: "Central America",
-    region: "Americas",
-    population: 6486201,
-    latlng: [
-    13.83333333,
-    -88.91666666
-    ],
-    demonym: "Salvadoran",
-    area: 21041,
-    gini: 38.8,
-    timezones: [
-    "UTC-06:00"
-    ],
-    borders: [
-    "GTM",
-    "HND"
-    ],
-    nativeName: "El Salvador",
-    numericCode: "222",
-    flags: {
-    svg: "https://flagcdn.com/sv.svg",
-    png: "https://flagcdn.com/w320/sv.png"
-    },
-    currencies: [
-    {
-    code: "USD",
-    "name": "United States dollar",
-    symbol: "$"
-    }
-    ],
-    languages: [
-    {
-    iso639_1: "es",
-    iso639_2: "spa",
-    "name": "Spanish",
-    nativeName: "Español"
-    }
-    ],
-    translations: {
-    br: "El Salvador",
-    pt: "El Salvador",
-    nl: "El Salvador",
-    hr: "Salvador",
-    fa: "السالوادور",
-    de: "El Salvador",
-    es: "El Salvador",
-    fr: "Salvador",
-    ja: "エルサルバドル",
-    it: "El Salvador",
-    hu: "Salvador"
-    },
-    flag: "https://flagcdn.com/sv.svg",
-    regionalBlocs: [
-    {
-    acronym: "CAIS",
-    "name": "Central American Integration System",
-    otherAcronyms: [
-    "SICA"
-    ],
-    otherNames: [
-    "Sistema de la Integración Centroamericana,"
-    ]
-    }
-    ],
-    cioc: "ESA",
-    independent: true
+        "name": "El Salvador",
+        "alphaCode": "SLV",
+        "callingCode": "503",
+        "capital": "San Salvador",
+        "region": "Americas",
+        "population": 6486201,
+        "timezones": "UTC-06:00",
+        "flags": {
+        "svg": "https://flagcdn.com/sv.svg",
+        "png": "https://flagcdn.com/w320/sv.png"
+        },
+        "currency":  "$-USD",
+        "language": "Spanish"
     },
     {
     "name": "Equatorial Guinea",
-    topLevelDomain: [
-    ".gq"
-    ],
-    alpha2Code: "GQ",
     "alphaCode": "GNQ",
-    callingCodes: [
-    "240"
-    ],
-    capital: "Malabo",
-    altSpellings: [
-    "GQ",
-    "Republic of Equatorial Guinea",
-    "República de Guinea Ecuatorial",
-    "République de Guinée équatoriale",
-    "República da Guiné Equatorial"
-    ],
-    subregion: "Middle Africa",
-    region: "Africa",
-    population: 1402985,
-    latlng: [
-    2,
-    10
-    ],
-    demonym: "Equatorial Guinean",
-    area: 28051,
-    timezones: [
-    "UTC+01:00"
-    ],
-    borders: [
-    "CMR",
-    "GAB"
-    ],
-    nativeName: "Guinea Ecuatorial",
-    numericCode: "226",
-    flags: {
-    svg: "https://flagcdn.com/gq.svg",
-    png: "https://flagcdn.com/w320/gq.png"
+    "callingCode": "240",
+    "capital" :"Malabo",
+    "region": "Africa",
+    "population": 1402985,
+    "timezones": "UTC+01:00",
+    "flags": {
+    "svg": "https://flagcdn.com/gq.svg",
+    "png": "https://flagcdn.com/w320/gq.png"
     },
-    currencies: [
-    {
-    code: "XAF",
-    "name": "Central African CFA franc",
-    symbol: "Fr"
-    }
-    ],
-    languages: [
-    {
-    iso639_1: "es",
-    iso639_2: "spa",
-    "name": "Spanish",
+    "currency": "Fr XAF",
+    "language": "Spanish",
     nativeName: "Español"
     },
     {
@@ -579,40 +219,40 @@
     ],
     alpha2Code: "GU",
     "alphaCode": "GUM",
-    callingCodes: [
+    "callingCode": [
     "1"
     ],
-    capital: "Hagåtña",
+    "capital" "Hagåtña",
     altSpellings: [
     "GU",
     "Guåhån"
     ],
-    subregion: "Micronesia",
-    region: "Oceania",
-    population: 168783,
+    sub"region": "Micronesia",
+    "region": "Oceania",
+    "population": 168783,
     latlng: [
     13.46666666,
     144.78333333
     ],
     demonym: "Guamanian",
     area: 549,
-    timezones: [
+    "timezones": [
     "UTC+10:00"
     ],
     nativeName: "Guam",
     numericCode: "316",
-    flags: {
-    svg: "https://flagcdn.com/gu.svg",
-    png: "https://flagcdn.com/w320/gu.png"
+    "flags": {
+    "svg": "https://flagcdn.com/gu.svg",
+    "png": "https://flagcdn.com/w320/gu.png"
     },
-    currencies: [
+    "currency": [
     {
     code: "USD",
     "name": "United States dollar",
     symbol: "$"
     }
     ],
-    languages: [
+    "language": [
     {
     iso639_1: "en",
     iso639_2: "eng",
@@ -656,16 +296,16 @@
     ],
     alpha2Code: "GT",
     "alphaCode": "GTM",
-    callingCodes: [
+    "callingCode": [
     "502"
     ],
-    capital: "Guatemala City",
+    "capital" "Guatemala City",
     altSpellings: [
     "GT"
     ],
-    subregion: "Central America",
-    region: "Americas",
-    population: 16858333,
+    sub"region": "Central America",
+    "region": "Americas",
+    "population": 16858333,
     latlng: [
     15.5,
     -90.25
@@ -673,7 +313,7 @@
     demonym: "Guatemalan",
     area: 108889,
     gini: 48.3,
-    timezones: [
+    "timezones": [
     "UTC-06:00"
     ],
     borders: [
@@ -684,18 +324,18 @@
     ],
     nativeName: "Guatemala",
     numericCode: "320",
-    flags: {
-    svg: "https://flagcdn.com/gt.svg",
-    png: "https://flagcdn.com/w320/gt.png"
+    "flags": {
+    "svg": "https://flagcdn.com/gt.svg",
+    "png": "https://flagcdn.com/w320/gt.png"
     },
-    currencies: [
+    "currency": [
     {
     code: "GTQ",
     "name": "Guatemalan quetzal",
     symbol: "Q"
     }
     ],
-    languages: [
+    "language": [
     {
     iso639_1: "es",
     iso639_2: "spa",
@@ -739,18 +379,18 @@
     ],
     alpha2Code: "HN",
     "alphaCode": "HND",
-    callingCodes: [
+    "callingCode": [
     "504"
     ],
-    capital: "Tegucigalpa",
+    "capital" "Tegucigalpa",
     altSpellings: [
     "HN",
     "Republic of Honduras",
     "República de Honduras"
     ],
-    subregion: "Central America",
-    region: "Americas",
-    population: 9904608,
+    sub"region": "Central America",
+    "region": "Americas",
+    "population": 9904608,
     latlng: [
     15,
     -86.5
@@ -758,7 +398,7 @@
     demonym: "Honduran",
     area: 112492,
     gini: 48.2,
-    timezones: [
+    "timezones": [
     "UTC-06:00"
     ],
     borders: [
@@ -768,18 +408,18 @@
     ],
     nativeName: "Honduras",
     numericCode: "340",
-    flags: {
-    svg: "https://flagcdn.com/hn.svg",
-    png: "https://flagcdn.com/w320/hn.png"
+    "flags": {
+    "svg": "https://flagcdn.com/hn.svg",
+    "png": "https://flagcdn.com/w320/hn.png"
     },
-    currencies: [
+    "currency": [
     {
     code: "HNL",
     "name": "Honduran lempira",
     symbol: "L"
     }
     ],
-    languages: [
+    "language": [
     {
     iso639_1: "es",
     iso639_2: "spa",
@@ -823,19 +463,19 @@
     ],
     alpha2Code: "MX",
     "alphaCode": "MEX",
-    callingCodes: [
+    "callingCode": [
     "52"
     ],
-    capital: "Mexico City",
+    "capital" "Mexico City",
     altSpellings: [
     "MX",
     "Mexicanos",
     "United Mexican States",
     "Estados Unidos Mexicanos"
     ],
-    subregion: "North America",
-    region: "Americas",
-    population: 128932753,
+    sub"region": "North America",
+    "region": "Americas",
+    "population": 128932753,
     latlng: [
     23,
     -102
@@ -843,7 +483,7 @@
     demonym: "Mexican",
     area: 1964375,
     gini: 45.4,
-    timezones: [
+    "timezones": [
     "UTC-08:00",
     "UTC-07:00",
     "UTC-06:00"
@@ -855,18 +495,18 @@
     ],
     nativeName: "México",
     numericCode: "484",
-    flags: {
-    svg: "https://flagcdn.com/mx.svg",
-    png: "https://flagcdn.com/w320/mx.png"
+    "flags": {
+    "svg": "https://flagcdn.com/mx.svg",
+    "png": "https://flagcdn.com/w320/mx.png"
     },
-    currencies: [
+    "currency": [
     {
     code: "MXN",
     "name": "Mexican peso",
     symbol: "$"
     }
     ],
-    languages: [
+    "language": [
     {
     iso639_1: "es",
     iso639_2: "spa",
@@ -915,18 +555,18 @@
     ],
     alpha2Code: "NI",
     "alphaCode": "NIC",
-    callingCodes: [
+    "callingCode": [
     "505"
     ],
-    capital: "Managua",
+    "capital" "Managua",
     altSpellings: [
     "NI",
     "Republic of Nicaragua",
     "República de Nicaragua"
     ],
-    subregion: "Central America",
-    region: "Americas",
-    population: 6624554,
+    sub"region": "Central America",
+    "region": "Americas",
+    "population": 6624554,
     latlng: [
     13,
     -85
@@ -934,7 +574,7 @@
     demonym: "Nicaraguan",
     area: 130373,
     gini: 46.2,
-    timezones: [
+    "timezones": [
     "UTC-06:00"
     ],
     borders: [
@@ -943,18 +583,18 @@
     ],
     nativeName: "Nicaragua",
     numericCode: "558",
-    flags: {
-    svg: "https://flagcdn.com/ni.svg",
-    png: "https://flagcdn.com/w320/ni.png"
+    "flags": {
+    "svg": "https://flagcdn.com/ni.svg",
+    "png": "https://flagcdn.com/w320/ni.png"
     },
-    currencies: [
+    "currency": [
     {
     code: "NIO",
     "name": "Nicaraguan córdoba",
     symbol: "C$"
     }
     ],
-    languages: [
+    "language": [
     {
     iso639_1: "es",
     iso639_2: "spa",
@@ -998,18 +638,18 @@
     ],
     alpha2Code: "PA",
     "alphaCode": "PAN",
-    callingCodes: [
+    "callingCode": [
     "507"
     ],
-    capital: "Panama City",
+    "capital" "Panama City",
     altSpellings: [
     "PA",
     "Republic of Panama",
     "República de Panamá"
     ],
-    subregion: "Central America",
-    region: "Americas",
-    population: 4314768,
+    sub"region": "Central America",
+    "region": "Americas",
+    "population": 4314768,
     latlng: [
     9,
     -80
@@ -1017,7 +657,7 @@
     demonym: "Panamanian",
     area: 75417,
     gini: 49.8,
-    timezones: [
+    "timezones": [
     "UTC-05:00"
     ],
     borders: [
@@ -1026,11 +666,11 @@
     ],
     nativeName: "Panamá",
     numericCode: "591",
-    flags: {
-    svg: "https://flagcdn.com/pa.svg",
-    png: "https://flagcdn.com/w320/pa.png"
+    "flags": {
+    "svg": "https://flagcdn.com/pa.svg",
+    "png": "https://flagcdn.com/w320/pa.png"
     },
-    currencies: [
+    "currency": [
     {
     code: "PAB",
     "name": "Panamanian balboa",
@@ -1042,7 +682,7 @@
     symbol: "$"
     }
     ],
-    languages: [
+    "language": [
     {
     iso639_1: "es",
     iso639_2: "spa",
@@ -1086,19 +726,19 @@
     ],
     alpha2Code: "PY",
     "alphaCode": "PRY",
-    callingCodes: [
+    "callingCode": [
     "595"
     ],
-    capital: "Asunción",
+    "capital" "Asunción",
     altSpellings: [
     "PY",
     "Republic of Paraguay",
     "República del Paraguay",
     "Tetã Paraguái"
     ],
-    subregion: "South America",
-    region: "Americas",
-    population: 7132530,
+    sub"region": "South America",
+    "region": "Americas",
+    "population": 7132530,
     latlng: [
     -23,
     -58
@@ -1106,7 +746,7 @@
     demonym: "Paraguayan",
     area: 406752,
     gini: 45.7,
-    timezones: [
+    "timezones": [
     "UTC-04:00"
     ],
     borders: [
@@ -1116,18 +756,18 @@
     ],
     nativeName: "Paraguay",
     numericCode: "600",
-    flags: {
-    svg: "https://flagcdn.com/py.svg",
-    png: "https://flagcdn.com/w320/py.png"
+    "flags": {
+    "svg": "https://flagcdn.com/py.svg",
+    "png": "https://flagcdn.com/w320/py.png"
     },
-    currencies: [
+    "currency": [
     {
     code: "PYG",
     "name": "Paraguayan guaraní",
     symbol: "₲"
     }
     ],
-    languages: [
+    "language": [
     {
     iso639_1: "es",
     iso639_2: "spa",
@@ -1182,18 +822,18 @@
     ],
     alpha2Code: "PE",
     "alphaCode": "PER",
-    callingCodes: [
+    "callingCode": [
     "51"
     ],
-    capital: "Lima",
+    "capital" "Lima",
     altSpellings: [
     "PE",
     "Republic of Peru",
     " República del Perú"
     ],
-    subregion: "South America",
-    region: "Americas",
-    population: 32971846,
+    sub"region": "South America",
+    "region": "Americas",
+    "population": 32971846,
     latlng: [
     -10,
     -76
@@ -1201,7 +841,7 @@
     demonym: "Peruvian",
     area: 1285216,
     gini: 41.5,
-    timezones: [
+    "timezones": [
     "UTC-05:00"
     ],
     borders: [
@@ -1213,18 +853,18 @@
     ],
     nativeName: "Perú",
     numericCode: "604",
-    flags: {
-    svg: "https://flagcdn.com/pe.svg",
-    png: "https://flagcdn.com/w320/pe.png"
+    "flags": {
+    "svg": "https://flagcdn.com/pe.svg",
+    "png": "https://flagcdn.com/w320/pe.png"
     },
-    currencies: [
+    "currency": [
     {
     code: "PEN",
     "name": "Peruvian sol",
     symbol: "S/."
     }
     ],
-    languages: [
+    "language": [
     {
     iso639_1: "es",
     iso639_2: "spa",
@@ -1280,41 +920,41 @@
     ],
     alpha2Code: "PR",
     "alphaCode": "PRI",
-    callingCodes: [
+    "callingCode": [
     "1"
     ],
-    capital: "San Juan",
+    "capital" "San Juan",
     altSpellings: [
     "PR",
     "Commonwealth of Puerto Rico",
     "Estado Libre Asociado de Puerto Rico"
     ],
-    subregion: "Caribbean",
-    region: "Americas",
-    population: 3194034,
+    sub"region": "Caribbean",
+    "region": "Americas",
+    "population": 3194034,
     latlng: [
     18.25,
     -66.5
     ],
     demonym: "Puerto Rican",
     area: 8870,
-    timezones: [
+    "timezones": [
     "UTC-04:00"
     ],
     nativeName: "Puerto Rico",
     numericCode: "630",
-    flags: {
-    svg: "https://flagcdn.com/pr.svg",
-    png: "https://flagcdn.com/w320/pr.png"
+    "flags": {
+    "svg": "https://flagcdn.com/pr.svg",
+    "png": "https://flagcdn.com/w320/pr.png"
     },
-    currencies: [
+    "currency": [
     {
     code: "USD",
     "name": "United States dollar",
     symbol: "$"
     }
     ],
-    languages: [
+    "language": [
     {
     iso639_1: "es",
     iso639_2: "spa",
@@ -1352,18 +992,18 @@
     ],
     alpha2Code: "ES",
     "alphaCode": "ESP",
-    callingCodes: [
+    "callingCode": [
     "34"
     ],
-    capital: "Madrid",
+    "capital" "Madrid",
     altSpellings: [
     "ES",
     "Kingdom of Spain",
     "Reino de España"
     ],
-    subregion: "Southern Europe",
-    region: "Europe",
-    population: 47351567,
+    sub"region": "Southern Europe",
+    "region": "Europe",
+    "population": 47351567,
     latlng: [
     40,
     -4
@@ -1371,7 +1011,7 @@
     demonym: "Spanish",
     area: 505992,
     gini: 34.7,
-    timezones: [
+    "timezones": [
     "UTC",
     "UTC+01:00"
     ],
@@ -1384,18 +1024,18 @@
     ],
     nativeName: "España",
     numericCode: "724",
-    flags: {
-    svg: "https://flagcdn.com/es.svg",
-    png: "https://flagcdn.com/w320/es.png"
+    "flags": {
+    "svg": "https://flagcdn.com/es.svg",
+    "png": "https://flagcdn.com/w320/es.png"
     },
-    currencies: [
+    "currency": [
     {
     code: "EUR",
     "name": "Euro",
     symbol: "€"
     }
     ],
-    languages: [
+    "language": [
     {
     iso639_1: "es",
     iso639_2: "spa",
@@ -1433,18 +1073,18 @@
     ],
     alpha2Code: "UY",
     "alphaCode": "URY",
-    callingCodes: [
+    "callingCode": [
     "598"
     ],
-    capital: "Montevideo",
+    "capital" "Montevideo",
     altSpellings: [
     "UY",
     "Oriental Republic of Uruguay",
     "República Oriental del Uruguay"
     ],
-    subregion: "South America",
-    region: "Americas",
-    population: 3473727,
+    sub"region": "South America",
+    "region": "Americas",
+    "population": 3473727,
     latlng: [
     -33,
     -56
@@ -1452,7 +1092,7 @@
     demonym: "Uruguayan",
     area: 181034,
     gini: 39.7,
-    timezones: [
+    "timezones": [
     "UTC-03:00"
     ],
     borders: [
@@ -1461,18 +1101,18 @@
     ],
     nativeName: "Uruguay",
     numericCode: "858",
-    flags: {
-    svg: "https://flagcdn.com/uy.svg",
-    png: "https://flagcdn.com/w320/uy.png"
+    "flags": {
+    "svg": "https://flagcdn.com/uy.svg",
+    "png": "https://flagcdn.com/w320/uy.png"
     },
-    currencies: [
+    "currency": [
     {
     code: "UYU",
     "name": "Uruguayan peso",
     symbol: "$"
     }
     ],
-    languages: [
+    "language": [
     {
     iso639_1: "es",
     iso639_2: "spa",
@@ -1521,18 +1161,18 @@
     ],
     alpha2Code: "VE",
     "alphaCode": "VEN",
-    callingCodes: [
+    "callingCode": [
     "58"
     ],
-    capital: "Caracas",
+    "capital" "Caracas",
     altSpellings: [
     "VE",
     "Bolivarian Republic of Venezuela",
     "República Bolivariana de Venezuela"
     ],
-    subregion: "South America",
-    region: "Americas",
-    population: 28435943,
+    sub"region": "South America",
+    "region": "Americas",
+    "population": 28435943,
     latlng: [
     8,
     -66
@@ -1540,7 +1180,7 @@
     demonym: "Venezuelan",
     area: 916445,
     gini: 44.8,
-    timezones: [
+    "timezones": [
     "UTC-04:00"
     ],
     borders: [
@@ -1550,18 +1190,18 @@
     ],
     nativeName: "Venezuela",
     numericCode: "862",
-    flags: {
-    svg: "https://flagcdn.com/ve.svg",
-    png: "https://flagcdn.com/w320/ve.png"
+    "flags": {
+    "svg": "https://flagcdn.com/ve.svg",
+    "png": "https://flagcdn.com/w320/ve.png"
     },
-    currencies: [
+    "currency": [
     {
     code: "VEF",
     "name": "Venezuelan bolívar",
     symbol: "Bs S"
     }
     ],
-    languages: [
+    "language": [
     {
     iso639_1: "es",
     iso639_2: "spa",
@@ -1610,24 +1250,24 @@
     ],
     alpha2Code: "EH",
     "alphaCode": "ESH",
-    callingCodes: [
+    "callingCode": [
     "212"
     ],
-    capital: "El Aaiún",
+    "capital" "El Aaiún",
     altSpellings: [
     "EH",
     "Taneẓroft Tutrimt"
     ],
-    subregion: "Northern Africa",
-    region: "Africa",
-    population: 510713,
+    sub"region": "Northern Africa",
+    "region": "Africa",
+    "population": 510713,
     latlng: [
     24.5,
     -13
     ],
     demonym: "Sahrawi",
     area: 266000,
-    timezones: [
+    "timezones": [
     "UTC+00:00"
     ],
     borders: [
@@ -1637,11 +1277,11 @@
     ],
     nativeName: "الصحراء الغربية",
     numericCode: "732",
-    flags: {
-    svg: "https://flagcdn.com/eh.svg",
-    png: "https://flagcdn.com/w320/eh.png"
+    "flags": {
+    "svg": "https://flagcdn.com/eh.svg",
+    "png": "https://flagcdn.com/w320/eh.png"
     },
-    currencies: [
+    "currency": [
     {
     code: "MAD",
     "name": "Moroccan dirham",
@@ -1653,7 +1293,7 @@
     symbol: "د.ج"
     }
     ],
-    languages: [
+    "language": [
     {
     iso639_1: "es",
     iso639_2: "spa",
