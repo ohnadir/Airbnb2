@@ -54,7 +54,7 @@ export default function Card() {
                     <Link  href={`/id/${item.id}`}>
                         <div key={item.id} className={style.cardItem}>
                             <div className="relative">
-                                <div className="absolute  text-white transition-all hover:text-[#717175] z-50 right-2 top-2"><IoMdHeartEmpty className="text-2xl" onClick={handleWish}/></div>
+                                <div style={{"zIndex":"1"}} className="absolute  text-white transition-all hover:text-[#717175] right-2 top-2"><IoMdHeartEmpty className="text-2xl" onClick={handleWish}/></div>
                                 <Slider {...settings}>
                                     {
                                         item.img.map((another)=>

@@ -25,9 +25,9 @@ const Navbar = () => {
     ]);
     const [openOptions, setOpenOptions] = useState(false);
     const [options, setOptions] = useState({
-        adult: 0,
+        adult: 1,
         children: 0,
-        room: 0,
+        room: 1,
     });
     const handleOption = (name, operation) => {
         setOptions((prev) => {
@@ -94,7 +94,7 @@ const Navbar = () => {
                     <div className='flex gap-5 items-center'>
                          <div className={styles.userMenu} onClick={()=>setDropdown(!dropdown)}>
                             <BiMenu className='cursor-pointer text-2xl '/>
-                            <span onClick={()=>setCartOpen(true)} >
+                            <span >
                                 <FaUserCircle className=' text-3xl ' />
                             </span>
                         </div>
@@ -139,15 +139,12 @@ const Navbar = () => {
                             {
                                 openDate && (
                                     <DateRange
-                                        // editableDateInputs={true}
-                                        onChange={(item) => setDate([item.selection])}
-                                        // showSelectionPreview={true}
-                                        // moveRangeOnFirstSelection={false}
-                                        months={2}
-                                        ranges={date}
-                                        direction="horizontal"
-                                        className={styles.date}
-                                        // minDate={new Date()}
+                                    editableDateInputs={true}
+                                    onChange={(item) => setDate([item.selection])}
+                                    moveRangeOnFirstSelection={false}
+                                    ranges={date}
+                                    className="date"
+                                    minDate={new Date()}
                                     />
                                 )
                             }
