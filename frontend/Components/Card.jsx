@@ -13,7 +13,7 @@ export default function Card() {
     const ArrowLeft = (props) => (
         <button
             {...props}
-            style={{visibility:props?.currentSlide === 5 ? "hidden" : "visible"}}
+            style={{visibility:props?.currentSlide === 0 ? "hidden" : "visible"}}
             className={style.prev}>
             <BiChevronLeft/>
         </button>
@@ -21,7 +21,7 @@ export default function Card() {
     const ArrowRight = (props) => (
         <button
             {...props}
-            style={{visibility:props?.currentSlide === 5 ? "hidden" : "visible"}}
+            style={{visibility:props?.currentSlide === 4 ? "hidden" : "visible"}}
             className={style.next}>
             <BiChevronRight/>
         </button>
