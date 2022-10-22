@@ -48,7 +48,7 @@ export default function Card() {
         <div className={style.locationTiger}>
             <div className={style.location} >Show map <BsFillMapFill /></div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 sm:grid-cols-2">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:grid-cols-2">
             {
                 palace.map((item)=> 
                     <Link  href={`/id/${item.id}`}>
@@ -64,16 +64,16 @@ export default function Card() {
                                 </Slider>
                             </div>
                             <div className="flex mt-3 items-center justify-between  font-bold">
-                                <p className="m-0 text-[15px] ">{item.name}</p>
+                                <p style={{"fontSize":"16px"}}  className="m-0">{item.name}</p>
                                 <div className="flex items-center gap-1">
                                     <FaStar className="text-[13px]"/>
                                     <span className="text-[14px] font-semibold">{item.rating}</span>
                                 </div>
                             </div>
-                            <p className="m-0 text-[15px] text-[#717175]">3,390 kilometers away</p>
-                            <p className="m-0 text-[15px] text-[#717175]">Nov 7-12</p>
+                            <p style={{"fontSize":"15px", "color": "#717175"}} className="m-0">3,390 kilometers away</p>
+                            <p style={{"fontSize":"15px", "color": "#717175"}} className="m-0">Nov 7-12</p>
                             <div className="flex items-center gap-1">
-                                <span className="text-[15px] font-semibold">${item.price} AUD</span>
+                                <span className="text-[16px] font-bold">${item.price} AUD</span>
                                 <span>night</span>
                             </div>
                         </div>
