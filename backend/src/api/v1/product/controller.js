@@ -2,6 +2,7 @@ const { Product } = require('../models');
 const  ErrorHandler = require('../utils/ErrorHandler');
 const  catchAsyncErrors = require('../middleware/catchAsyncErrors');
 const APIFeatures = require('../utils/APIFeatures');
+// const product = require('../firebase.init')
 
 exports.addProduct = catchAsyncErrors(async (req, res, next) => {
   const { name,price,quantity,desc, productPictures,category } = req.body;

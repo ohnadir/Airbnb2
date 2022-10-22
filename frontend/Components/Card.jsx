@@ -7,7 +7,6 @@ import { IoMdHeartEmpty } from 'react-icons/io';
 import palace from './place.json';
 import { message } from 'antd';
 import Link from "next/link";
-import Category from "./category";
 
 export default function Card() {
     const ArrowLeft = (props) => (
@@ -54,7 +53,9 @@ export default function Card() {
                     <Link  href={`/id/${item.id}`}>
                         <div key={item.id} className={style.cardItem}>
                             <div className="relative">
-                                <div style={{"zIndex":"1"}} className="absolute  text-white transition-all hover:text-[#717175] right-2 top-2"><IoMdHeartEmpty className="text-2xl" onClick={handleWish}/></div>
+                                <div style={{"zIndex":"1"}} className="absolute  text-white transition-all hover:text-[#717175] right-2 top-2">
+                                    <IoMdHeartEmpty className="text-2xl" onClick={handleWish}/>
+                                </div>
                                 <Slider {...settings}>
                                     {
                                         item.img.map((another)=>

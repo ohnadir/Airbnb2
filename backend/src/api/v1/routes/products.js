@@ -4,7 +4,6 @@ const {
   updateProduct,
   deleteProduct,
   getProducts,
-  searchProduct,
   getSingleProduct,
 } = require('../product/controller');
 
@@ -31,8 +30,6 @@ router.patch(
 router.delete('/:id', idValidator, validationResult, deleteProduct);
 
 router.get('/', getProducts);
-
-router.get('/search', searchProduct);
 
 router.get('/:id', idValidator, validationResult, getSingleProduct);
 

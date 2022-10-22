@@ -3,7 +3,7 @@ const crypto = require('crypto');
 const ErrorHandler = require('../utils/errorHandler');
 const catchAsyncErrors = require('../middleware/catchAsyncErrors');
 const sendToken = require('../utils/jwtToken')
-const sendEmail = require('../utils/sendEmail')
+const sendEmail = require('../utils/sendEmail');
 
 exports.userRegister = catchAsyncErrors(async (req, res, next)=> {
   const { firstName, lastName, password, email, phone, role } = body;
@@ -37,7 +37,7 @@ exports.userRegister = catchAsyncErrors(async (req, res, next)=> {
 });
 
 exports.userLogin = catchAsyncErrors(async (req, res, next) => {
-  const { email, password, res } = req.body;
+  const { email, password } = req.body;
 
   const user = await User.findOne({ email });
 
