@@ -31,6 +31,6 @@ router.delete('/:id', idValidator, validationResult, deleteProduct);
 
 router.get('/', getProducts);
 
-router.get('/:id', idValidator, validationResult, getSingleProduct);
+router.get('/:id',  getSingleProduct);
 
 module.exports = router;

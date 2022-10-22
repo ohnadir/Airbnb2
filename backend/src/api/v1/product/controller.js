@@ -1,13 +1,14 @@
-const { Product } = require('../models');
+// const { Product } = require('../models');
 const  ErrorHandler = require('../utils/ErrorHandler');
 const  catchAsyncErrors = require('../middleware/catchAsyncErrors');
 const APIFeatures = require('../utils/APIFeatures');
-// const product = require('../firebase.init')
+const product = require('../firebaseConfig')
 
 exports.addProduct = catchAsyncErrors(async (req, res, next) => {
-  const { name,price,quantity,desc, productPictures,category } = req.body;
+  // const { name,price,quantity,desc, productPictures,category } = req.body;
+  const data = req.body;
 
-  const isNameExist = await Product.findOne({ name });
+ /*  const isNameExist = await Product.findOne({ name });
   if (isNameExist) {
     return next(new ErrorHandler('Name Already Taken', 422))
   }
@@ -19,13 +20,15 @@ exports.addProduct = catchAsyncErrors(async (req, res, next) => {
     productPictures,
     category
   });
-  await newProduct.save();
+  await newProduct.save(); */
+  // const data = req.body;
+  await product.add({ data });
 
   res.status(200).json({
     Success: true,
     statusCode:200,
     message:"Add Product Successfully",
-    data: newProduct
+    data: product
   })
 });
 
@@ -84,8 +87,7 @@ exports.deleteProduct = catchAsyncErrors(async (req, res, next) => {
 
 // Get all products   =>   /api/v1/products?keyword=apple
 exports.getProducts = catchAsyncErrors(async (req, res, next) => {
-
-  const resPerPage = 4;
+  /* const resPerPage = 4;
   const productsCount = await Product.countDocuments();
 
   const apiFeatures = new APIFeatures(Product.find(), req.query)
@@ -96,30 +98,31 @@ exports.getProducts = catchAsyncErrors(async (req, res, next) => {
   let filteredProductsCount = products.length;
 
   apiFeatures.pagination(resPerPage)
-  products = await apiFeatures.query;
+  products = await apiFeatures.query; */
+  const snapshot = await product.get();
+  const list = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
 
 
   res.status(200).json({
-      success: true,
-      productsCount,
-      resPerPage,
-      filteredProductsCount,
-      products
+    success: true,
+    list
   })
 
 })
 
 // Get single product details   =>   /api/v1/product/:id
 exports.getSingleProduct = catchAsyncErrors(async (req, res, next) => {
+  const id = req.params.id;
+  const snapshot = await product.get();
+  const products = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
+  const singleProduct =  products.find((item)=> item.id === id);
 
-  const product = await Product.findById(req.params.id);
-  
-  if (!product) {
+  if (!singleProduct) {
     return next(new ErrorHandler('Product not found', 404));
   }
   res.status(200).json({
-      success: true,
-      product
+    success: true,
+    singleProduct
   })
 })
 

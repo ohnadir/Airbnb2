@@ -1,7 +1,5 @@
-const { Schema, model } = require('mongoose');
+/* const { Schema, model } = require('mongoose');
 const mongoose = require("mongoose");
-
-
 const productSchema = Schema(
   {
     name: { type: String, required: true, trim: true },
@@ -32,4 +30,4 @@ const productSchema = Schema(
   { timestamps: true }
 );
 
-module.exports = model('product', productSchema);
+module.exports = model('product', productSchema); */
