@@ -10,6 +10,7 @@ import Link from "next/link";
 import { useDispatch, useSelector } from 'react-redux'
 import { useEffect } from "react";
 import { getProducts, clearErrors } from '../actions/productActions'
+import spin from '../Components/Loading'
 
 export default function Card() {
     const dispatch = useDispatch();
@@ -52,46 +53,53 @@ export default function Card() {
     }, [dispatch])
     
   return (
-    <div className="max-w-7xl mx-auto px-4 mt-8 mb-8">
-        {/* <Category/> */}
-        <div className={style.locationTiger}>
-            <div className={style.location} >Show map <BsFillMapFill /></div>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:grid-cols-2">
-            {
-                products?.data?.map((item)=> 
-                    <Link  href={`/id/${item.id}`}>
-                        <div key={item.id} className={style.cardItem}>
-                            <div className="relative">
-                                <div style={{"zIndex":"1"}} className="absolute  text-white transition-all hover:text-[#717175] right-2 top-2">
-                                    <IoMdHeartEmpty className="text-2xl" onClick={handleWish}/>
+    <>
+    {
+        loading ? <spin></spin> 
+        :
+        
+            <div className="max-w-7xl mx-auto px-4 mt-8 mb-8">
+            {/* <Category/> */}
+            <div className={style.locationTiger}>
+                <div className={style.location} >Show map <BsFillMapFill /></div>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:grid-cols-2">
+                {
+                    products?.data?.map((item)=> 
+                        <Link   href="/id/[id]" as={`/id/${item.id}`}>
+                            <div key={item.id} className={style.cardItem}>
+                                <div className="relative">
+                                    <div style={{"zIndex":"1"}} className="absolute  text-white transition-all hover:text-[#717175] right-2 top-2">
+                                        <IoMdHeartEmpty className="text-2xl" onClick={handleWish}/>
+                                    </div>
+                                    <Slider {...settings}>
+                                        {
+                                            item.img.map((another)=>
+                                            <img key={another.id} className=" rounded-xl" src={another} alt="" />
+                                            )
+                                        }
+                                    </Slider>
                                 </div>
-                                <Slider {...settings}>
-                                    {
-                                        item.img.map((another)=>
-                                        <img key={another.id} className=" rounded-xl" src={another} alt="" />
-                                        )
-                                    }
-                                </Slider>
-                            </div>
-                            <div className="flex mt-3 items-center justify-between  font-bold">
-                                <p style={{"fontSize":"16px"}}  className="m-0">{item.name}</p>
+                                <div className="flex mt-3 items-center justify-between  font-bold">
+                                    <p style={{"fontSize":"16px"}}  className="m-0">{item.name}</p>
+                                    <div className="flex items-center gap-1">
+                                        <FaStar className="text-[13px]"/>
+                                        <span className="text-[14px] font-semibold">{item.rating}</span>
+                                    </div>
+                                </div>
+                                <p style={{"fontSize":"15px", "color": "#717175"}} className="m-0">3,390 kilometers away</p>
+                                <p style={{"fontSize":"15px", "color": "#717175"}} className="m-0">Nov 7-12</p>
                                 <div className="flex items-center gap-1">
-                                    <FaStar className="text-[13px]"/>
-                                    <span className="text-[14px] font-semibold">{item.rating}</span>
+                                    <span className="text-[16px] font-bold">${item.price} AUD</span>
+                                    <span>night {products?.length}</span>
                                 </div>
                             </div>
-                            <p style={{"fontSize":"15px", "color": "#717175"}} className="m-0">3,390 kilometers away</p>
-                            <p style={{"fontSize":"15px", "color": "#717175"}} className="m-0">Nov 7-12</p>
-                            <div className="flex items-center gap-1">
-                                <span className="text-[16px] font-bold">${item.price} AUD</span>
-                                <span>night {products?.length}</span>
-                            </div>
-                        </div>
-                    </Link>
-                )
-            }
+                        </Link>
+                    )
+                }
+            </div>
         </div>
-    </div>
+    }
+    </>
   )
 }
