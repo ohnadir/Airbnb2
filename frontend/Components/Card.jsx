@@ -10,12 +10,11 @@ import Link from "next/link";
 import { useDispatch, useSelector } from 'react-redux'
 import { useEffect } from "react";
 import { getProducts, clearErrors } from '../actions/productActions'
-import spin from '../Components/Loading'
+import Spinner from '../Components/Loading'
 
 export default function Card() {
     const dispatch = useDispatch();
     const { loading, products, error } = useSelector(state => state.products);
-    console.log(products.data);
     const ArrowLeft = (props) => (
         <button
             {...props}
@@ -55,7 +54,7 @@ export default function Card() {
   return (
     <>
     {
-        loading ? <spin></spin> 
+        loading ? <spinner></spinner> 
         :
         
             <div className="max-w-7xl mx-auto px-4 mt-8 mb-8">

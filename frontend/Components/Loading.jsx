@@ -4,7 +4,7 @@ import style from "../styles/spin.module.css"
 
 export const Loading = () => {
   return (
-    <div style={style.spin}>
+    <div style={style.spinContainer}>
         <Spin />
     </div>
   )

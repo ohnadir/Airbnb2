@@ -8,6 +8,11 @@
     /* align-items: center; */
     gap: 20px;
 }
+.image{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
 
 .imageContainer img:hover{
     opacity: 0.8;
@@ -26,6 +31,13 @@
     width: 100%;
     /* border-top: 1px solid #b0b0b0; */
     
+}
+.checkHead{
+    font-size: 11px;
+    font-weight: 700;
+}
+.checkFooter{
+    font-size: 16px;
 }
 .guest p{
     padding: 0;
@@ -99,6 +111,7 @@
     display: flex;
     list-style-position: inside;
     margin: 0;
+    font-size: 15px;
 }
 .seatOption li{
 }
