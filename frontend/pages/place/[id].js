@@ -1,4 +1,4 @@
-import style from '../styles/book.module.css';
+import style from '../../styles/book.module.css';
 // import { IoChevronDownSharp } from 'react-icons/io';
 import { IoIosArrowUp } from 'react-icons/io';
 import { AiOutlineStar } from 'react-icons/ai';
@@ -11,17 +11,19 @@ import { TbPool, TbWorld } from 'react-icons/tb';
 import { FaAirbnb } from 'react-icons/fa';
 import { RiAlarmWarningFill } from 'react-icons/ri';
 import { BiChevronRight } from 'react-icons/bi';
-import MetaData from '../Components/Meta';
-import { useState } from 'react';
+import MetaData from '../../Components/Meta';
+import { useEffect, useState } from 'react';
 import { Modal } from 'antd';
 import { DateRange, DateRangePicker } from "react-date-range";
-import Footer from '../Components/Footer';
-import { useRouter } from 'next/router'
+import { useRouter } from 'next/router';
+import { useDispatch, useSelector } from 'react-redux'
+import { getProductDetails, clearErrors } from '../../actions/productActions'
 
 export default function Book() {
     const router = useRouter()
-    const { pid } = router.query;
-    console.log(pid);
+    const { id } = router.query;
+    const dispatch = useDispatch();
+    console.log(id);
     const [open, setOpen] = useState(false);
     const [service, setService] = useState(false);
     const [state, setState] = useState([
@@ -31,13 +33,16 @@ export default function Book() {
           key: 'selection'
         }
       ]);
+      useEffect(() => {
+        dispatch(getProductDetails(id));
+      }, [dispatch]);
     return (
       <div className="max-w-7xl mx-auto px-10 mt-10">
         <MetaData title={'Book'} />
         <div>
             <div>
                 <h1 className={style.headerName}>Adaaran Club Rannalhi, Maldives, Silver All Inclu.</h1>
-                <p className="underline cursor-pointer text-[15px]">Maldives</p>
+                <p className="underline cursor-pointer text-[15px]">Maldives {id}</p>
             </div>
             <div className={style.imageContainer} id='imageContainer'>
                 <div className="max-h-full w-[50%]">
