@@ -7,9 +7,14 @@ import { IoMdHeartEmpty } from 'react-icons/io';
 import palace from './place.json';
 import { message } from 'antd';
 import Link from "next/link";
-
+import { useDispatch, useSelector } from 'react-redux'
+import { useEffect } from "react";
+import { getProducts, clearErrors } from '../actions/productActions'
 
 export default function Card() {
+    const dispatch = useDispatch();
+    const { loading, products, error } = useSelector(state => state.products);
+    console.log(products.data);
     const ArrowLeft = (props) => (
         <button
             {...props}
@@ -42,6 +47,10 @@ export default function Card() {
     const handleWish=()=>{
         message.info("Added on Wish list");
     }
+    useEffect(() => {
+      dispatch(getProducts())
+    }, [dispatch])
+    
   return (
     <div className="max-w-7xl mx-auto px-4 mt-8 mb-8">
         {/* <Category/> */}
@@ -50,7 +59,7 @@ export default function Card() {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:grid-cols-2">
             {
-                palace.map((item)=> 
+                products?.data?.map((item)=> 
                     <Link  href={`/id/${item.id}`}>
                         <div key={item.id} className={style.cardItem}>
                             <div className="relative">
@@ -76,7 +85,7 @@ export default function Card() {
                             <p style={{"fontSize":"15px", "color": "#717175"}} className="m-0">Nov 7-12</p>
                             <div className="flex items-center gap-1">
                                 <span className="text-[16px] font-bold">${item.price} AUD</span>
-                                <span>night</span>
+                                <span>night {products?.length}</span>
                             </div>
                         </div>
                     </Link>

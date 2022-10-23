@@ -1,5 +1,4 @@
 import axios from 'axios';
-
 import {
     ALL_PRODUCTS_REQUEST,
     ALL_PRODUCTS_SUCCESS,
@@ -16,15 +15,16 @@ export const getProducts = () => async (dispatch) => {
             type:ALL_PRODUCTS_REQUEST
         })
         const { data } = await axios.get('http://localhost:5001/api/v1/products');
+        console.log(data)
         dispatch({
             type: ALL_PRODUCTS_SUCCESS,
-            payload:data.products
+            payload:data
         })
     }
     catch (error) {
         dispatch({
             type: ALL_PRODUCTS_FAIL,
-            payload: error.response.data.message
+            payload: error.response?.data.message
         })
     }
 }

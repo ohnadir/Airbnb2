@@ -5,30 +5,19 @@ const APIFeatures = require('../utils/APIFeatures');
 const product = require('../firebaseConfig')
 
 exports.addProduct = catchAsyncErrors(async (req, res, next) => {
-  // const { name,price,quantity,desc, productPictures,category } = req.body;
-  const data = req.body;
-
- /*  const isNameExist = await Product.findOne({ name });
-  if (isNameExist) {
-    return next(new ErrorHandler('Name Already Taken', 422))
-  }
-  const newProduct = new Product({
+  const { name, img, price, rating, quantity } = req.body;
+  await product.add({
     name,
+    img,
     price,
-    quantity,
-    desc,
-    productPictures,
-    category
+    rating,
+    quantity
   });
-  await newProduct.save(); */
-  // const data = req.body;
-  await product.add({ data });
 
   res.status(200).json({
     Success: true,
-    statusCode:200,
-    message:"Add Product Successfully",
-    data: product
+    statusCode: 200,
+    message:"Add Product Successfully"
   })
 });
 
@@ -100,12 +89,12 @@ exports.getProducts = catchAsyncErrors(async (req, res, next) => {
   apiFeatures.pagination(resPerPage)
   products = await apiFeatures.query; */
   const snapshot = await product.get();
-  const list = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
+  const products = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
 
 
   res.status(200).json({
     success: true,
-    list
+    data:products
   })
 
 })
