@@ -8,6 +8,7 @@ import palace from './place.json';
 import { message } from 'antd';
 import Link from "next/link";
 
+
 export default function Card() {
     const ArrowLeft = (props) => (
         <button
