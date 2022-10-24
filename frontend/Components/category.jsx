@@ -88,8 +88,8 @@ export default function Category() {
           ],
     }
   return (
-    <div className='max-w-7xl mx-auto px-4 mt-5  overflow-y-hidden'>
-        <div className='flex items-center gap-10 justify-between'>
+    <div style={{"top" : "86px"}} className='max-w-7xl mx-auto px-4 mt-5  overflow-y-hidden  sticky  z-50 bg-white'>
+        <div className='flex items-center gap-10 justify-between pt-5'>
             <div className='relative  px-8 w-[80%] overflow-y-hidden'>
                 <Slider {...settings}>
                     {

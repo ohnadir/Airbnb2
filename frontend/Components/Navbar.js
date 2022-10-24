@@ -8,12 +8,18 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { DateRange } from "react-date-range";
 import { format } from "date-fns";
+import { CgOptions } from 'react-icons/cg';
+import { BiSearch } from 'react-icons/bi';
+import { Modal } from 'antd';
+import { RiCloseFill } from 'react-icons/ri';
+
 
 
 const Navbar = () => {
     // const navigate = useNavigate();
     const [open, setOpen] = useState(false);
     const [dropdown, setDropdown] = useState(false);
+    const [filterOpen, setFilterOpen] = useState(false)
     const [destination, setDestination] = useState("");
     const [openDate, setOpenDate] = useState(false);
     const [date, setDate] = useState([
@@ -43,9 +49,10 @@ const Navbar = () => {
         
     </> */
     return (
-        <div className='border py-4 '>
+        <div className='border py-4 sticky top-0 z-50 bg-white'>
             <div className='max-w-7xl mx-auto px-2 relative'>
-                <div className='flex items-center justify-between text-black '>
+                <div className='hidden md:block'>
+                    <div className='flex items-center justify-between text-black '>
                     <div className='flex justify-start'>
                         <Image
                             className={styles.logo}
@@ -99,6 +106,23 @@ const Navbar = () => {
                             </span>
                         </div>
                         
+                    </div>
+                    </div>
+                </div>
+                <div className='block md:hidden'>
+                    <div className='flex justify-between items-center border px-4 rounded-full'>
+                        <div className='flex items-center gap-5'>
+                            <BiSearch className='text-2xl'/>
+                            <div className='py-2'>
+                                <h1 className='m-0'>Where to?</h1>
+                                <ul className='flex m-0'>
+                                    <span>Anywhere</span>
+                                    <li>Any week</li>
+                                    <li>Add guests</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <CgOptions onClick={()=>setFilterOpen(!filterOpen)} className='text-4xl cursor-pointer font-bold rounded-full border p-2' />
                     </div>
                 </div>
                 {
@@ -283,6 +307,57 @@ const Navbar = () => {
                         </ul>
                         
                     </div>
+                }
+                {
+                    filterOpen && <Modal
+                    // style={{padding:0}}
+                    centered
+                    open={filterOpen}
+                    width={870}
+                    closable={false}
+                    footer={false}
+                    className={{borderRadius:"30px"}}
+                    bodyStyle={{margin:"0", border:"none", padding:0  }}
+                >
+                    <div>
+                        <div className='border-b-[1px]'>
+                            <div className='flex items-center px-5 py-5'>
+                                <RiCloseFill onClick={() => setFilterOpen(false)} className='w-8 h-8  rounded-full hover:bg-gray-100 p-1 cursor-pointer'/>
+                                <p className='m-0 mx-auto font-bold text-lg '>Filters</p>
+                            </div>
+                        </div>
+                        <div className='px-5 mt-10'>
+                            <p className={styles.pHeading}>Price range</p>
+                            <div className={styles.divider}>
+                                <p className=''></p>
+                            </div>
+                            <div className='grid lg:grid-cols-2 gap-5 mt-[25px]'>
+                                <div>
+                                    <h1 className={styles.heading}>Booking Protection Guarantee</h1>
+                                    <p className={styles.pHeading}>In the unlikely event a Host needs to cancel your booking within 30 days of check-in, we’ll find you a similar or better home, or we’ll refund you.</p>
+                                </div>
+                                <div>
+                                    <h1 className={styles.heading}>Check-In Guarantee</h1>
+                                    <p className={styles.pHeading}>If you can’t check into your home and the Host cannot resolve the issue, 
+                                        we’ll find you a similar or better home for the length of your original stay, or we’ll refund you.
+                                    </p>
+                                </div>
+                                <div>
+                                    <h1 className={styles.heading}>Get-What-You-Booked Guarantee</h1>
+                                    <p className={styles.pHeading}>If at any time during your stay you find your listing isn't as advertised—for example, 
+                                        the refrigerator stops working and your Host can’t easily fix it, or it has fewer bedrooms than listed—you'll have 
+                                        three days to report it and we’ll find you a similar or better home, or we’ll refund you.
+                                    </p>
+                                </div>
+                                <div>
+                                    <h1 className={styles.heading}>24-hour Safety Line</h1>
+                                    <p className={styles.pHeading}>If you ever feel unsafe, you’ll get priority access to specially-trained safety agents, day or night.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    </Modal>
                 }
             </div>
         </div>
