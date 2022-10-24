@@ -17,6 +17,7 @@ import { useRouter } from 'next/router';
 import { useDispatch, useSelector } from 'react-redux'
 import { getProductDetails, clearErrors } from '../../actions/productActions'
 import { Spin } from 'antd';
+import Slider from "react-slick";
 
 export default function Book() {
     const router = useRouter()
@@ -41,15 +42,22 @@ export default function Book() {
     }, [dispatch, error]);
     const name = product?.name?.split(',')[1];
     const name2 = product?.name?.split(',')[0];
-    const subTotal = parseInt(product.price) * parseInt(2);
+    const subTotal = parseInt(product?.price) * parseInt(2);
     const total = parseInt(subTotal) + parseInt(24);
+    const settings = {
+        dots: false,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1
+      };
     
     return (
         <>
             { 
                 loading ? <Spin className={style.spinContainer} /> :
             
-                <div className="max-w-7xl mx-auto px-10 mt-10">
+                <div className="max-w-7xl mx-auto px-2 md:px-10 mt-10">
                     <MetaData title={'Book'} />
 
                     <div>
@@ -57,35 +65,49 @@ export default function Book() {
                             <h1 className={style.headerName}>{name2}</h1>
                             <p className="underline cursor-pointer text-base">{name}</p>
                         </div>
-                        <div className={style.imageContainer} id='imageContainer'>
-                            <div className={style.bigSize}>
-                                {
-                                    product?.img ? <img src={product?.img[0]}  alt=""/> : ""
-                                }
+                        <section className='imageContainer'>
+                            <div className={style.desktopVersion}>
+                                <div className={style.imageContainer} id='imageContainer'>
+                                    <div className={style.bigSize}>
+                                        {
+                                            product?.img ? <img src={product?.img[0]}  alt=""/> : ""
+                                        }
+                                    </div>
+                                    <div className={style.image}>
+                                        <div>
+                                            {
+                                                product?.img ? <img className="" src={product?.img[1]}  alt=""/> : ""
+                                            }
+                                        </div>
+                                        <div>
+                                            {
+                                                product?.img ? <img className={style.topCorner} src={product?.img[2]}  alt=""/> : ""
+                                            }
+                                        </div>
+                                        <div>
+                                            {
+                                                product?.img ? <img className="" src={product?.img[3]}  alt=""/> : ""
+                                            }
+                                        </div>
+                                        <div>
+                                            {
+                                                product?.img ? <img className={style.bottomCorner} src={product?.img[4]}  alt=""/> : ""
+                                            }
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div className={style.image}>
-                                <div>
-                                    {
-                                        product?.img ? <img className="" src={product?.img[1]}  alt=""/> : ""
-                                    }
-                                </div>
-                                <div>
-                                    {
-                                        product?.img ? <img className={style.topCorner} src={product?.img[2]}  alt=""/> : ""
-                                    }
-                                </div>
-                                <div>
-                                    {
-                                        product?.img ? <img className="" src={product?.img[3]}  alt=""/> : ""
-                                    }
-                                </div>
-                                <div>
-                                    {
-                                        product?.img ? <img className={style.bottomCorner} src={product?.img[4]}  alt=""/> : ""
-                                    }
+                            
+                            <div className={style.mobileVersion}>
+                                <div className=''>
+                                    <Slider {...settings}>
+                                        {
+                                            product?.img?.map((img)=> <img className='overflow-y-hidden' src={img} alt=""/>)
+                                        }
+                                    </Slider>
                                 </div>
                             </div>
-                        </div>
+                        </section>
                         <div className='flex justify-between mt-20'>
                             <div className='w-full md:w-3/5'>
                                 <div className='flex justify-between items-center '>
@@ -193,10 +215,12 @@ export default function Book() {
 
                                     <div>
                                         <DateRange
+                                            style={{display: DateRange.rdrInputRanges ?  "none" : ""}}
                                             editableDateInputs={true}
                                             onChange={item => setState([item.selection])}
                                             moveRangeOnFirstSelection={false}
                                             ranges={state}
+                                            
                                         />
                                     </div>
                                     
@@ -330,10 +354,10 @@ export default function Book() {
                                         <p className='m-0 text-base '>Response rate: 83%</p>
                                         <p className='m-0 text-base '>Response time: within a day</p>
                                     </div>
-                                    <button style={{"border" : "1px solid #222222"}} className='my-5 py-2 px-6 text-[16px] font-bold rounded-lg' type="">Contact Host</button>
-                                    <div className='flex items-center gap-3'>
+                                    <button style={{"border" : "1px solid #222222"}} className='my-5 py-2 w-full md:w-36  text-base font-bold rounded-lg' type="">Contact Host</button>
+                                    <div className='flex  items-center gap-3 w-full'>
+                                        <p className='m-0 text-sm'>To protect your payment, never transfer   money or communicate outside of the Airbnb   website or app.</p>
                                         <FaAirbnb className={style.airBnb } />
-                                        <p className='m-0 text-sm'>To protect your payment, never transfer <br/>  money or communicate outside of the Airbnb <br/>  website or app.</p>
                                     </div>
                                 </div>
                             </div>
@@ -343,19 +367,19 @@ export default function Book() {
                         </div>
                         <section className='hostedSection my-10'>
                             <h2 className='text-2xl font-bold font-sans m-0'>Things to know</h2>
-                            <div className='flex justify-between mt-3'>
+                            <div className='flex flex-col md:flex-row gap-10 justify-between mt-3'>
                                 <div className='w-1/3'>
                                     <h2 className='mb-2 text-lg font-bold  m-0'>House rules</h2>
                                     <BsClockFill className='text-lg'/>
                                 </div>
                                 <div className='w-1/3'>
                                     <h2 className='mb-2 text-lg  font-bold m-0'>Health & safety</h2>
-                                    <span className='flex  gap-3 text-[15px] text-base mb-1'><BsStars className='text-xl'/>  Airbnb's COVID-19 safety <br/> practices apply</span>
+                                    <span className='flex  gap-3 text-[15px] text-base mb-1'><BsStars className='text-xl'/>  Airbnb's COVID-19 safety  practices apply</span>
                                     <span className='flex items-center gap-3 text-base mb-1'><RiAlarmWarningFill className='text-xl'/> Carbon monoxide alarm</span> 
                                     <span className='flex items-center gap-3 text-base mb-1'> <RiAlarmWarningFill className='text-xl'/> Smoke alarm</span> 
                                     <h3 className='underline font-bold flex items-center text-base'>Show more <BiChevronRight className='text-xl mt-1'/></h3>
                                 </div>
-                                <div className='w-1/3'>
+                                <div className='w-full  md:w-1/3'>
                                     <h2 className='mb-2 text-lg  font-bold  m-0'>Cancellation policy</h2>
                                     <p className='text-base'>Cancel before Oct 13 for a partial refund.</p>
                                     <p className='text-base'>Review the Host’s full cancellation policy which applies even if you cancel for illness or disruptions caused by COVID-19.</p>
@@ -421,7 +445,23 @@ export default function Book() {
                                 <p></p>
                             </div>
                         </section>
+                        
                     </div>
+                    <section className='mobileNavbar'>
+                        <div className={style.mobileContainer}>
+                            <div className={style.mobileSection}>
+                                <div>
+                                    <span className='text-base font-bold'>${product.price} AUD</span> <span>night</span>
+                                    <div className='flex items-center gap-1'>
+                                        <FaStar className=""/>
+                                        <span className=" font-semibold">{product?.rating}</span>
+                                    </div>  
+                                </div>
+                                <button className={style.mobileBtn} type="">Check availability</button>
+                            </div>
+                        </div>
+                        {/* <button className={style.reserveBtn} type="">Reserve</button> */}
+                    </section>
                     {
                         open && <Modal
                         // style={{padding:0}}

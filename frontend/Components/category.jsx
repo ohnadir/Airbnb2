@@ -57,8 +57,35 @@ export default function Category() {
         arrows: true,
         prevArrow: <ArrowLeft />,
         nextArrow: <ArrowRight />,
-        slidesToShow: 8,
-        slidesToScroll: 8
+        slidesToShow: 10,
+        slidesToScroll: 10,
+        initialSlide: 0,
+        responsive: [
+            {
+              breakpoint: 1024,
+              settings: {
+                slidesToShow: 6,
+                slidesToScroll: 6,
+                infinite: true,
+                dots: true
+              }
+            },
+            {
+              breakpoint: 600,
+              settings: {
+                slidesToShow: 4,
+                slidesToScroll: 4,
+                initialSlide: 2
+              }
+            },
+            {
+              breakpoint: 480,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2
+              }
+            }
+          ],
     }
   return (
     <div className='max-w-7xl mx-auto px-4 mt-5  overflow-y-hidden'>
@@ -78,7 +105,7 @@ export default function Category() {
                     }
                 </Slider>
             </div>
-            <div className='w-[10%] '>
+            <div className='w-[10%] hidden sm:block'>
                 <div onClick={()=>setOpen(!open)} className='cursor-pointer flex items-center gap-1 font-semibold border rounded-lg max-w-fit px-5 py-2'>
                     <CgOptions/> <span>Filter</span>
                 </div>
