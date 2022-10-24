@@ -21,6 +21,7 @@ const Navbar = () => {
     const [dropdown, setDropdown] = useState(false);
     const [filterOpen, setFilterOpen] = useState(false)
     const [destination, setDestination] = useState("");
+    const [show, setShow] = useState(true);
     const [openDate, setOpenDate] = useState(false);
     const [date, setDate] = useState([
         {

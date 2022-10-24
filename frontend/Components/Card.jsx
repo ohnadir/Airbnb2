@@ -1,4 +1,4 @@
-import { BiChevronRight, BiChevronLeft } from "react-icons/bi";
+import { BiChevronRight, BiChevronLeft, BiSearch, BiHeart, BiUserCircle } from "react-icons/bi";
 import Slider from "react-slick";
 import style from '../styles/Home.module.css'
 import { FaStar } from 'react-icons/fa';
@@ -8,11 +8,12 @@ import palace from './place.json';
 import { message } from 'antd';
 import Link from "next/link";
 import { useDispatch, useSelector } from 'react-redux'
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { getProducts, clearErrors } from '../actions/productActions'
 import { Spin } from 'antd';
 
 export default function Card() {
+    const [show, setShow] = useState(true);
     const dispatch = useDispatch();
     const { loading, products, error } = useSelector(state => state.products);
     const ArrowLeft = (props) => (
@@ -50,18 +51,34 @@ export default function Card() {
     useEffect(() => {
       dispatch(getProducts())
     }, [dispatch])
-    
+    const controlNavbar = () => {
+        if (window.scrollY > 100) {
+            setShow(false)
+        } else {
+            setShow(true)
+        }
+    }
+
+    useEffect(() => {
+        window.addEventListener('scroll', controlNavbar)
+        return () => {
+            window.removeEventListener('scroll', controlNavbar)
+        }
+    }, [])
   return (
     <>
     {
         loading ? <Spin className={style.spinContainer} /> 
         :
         
-            <div className="max-w-7xl mx-auto px-4 mt-8 mb-8">
+        <div className="max-w-7xl mx-auto px-4 mt-8 mb-8">
+
             {/* <Category/> */}
-            <div className={style.locationTiger}>
-                <div className={style.location} >Show map <BsFillMapFill /></div>
-            </div>
+            <section style={{display: show === false ? "block" : "none"}}>
+                <div className={style.locationTiger}>
+                    <div className={style.location} >Show map <BsFillMapFill /></div>
+                </div>
+            </section>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:grid-cols-2">
                 {
                     products?.data?.map((item)=> 
@@ -97,6 +114,26 @@ export default function Card() {
                     )
                 }
             </div>
+            <section className={style.mobileNav} >
+                <div className={` ${show && style.mobileMenu}`}>
+                    <div >
+                        <div className="flex gap-10">
+                            <div>
+                                <BiSearch className="mx-auto text-2xl"/>
+                                <p className="m-0">Search</p>
+                            </div>
+                            <div>
+                                <BiHeart className="mx-auto text-2xl"/>
+                                <p className="m-0">Search</p>
+                            </div>
+                            <div>
+                                <BiUserCircle className="mx-auto text-2xl"/>
+                                <p className="m-0">Search</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
     }
     </>

@@ -15,6 +15,7 @@ import { Modal } from 'antd';
 import { RiCloseFill } from 'react-icons/ri';
 
 export default function Category() {
+    
     const [open, setOpen] = useState(false)
     const [keyword, setKeyword] = useState();
     const category = [
@@ -88,7 +89,7 @@ export default function Category() {
           ],
     }
   return (
-    <div style={{"top" : "86px"}} className='max-w-7xl mx-auto px-4 mt-5  overflow-y-hidden  sticky  z-50 bg-white'>
+    <div style={{"top" : "86px", "zIndex" : "1"}} className='max-w-7xl mx-auto px-4 mt-5  overflow-y-hidden  sticky  bg-white'>
         <div className='flex items-center gap-10 justify-between pt-5'>
             <div className='relative  px-8 w-[80%] overflow-y-hidden'>
                 <Slider {...settings}>
