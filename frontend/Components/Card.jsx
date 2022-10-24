@@ -10,7 +10,7 @@ import Link from "next/link";
 import { useDispatch, useSelector } from 'react-redux'
 import { useEffect } from "react";
 import { getProducts, clearErrors } from '../actions/productActions'
-import Spinner from '../Components/Loading'
+import { Spin } from 'antd';
 
 export default function Card() {
     const dispatch = useDispatch();
@@ -54,7 +54,7 @@ export default function Card() {
   return (
     <>
     {
-        loading ? <spinner></spinner> 
+        loading ? <Spin className={style.spinContainer} /> 
         :
         
             <div className="max-w-7xl mx-auto px-4 mt-8 mb-8">

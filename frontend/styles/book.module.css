@@ -5,15 +5,31 @@
 }
 .imageContainer{
     display: flex;
-    /* align-items: center; */
     gap: 20px;
+}
+.bottomCorner{
+    border-radius: 0 0 10px 0 !important;
+}
+.topCorner{
+    border-radius: 0 10px 0 0 !important;
 }
 .image{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
+    width: 50%;
+    height: 100% !important;
 }
-
+.bigSize{
+    width: 50%;
+}
+.imageContainer img{
+    height: 100% !important;
+}
+.bigSize img{
+    height: 100% !important;
+    border-radius: 10px 0 0 10px !important;
+}
 .imageContainer img:hover{
     opacity: 0.8;
     cursor: pointer;
@@ -164,4 +180,11 @@
 .hostedContainer{
     display: flex;
     justify-content: space-between !important;
+}
+.spinContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
 }
