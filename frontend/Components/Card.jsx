@@ -13,6 +13,7 @@ import { getProducts, clearErrors } from '../actions/productActions'
 import { Spin } from 'antd';
 
 export default function Card() {
+    const [page, setPage] = useState('');
     const [show, setShow] = useState(true);
     const dispatch = useDispatch();
     const { loading, products, error } = useSelector(state => state.products);
@@ -52,7 +53,7 @@ export default function Card() {
       dispatch(getProducts())
     }, [dispatch])
     const controlNavbar = () => {
-        if (window.scrollY > 100) {
+        if (window.scrollY > 1280) {
             setShow(false)
         } else {
             setShow(true)
@@ -64,7 +65,14 @@ export default function Card() {
         return () => {
             window.removeEventListener('scroll', controlNavbar)
         }
-    }, [])
+    }, []);
+    const icon = [
+        {id: 1, name: "Search", icon: <BiSearch /> },
+        { id: 2,  name: "Wishlists", icon: <BiHeart /> },
+        { id: 3, name: "Log in", icon: <BiUserCircle />}
+    ]
+
+    
   return (
     <>
     {
@@ -118,18 +126,16 @@ export default function Card() {
                 <div className={` ${show && style.mobileMenu}`}>
                     <div >
                         <div className="flex gap-10">
-                            <div>
-                                <BiSearch className="mx-auto text-2xl"/>
-                                <p className="m-0">Search</p>
-                            </div>
-                            <div>
-                                <BiHeart className="mx-auto text-2xl"/>
-                                <p className="m-0">Search</p>
-                            </div>
-                            <div>
-                                <BiUserCircle className="mx-auto text-2xl"/>
-                                <p className="m-0">Search</p>
-                            </div>
+                            {
+                                icon.map((item)=>(
+                                    <Link href={`/${page}`}>
+                                        <div  style={{color :page === item.name  ? "#ff385c" : "#b0b0b0"}} onClick={()=>setPage(item.name) }>
+                                            <div style={{color :page === item.name  ? "#ff385c" : "#b0b0b0"}} className=' flex justify-center text-2xl'>{item.icon}</div>
+                                            <p style={{color :page === item.name  ? "black" : "#b0b0b0"}} className='m-0 '>{item.name}</p>
+                                        </div>
+                                    </Link>
+                                ))
+                            }
                         </div>
                     </div>
                 </div>
