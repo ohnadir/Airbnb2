@@ -1,0 +1,83 @@
+.numberContainer{
+    border:1px solid #dddddd;
+    border-radius: 7px !important;
+    margin-bottom: 5px;
+}
+.numberContainer input{
+    border: none;
+    outline: none;
+    width: 100%;
+    /* padding: 13px 10px; */
+}
+.countryCodeDropdown{
+    width: 100%;
+    background-color: white;
+    left: 0;
+    position: absolute;
+    z-index: 1;
+}
+.countryCodeContainer{
+    
+    margin: 0 20px;
+    border: 1px solid black;
+    height: 100px;
+}
+.countryCodeContainer li{
+    padding: 4px 10px; 
+}
+.countryCodeContainer li:hover{
+    background-color: #1e90ff;
+    color: white;
+}
+.countryContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #dddddd;
+    padding: 10px ;
+}
+.numberCodeContainer{
+    padding: 10px ;
+    
+}
+.authBtn{
+    width: 100%;
+    padding: 8px 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    border-radius: 5px;
+    background: linear-gradient(to right, rgb(230, 30, 77) 0%, rgb(227, 28, 95) 50%, rgb(215, 4, 102) 100%) !important;
+}
+.authDivider{
+    width: 100%;
+    height: 1px;
+    margin: 25px 0;
+    background-color: #dddddd;
+}
+.socialIcon{
+    align-items: center;
+    cursor: pointer;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    padding: 8px 0;
+    position: relative;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+}
+.socialIcon h2{
+    font-size: 16px;
+}
+.socialIcon:hover{
+    background-color: #eee;
+}
+.icon{
+    width: 24px;
+    /* float: left ; */
+    position: absolute;
+    /* margin:0 auto; */
+    margin-left: 5%;
+
+}

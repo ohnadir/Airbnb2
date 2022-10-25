@@ -12,12 +12,14 @@ import { CgOptions } from 'react-icons/cg';
 import { BiSearch } from 'react-icons/bi';
 import { Modal } from 'antd';
 import { RiCloseFill } from 'react-icons/ri';
+import AuthModal from "../Components/authModal"
 
 
 
 const Navbar = () => {
     // const navigate = useNavigate();
     const [open, setOpen] = useState(false);
+    const [authModal, setAuthModal] = useState(false)
     const [dropdown, setDropdown] = useState(false);
     const [filterOpen, setFilterOpen] = useState(false)
     const [destination, setDestination] = useState("");
@@ -297,8 +299,8 @@ const Navbar = () => {
                 {
                     dropdown && <div className={styles.dropDown}>
                         <ul>
-                            <li><Link href="/signup">Signup</Link> </li>
-                            <li>Login</li>
+                            <li onClick={() => setAuthModal(!authModal)}>Signup</li>
+                            <li onClick={() => setAuthModal(!authModal)}>Login</li>
                         </ul>
                         <p className={styles.dropDownHr}></p>
                         <ul>
@@ -356,6 +358,29 @@ const Navbar = () => {
                                 </div>
                             </div>
                         </div>
+                        
+                    </div>
+                    </Modal>
+                }
+                {
+                    authModal && <Modal
+                    centered
+                    style ={{borderRadius:"15px",overflow:"auto"}}
+                    open={authModal}
+                    width={570}
+                    closable={false}
+                    footer={false}
+                    className={{borderRadius:"30px"}}
+                    bodyStyle={{margin:"0", border:"none", padding:0  }}
+                >
+                    <div>
+                        <div className='border-b-2'>
+                            <div className='flex items-center px-5 py-5'>
+                                <RiCloseFill onClick={() => setAuthModal(false)} className='w-8 h-8  rounded-full hover:bg-gray-100 p-1 cursor-pointer'/>
+                                <p className='m-0 mx-auto font-bold text-lg '>Log in or sign up</p>
+                            </div>
+                        </div>
+                        <AuthModal/>
                         
                     </div>
                     </Modal>
