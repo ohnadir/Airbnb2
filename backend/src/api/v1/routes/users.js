@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const passport = require("passport");
 const {
   userRegister,
   userLogin,
@@ -46,5 +47,5 @@ router.post('/password/forgot', forgotPassword);
 router.put('/password/reset/:token', resetPassword);
 
 router.get('/:id', isAuthenticatedUser, authorizeRoles('admin'), idValidator, validationResult, getSingleUser);
-
+router.get("/google", passport.authenticate("google", { scope: ["profile"] }))
 module.exports = router;

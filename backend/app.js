@@ -4,6 +4,7 @@ const csrf = require('csurf');
 const cookieParser = require('cookie-parser');
 const bodyParser = require("body-parser");
 const morgan = require('morgan');
+const passport = require("passport");
 const { readdirSync } = require('fs');
 
 const errorMiddleware = require('./src/api/v1/middleware/errors')
@@ -17,7 +18,8 @@ app.use(cors());
 app.use(express.json());
 app.use(cookieParser());
 app.use(morgan('dev'));
-
+// app.use(passport.initialize());
+// app.use(passport.session());
 
 
 readdirSync('./src/api/v1/routes').map((route) =>
