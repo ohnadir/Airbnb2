@@ -4,8 +4,8 @@ import Category from "../Components/category";
 export default function Home() {
   return (
     <>
-      <Card/>
       <Category/>
+      <Card/>
     </>
   )
 }

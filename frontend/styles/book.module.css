@@ -201,9 +201,7 @@
     background: linear-gradient(to right, rgb(230, 30, 77) 0%, rgb(227, 28, 95) 50%, rgb(215, 4, 102) 100%) !important;
     color: rgb(255, 255, 255)
 }
-.rdrDateDisplayWrapper{
-    /* display: none; */
-}
+
 .mobileContainer{
     overflow-x: hidden;
     background-color: white;
@@ -216,6 +214,7 @@
     align-items: center;
     visibility: hidden;
     margin: 0;
+    z-index: 1;
 }
 .mobileSection{
     display: flex;
@@ -225,6 +224,42 @@
     padding: 10px 40px;
     margin: 0 auto;
     
+}
+.topNavbarContainer{
+    position: fixed;
+    top: 86px;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    border-bottom: 1px solid #b0b0b0;
+}
+.topNavbar{
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 14.5px 20px !important;
+    
+}
+.topNavbar li{
+    font-size: 16px;
+    font-weight: 400;
+    padding-bottom: 10px;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.3s ease;
+    
+} 
+.topNavbar li:hover{
+    border-bottom: 2px solid #000;
+}
+.showCard{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.showCardReserveBtn{
+    background: linear-gradient(to right, rgb(230, 30, 77) 0%, rgb(227, 28, 95) 50%, rgb(215, 4, 102) 100%) !important;
+    color: white;
+    padding: 8px 25px;
+    border-radius: 8px;
 }
 @media screen and (max-width: 768px) {
     .hostedContainer{

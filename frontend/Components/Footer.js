@@ -3,16 +3,15 @@ import { IoIosArrowUp } from 'react-icons/io';
 import styles from '../styles/footer.module.css'
 export default function Footer() {
     return (
-      <div className={styles.container}>
-            <div className='max-w-7xl mx-auto px-2'>
-                <div className={styles.footerContainer}>
-                    <div className="flex items-center relative">
+      <div>
+            <div className='max-w-7xl mx-auto  py-5'>
+                <div className="flex flex-col-reverse gap-3 lg:flex-row items-center justify-center lg:justify-between">
+                    <div className="flex flex-col lg:flex-row items-center relative">
                         <p className='mb-0 pb-0 '>© 2022 Airbnb, Inc.</p>
-                        <ul className={styles.footerList}>
+                        <ul className="flex m-0 gap-5">
                             <li>Privacy</li>
                             <li>Terms</li>
                             <li>Sitemap</li>
-                            <li>Destinations</li>
                         </ul>
                     </div>
                     <div className={styles.right}>

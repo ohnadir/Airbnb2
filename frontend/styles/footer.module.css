@@ -1,19 +1,6 @@
 .footerList {
-    display: flex;
-    gap: 15px;
-    /* padding-left: 15px; */
-    margin-left: 15px;
-    margin-bottom: 0;
 }
 .footerList li::before{
-    content: '.';
-    position: absolute;
-    top: -17px;
-    font-size: 25px;
-    color: #666;
-    right: 100px;
-    padding: 0 -20px ;
-    padding-right: 5px;
 }
 .footerContainer{
     display: flex;
@@ -30,15 +17,11 @@
     display: flex;
     align-items: center;
     gap: 15px;
+    font-size: 16px;
+    font-weight: 600;
 
 }
-.container{
-    border-top: 1px solid #eee;
-    bottom: 0;
-    position: absolute;
-    left: 0;
-    width: 100%;
-}
+
 .support{
     display: flex;
     align-items: center;
@@ -69,4 +52,4 @@
     position: absolute;
     display: block;
 
-}
+} 

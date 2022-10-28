@@ -18,8 +18,11 @@ import { useDispatch, useSelector } from 'react-redux'
 import { getProductDetails, clearErrors } from '../../actions/productActions'
 import { Spin } from 'antd';
 import Slider from "react-slick";
+import Footer from "../../Components/Footer"
 
 export default function Book() {
+    const [show, setShow] = useState(true);
+    const [showCard, setShowCard] = useState(false)
     const router = useRouter()
     const { id } = router.query;
     const dispatch = useDispatch();
@@ -50,16 +53,73 @@ export default function Book() {
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1
-      };
-    
+    };
+    const controlNavbar = () => {
+        if (window.scrollY > 450) {
+            setShow(true)
+        } else {
+            setShow(false)
+        }
+        if (window.scrollY > 2000) {
+            setShowCard(true)
+        } else {
+            setShowCard(false)
+        }
+    }
+
+    useEffect(() => {
+        window.addEventListener('scroll', controlNavbar)
+        return () => {
+            window.removeEventListener('scroll', controlNavbar)
+        }
+    }, []);
     return (
         <>
             { 
                 loading ? <Spin className={style.spinContainer} /> :
             
-                <div className="max-w-7xl mx-auto px-2 md:px-10 mt-10">
-                    <MetaData title={'Book'} />
+                <div className="max-w-7xl mx-auto px-2 md:px-10 mt-5">
+                    <MetaData title={'Book- airbnb'} />
+                    <section className='topNavbar hidden md:block'>
+                        {
+                            show && 
+                            <div style={{"top" : "86px", "zIndex" : "5"}} className={style.topNavbarContainer}>
+                                <div className={style.topNavbar}>
+                                    <div className='flex justify-between'>
+                                        <ul className='flex items-center justify-start gap-4 m-0'>
+                                            <li>Photos</li>
+                                            <li>Amenities</li>
+                                            <li>Reviews</li>
+                                            <li>Location</li>
+                                        </ul>
 
+                                        {
+                                            showCard 
+                                            && 
+                                            <div className='flex items-center gap-5'>
+                                                <div >
+                                                    <div className='flex items-center gap-1'>
+                                                        <span className=' font-semibold'>${product?.price} AUD</span>
+                                                        <span style={{color:" #979797"}} className='mt-1 '>night</span>
+                                                    </div>
+                                                    <div className="flex items-center gap-1  text-xs">
+                                                        <FaStar className=""/>
+                                                        <span className=" font-semibold">{product?.rating}</span>
+                                                        <div style={{color:" #979797"}} className=''>
+                                                            review 
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <button className={style.showCardReserveBtn}>Reserve</button>
+                                            </div>
+                                        }
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        }
+                        
+                    </section>
                     <div>
                         <div>
                             <h1 className={style.headerName}>{name2}</h1>
@@ -228,7 +288,7 @@ export default function Book() {
                                     
                             </div>
                             <div className='w-1/3 hidden md:block' id='reserveCard'>
-                                <div className={style.reserveCard}>
+                                <div style={{"top":"150px"}} className={style.reserveCard}>
                                     <div className='flex items-center gap-1'>
                                         <span className='text-2xl font-semibold'>${product?.price} AUD</span>
                                         <span style={{color:" #979797"}} className='mt-1 text-lg'>night</span>
@@ -554,6 +614,7 @@ export default function Book() {
                         </div>
                     </Modal>
                     }
+                    <Footer/>
                 </div>
             }
         </>
