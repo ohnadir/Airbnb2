@@ -78,7 +78,7 @@ export default function Book() {
             { 
                 loading ? <Spin className={style.spinContainer} /> :
             
-                <div className="max-w-7xl mx-auto px-2 md:px-10 mt-5">
+                <div className="container mx-auto px-4 mt-5">
                     <MetaData title={'Book- airbnb'} />
                     <section className='topNavbar hidden md:block'>
                         {

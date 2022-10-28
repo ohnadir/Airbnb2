@@ -79,7 +79,7 @@ export default function Card() {
         loading ? <Spin className={style.spinContainer} /> 
         :
         
-        <div className="max-w-7xl mx-auto px-4 mt-8 mb-8">
+        <div className="container mx-auto px-4 mt-8 mb-8">
 
             {/* <Category/> */}
             <section style={{display: show === false ? "block" : "none"}}>

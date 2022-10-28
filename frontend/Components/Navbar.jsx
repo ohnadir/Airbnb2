@@ -22,8 +22,8 @@ const Navbar = () => {
     const [authModal, setAuthModal] = useState(false)
     const [dropdown, setDropdown] = useState(false);
     const [filterOpen, setFilterOpen] = useState(false)
-    const [destination, setDestination] = useState("");
     const [show, setShow] = useState(true);
+    const [destination, setDestination] = useState("");
     const [openDate, setOpenDate] = useState(false);
     const [date, setDate] = useState([
         {
@@ -34,9 +34,10 @@ const Navbar = () => {
     ]);
     const [openOptions, setOpenOptions] = useState(false);
     const [options, setOptions] = useState({
-        adult: 1,
+        adult: 0,
         children: 0,
-        room: 1,
+        infants: 0,
+        pets:0
     });
     const handleOption = (name, operation) => {
         setOptions((prev) => {
@@ -45,7 +46,7 @@ const Navbar = () => {
             [name]: operation === "i" ? options[name] + 1 : options[name] - 1,
           };
         });
-      };
+    };
 
     /* const menuLists = <>
         <button className='text-white block md:hidden' onClick={()=>setOpen(!open)}><BiSearchAlt2 className='text-2xl'/></button>
@@ -53,7 +54,7 @@ const Navbar = () => {
     </> */
     return (
         <div className='border py-4 sticky top-0 z-50 bg-white'>
-            <div className='max-w-7xl mx-auto px-2 relative'>
+            <div className='container mx-auto px-4 relative'>
                 <div className='hidden md:block'>
                     <div className='flex items-center justify-between text-black '>
                         <div className='flex justify-start'>
@@ -144,14 +145,9 @@ const Navbar = () => {
                         <div className={styles.destinationItem}>
                             <div className={styles.destinationContent} onClick={() => setOpenDate(!openDate)}>
                                 <p className={styles.optionHeader}>Check in</p>
-                                { (format(date[0].startDate) !== format(new Date())) 
-                                    ? 
-                                    <p className={styles.optionFooter}>Add dates</p> 
-                                    :
-                                    <p className={styles.optionFooter}>
-                                        {`${format(date[0].startDate, "MM/dd/yyyy")}`}
-                                    </p>
-                                }
+                                <p className={styles.optionFooter}>
+                                    {`${format(date[0].startDate, "MM/dd/yyyy")}`}
+                                </p>
                             </div>
 
                         </div>
@@ -172,7 +168,7 @@ const Navbar = () => {
                                     onChange={(item) => setDate([item.selection])}
                                     moveRangeOnFirstSelection={false}
                                     ranges={date}
-                                    className="date"
+                                    className={styles.date}
                                     minDate={new Date()}
                                     />
                                 )
@@ -250,14 +246,14 @@ const Navbar = () => {
                                             </div>
                                             <div className={styles.optionCounter}>
                                                 <button
-                                                disabled={options.room <= 0}
+                                                disabled={options.infants <= 0}
                                                 className={styles.optionCounterButton}
                                                 onClick={() => handleOption("infants", "d")}
                                                 >
                                                 -
                                                 </button>
                                                 <span className={styles.optionCounterNumber}>
-                                                {options.room}
+                                                {options.infants}
                                                 </span>
                                                 <button
                                                 className={styles.optionCounterButton}
@@ -274,14 +270,14 @@ const Navbar = () => {
                                             </div>
                                             <div className={styles.optionCounter}>
                                                 <button
-                                                disabled={options.room <= 0}
+                                                disabled={options.pets <= 0}
                                                 className={styles.optionCounterButton}
                                                 onClick={() => handleOption("pets", "d")}
                                                 >
                                                 -
                                                 </button>
                                                 <span className={styles.optionCounterNumber}>
-                                                {options.room}
+                                                {options.pets}
                                                 </span>
                                                 <button
                                                 className={styles.optionCounterButton}
