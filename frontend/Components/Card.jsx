@@ -90,7 +90,7 @@ export default function Card() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:grid-cols-2">
                 {
                     products?.data?.map((item)=> 
-                        <Link   href={`place/${item.id}`}>
+                        <Link   href={`place/${item.id}`}  key={item.id}>
                             <div key={item.id} className={style.cardItem}>
                                 <div className="relative">
                                     <div style={{"zIndex":"1"}} className="absolute  text-white transition-all hover:text-[#717175] right-2 top-2">

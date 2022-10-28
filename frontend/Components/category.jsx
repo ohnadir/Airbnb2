@@ -96,7 +96,7 @@ export default function Category() {
                     {
                         category.map((item)=>(
                             
-                            <div   >
+                            <div   key={item.id}>
                                 <div className={style.iconContainer} style={{color :keyword === item.name  ? " black" : "", borderBottom :keyword === item.name  ? " 2px solid  black" : ""}} onClick={()=>setKeyword(item.name) }>
                                     <div className='text-3xl flex justify-center'>{item.icon}</div>
                                     <p className='m-0 text-center'>{item.name}</p>

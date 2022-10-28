@@ -288,7 +288,7 @@ export default function Book() {
                                     
                             </div>
                             <div className='w-1/3 hidden md:block' id='reserveCard'>
-                                <div style={{"top":"150px"}} className={style.reserveCard}>
+                                <div style={{"top":"170px"}} className={style.reserveCard}>
                                     <div className='flex items-center gap-1'>
                                         <span className='text-2xl font-semibold'>${product?.price} AUD</span>
                                         <span style={{color:" #979797"}} className='mt-1 text-lg'>night</span>

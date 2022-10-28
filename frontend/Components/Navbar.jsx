@@ -12,7 +12,7 @@ import { CgOptions } from 'react-icons/cg';
 import { BiSearch } from 'react-icons/bi';
 import { Modal } from 'antd';
 import { RiCloseFill } from 'react-icons/ri';
-import AuthModal from "../Components/authModal"
+import AuthModal from "./authModal";
 
 
 
@@ -56,13 +56,15 @@ const Navbar = () => {
             <div className='max-w-7xl mx-auto px-2 relative'>
                 <div className='hidden md:block'>
                     <div className='flex items-center justify-between text-black '>
-                    <div className='flex justify-start'>
-                        <Image
-                            className={styles.logo}
-                            src={logo}
-                            alt="Picture of the author"
-                        />
-                    </div>
+                        <div className='flex justify-start'>
+                            <Link href="/">
+                                <Image
+                                    className="cursor-pointer"
+                                    src={logo}
+                                    alt="Picture of the author"
+                                /> 
+                            </Link>
+                        </div>
                     <div>
                         {
                             open ? <div className='flex items-center gap-6'>
