@@ -120,7 +120,7 @@ const Navbar = () => {
                             <BiSearch className='text-2xl'/>
                             <div className='py-2'>
                                 <h1 className='m-0'>Where to?</h1>
-                                <ul className='flex m-0'>
+                                <ul className={`flex m-0 gap-1 ${styles.customNav}`}>
                                     <span>Anywhere</span>
                                     <li>Any week</li>
                                     <li>Add guests</li>

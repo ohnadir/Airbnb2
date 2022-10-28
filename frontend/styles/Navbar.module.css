@@ -19,7 +19,17 @@
     width: 1px;
     background-color: #dddddd;
 }
-
+.customNav li, .customNav   span{
+    color: #666;
+    font-size: 12px;
+}
+.customNav li::before{
+    content: "\2022";
+    color: #717171;
+    display: inline-block; 
+    width: 1px;
+    padding-right: 8px;
+}
 .searchBtn{
     background-color: #ff385c;
     height: 30px;
