@@ -1,0 +1,83 @@
+[
+    {   
+        "id":"1",
+        "name": "Colombia",
+        "region": "Americas",
+        "currency": [
+            {"code" :"$"},
+            {"name" :" COP"}
+        ],
+        "language": "Spanish"
+    },
+    {
+        "id":"2",
+        "name": "Costa Rica",
+        "region": "Americas",
+        "currency": [
+            {"code": "₡"},
+            {"name" :"CRC"}
+        ],
+        "language":"Spanish"
+    },
+    {
+        "id":"3",
+        "name": "Ecuador",
+        "region": "Americas",
+        "currency": [
+            {  "code":"$"},
+            {"name":"USD"}
+        ],
+        "language": "Spanish"
+    },
+    {
+        "id":"4",
+        "name": "Honduras",
+        "region": "Americas",
+        "currency": [
+            {"code":"L"},
+            {"name":"KHNL"}
+        ],
+        "language" :"Spanish"
+    },
+    {
+        "id":"5",
+        "name": "Mexico",
+        "region": "Americas",
+        "currency":[
+            {"code":"$"},
+            {"name":"MXN"}
+        ],
+        "language": "Spanish"
+    },
+    {
+        "id":"6",
+        "name": "Chile",
+        "region": "Americas",
+        "currency": [
+            {"code":"$"},
+            {"name":"CLP"}
+        ],
+        "language":"Spanish"
+    },
+    {
+        "id":"7",
+        "name": "Paraguay",
+        "region": "Americas",
+        "currency": [
+            {"code":"₲"},
+            {"name":"PYG"}
+        ],
+        "language":"Spanish"
+    },
+    {
+        "id":"8",
+        "name": "Peru",
+        "region": "Americas",
+        "currency": [
+            {"code": "S/."},
+            {"name": "PEN"}
+        ],
+        "language":"Spanish"
+    }
+
+]

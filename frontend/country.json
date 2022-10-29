@@ -161,133 +161,22 @@
     "png": "https://flagcdn.com/w320/gq.png"
     },
     "currency": "Fr XAF",
-    "language": "Spanish",
-    nativeName: "Español"
-    },
-    {
-    iso639_1: "fr",
-    iso639_2: "fra",
-    "name": "French",
-    nativeName: "français"
-    },
-    {
-    iso639_1: "pt",
-    iso639_2: "por",
-    "name": "Portuguese",
-    nativeName: "Português"
-    },
-    {
-    iso639_2: "fan",
-    "name": "Fang",
-    nativeName: "Fang"
-    }
-    ],
-    translations: {
-    br: "Ginea ar C'heheder",
-    pt: "Guiné Equatorial",
-    nl: "Equatoriaal-Guinea",
-    hr: "Ekvatorijalna Gvineja",
-    fa: "گینه استوایی",
-    de: "Äquatorial-Guinea",
-    es: "Guinea Ecuatorial",
-    fr: "Guinée-Équatoriale",
-    ja: "赤道ギニア",
-    it: "Guinea Equatoriale",
-    hu: "Egyenlítői-Guinea"
-    },
-    flag: "https://flagcdn.com/gq.svg",
-    regionalBlocs: [
-    {
-    acronym: "AU",
-    "name": "African Union",
-    otherNames: [
-    "الاتحاد الأفريقي",
-    "Union africaine",
-    "União Africana",
-    "Unión Africana",
-    "Umoja wa Afrika"
-    ]
-    }
-    ],
-    cioc: "GEQ",
-    independent: true
+    "language": "Spanish"
     },
     {
     "name": "Guam",
-    topLevelDomain: [
-    ".gu"
-    ],
-    alpha2Code: "GU",
     "alphaCode": "GUM",
-    "callingCode": [
-    "1"
-    ],
-    "capital" "Hagåtña",
-    altSpellings: [
-    "GU",
-    "Guåhån"
-    ],
-    sub"region": "Micronesia",
+    "callingCode": "1",
+    "capital": "Hagåtña",
     "region": "Oceania",
     "population": 168783,
-    latlng: [
-    13.46666666,
-    144.78333333
-    ],
-    demonym: "Guamanian",
-    area: 549,
-    "timezones": [
-    "UTC+10:00"
-    ],
-    nativeName: "Guam",
-    numericCode: "316",
+    "timezones": "UTC+10:00",
     "flags": {
     "svg": "https://flagcdn.com/gu.svg",
     "png": "https://flagcdn.com/w320/gu.png"
     },
-    "currency": [
-    {
-    code: "USD",
-    "name": "United States dollar",
-    symbol: "$"
-    }
-    ],
-    "language": [
-    {
-    iso639_1: "en",
-    iso639_2: "eng",
-    "name": "English",
-    nativeName: "English"
-    },
-    {
-    iso639_1: "ch",
-    iso639_2: "cha",
-    "name": "Chamorro",
-    nativeName: "Chamoru"
-    },
-    {
-    iso639_1: "es",
-    iso639_2: "spa",
-    "name": "Spanish",
-    nativeName: "Español"
-    }
-    ],
-    translations: {
-    br: "Guam",
-    pt: "Guame",
-    nl: "Guam",
-    hr: "Guam",
-    fa: "گوام",
-    de: "Guam",
-    es: "Guam",
-    fr: "Guam",
-    ja: "グアム",
-    it: "Guam",
-    hu: "Guam"
-    },
-    flag: "https://flagcdn.com/gu.svg",
-    cioc: "GUM",
-    independent: false
+    "currency": "$-USD",
+    "language": "English"
     },
     {
     "name": "Guatemala",
@@ -299,7 +188,7 @@
     "callingCode": [
     "502"
     ],
-    "capital" "Guatemala City",
+    "capital": "Guatemala City",
     altSpellings: [
     "GT"
     ],
@@ -374,167 +263,33 @@
     },
     {
     "name": "Honduras",
-    topLevelDomain: [
-    ".hn"
-    ],
-    alpha2Code: "HN",
     "alphaCode": "HND",
-    "callingCode": [
-    "504"
-    ],
-    "capital" "Tegucigalpa",
-    altSpellings: [
-    "HN",
-    "Republic of Honduras",
-    "República de Honduras"
-    ],
-    sub"region": "Central America",
+    "callingCode": "504",
+    "capital" :"Tegucigalpa",
     "region": "Americas",
     "population": 9904608,
-    latlng: [
-    15,
-    -86.5
-    ],
-    demonym: "Honduran",
-    area: 112492,
-    gini: 48.2,
-    "timezones": [
-    "UTC-06:00"
-    ],
-    borders: [
-    "GTM",
-    "SLV",
-    "NIC"
-    ],
-    nativeName: "Honduras",
-    numericCode: "340",
+    "timezones": "UTC-06:00",
     "flags": {
     "svg": "https://flagcdn.com/hn.svg",
     "png": "https://flagcdn.com/w320/hn.png"
     },
-    "currency": [
-    {
-    code: "HNL",
-    "name": "Honduran lempira",
-    symbol: "L"
-    }
-    ],
-    "language": [
-    {
-    iso639_1: "es",
-    iso639_2: "spa",
-    "name": "Spanish",
-    nativeName: "Español"
-    }
-    ],
-    translations: {
-    br: "Honduras",
-    pt: "Honduras",
-    nl: "Honduras",
-    hr: "Honduras",
-    fa: "هندوراس",
-    de: "Honduras",
-    es: "Honduras",
-    fr: "Honduras",
-    ja: "ホンジュラス",
-    it: "Honduras",
-    hu: "Honduras"
-    },
-    flag: "https://flagcdn.com/hn.svg",
-    regionalBlocs: [
-    {
-    acronym: "CAIS",
-    "name": "Central American Integration System",
-    otherAcronyms: [
-    "SICA"
-    ],
-    otherNames: [
-    "Sistema de la Integración Centroamericana,"
-    ]
-    }
-    ],
-    cioc: "HON",
-    independent: true
+    "currency": " L-KHNL",
+    "language" :"Spanish"
     },
     {
     "name": "Mexico",
-    topLevelDomain: [
-    ".mx"
-    ],
-    alpha2Code: "MX",
     "alphaCode": "MEX",
-    "callingCode": [
-    "52"
-    ],
-    "capital" "Mexico City",
-    altSpellings: [
-    "MX",
-    "Mexicanos",
-    "United Mexican States",
-    "Estados Unidos Mexicanos"
-    ],
-    sub"region": "North America",
+    "callingCode": "52",
+    "capital" : "Mexico City",
     "region": "Americas",
     "population": 128932753,
-    latlng: [
-    23,
-    -102
-    ],
-    demonym: "Mexican",
-    area: 1964375,
-    gini: 45.4,
-    "timezones": [
-    "UTC-08:00",
-    "UTC-07:00",
-    "UTC-06:00"
-    ],
-    borders: [
-    "BLZ",
-    "GTM",
-    "USA"
-    ],
-    nativeName: "México",
-    numericCode: "484",
+    "timezones": "UTC-07:00",
     "flags": {
     "svg": "https://flagcdn.com/mx.svg",
     "png": "https://flagcdn.com/w320/mx.png"
     },
-    "currency": [
-    {
-    code: "MXN",
-    "name": "Mexican peso",
-    symbol: "$"
-    }
-    ],
-    "language": [
-    {
-    iso639_1: "es",
-    iso639_2: "spa",
-    "name": "Spanish",
-    nativeName: "Español"
-    }
-    ],
-    translations: {
-    br: "Mec'hiko",
-    pt: "México",
-    nl: "Mexico",
-    hr: "Meksiko",
-    fa: "مکزیک",
-    de: "Mexiko",
-    es: "México",
-    fr: "Mexique",
-    ja: "メキシコ",
-    it: "Messico",
-    hu: "Mexikó"
-    },
-    flag: "https://flagcdn.com/mx.svg",
-    regionalBlocs: [
-    {
-    acronym: "PA",
-    "name": "Pacific Alliance",
-    otherNames: [
-    "Alianza del Pacífico"
-    ]
+    "currency":  "$-MXN",
+    "language": "Spanish"
     },
     {
     acronym: "NAFTA",
@@ -607,65 +362,16 @@
     pt: "Nicarágua",
     nl: "Nicaragua",
     hr: "Nikaragva",
-    fa: "نیکاراگوئه",
-    de: "Nicaragua",
-    es: "Nicaragua",
-    fr: "Nicaragua",
-    ja: "ニカラグア",
-    it: "Nicaragua",
-    hu: "Nicaragua"
-    },
-    flag: "https://flagcdn.com/ni.svg",
-    regionalBlocs: [
-    {
-    acronym: "CAIS",
-    "name": "Central American Integration System",
-    otherAcronyms: [
-    "SICA"
-    ],
-    otherNames: [
-    "Sistema de la Integración Centroamericana,"
-    ]
-    }
-    ],
-    cioc: "NCA",
-    independent: true
+    fa: "نیکارا
     },
     {
     "name": "Panama",
-    topLevelDomain: [
-    ".pa"
-    ],
-    alpha2Code: "PA",
     "alphaCode": "PAN",
-    "callingCode": [
-    "507"
-    ],
-    "capital" "Panama City",
-    altSpellings: [
-    "PA",
-    "Republic of Panama",
-    "República de Panamá"
-    ],
-    sub"region": "Central America",
+    "callingCode": "507",
+    "capital" :"Panama City",
     "region": "Americas",
     "population": 4314768,
-    latlng: [
-    9,
-    -80
-    ],
-    demonym: "Panamanian",
-    area: 75417,
-    gini: 49.8,
-    "timezones": [
-    "UTC-05:00"
-    ],
-    borders: [
-    "COL",
-    "CRI"
-    ],
-    nativeName: "Panamá",
-    numericCode: "591",
+    "timezones": "UTC-05:00",
     "flags": {
     "svg": "https://flagcdn.com/pa.svg",
     "png": "https://flagcdn.com/w320/pa.png"
@@ -682,237 +388,42 @@
     symbol: "$"
     }
     ],
-    "language": [
-    {
-    iso639_1: "es",
-    iso639_2: "spa",
-    "name": "Spanish",
-    nativeName: "Español"
-    }
-    ],
-    translations: {
-    br: "Panama",
-    pt: "Panamá",
-    nl: "Panama",
-    hr: "Panama",
-    fa: "پاناما",
-    de: "Panama",
-    es: "Panamá",
-    fr: "Panama",
-    ja: "パナマ",
-    it: "Panama",
-    hu: "Panama"
-    },
-    flag: "https://flagcdn.com/pa.svg",
-    regionalBlocs: [
-    {
-    acronym: "CAIS",
-    "name": "Central American Integration System",
-    otherAcronyms: [
-    "SICA"
-    ],
-    otherNames: [
-    "Sistema de la Integración Centroamericana,"
-    ]
-    }
-    ],
-    cioc: "PAN",
-    independent: true
+    "language": "Spanish",
     },
     {
     "name": "Paraguay",
-    topLevelDomain: [
-    ".py"
-    ],
-    alpha2Code: "PY",
-    "alphaCode": "PRY",
-    "callingCode": [
-    "595"
-    ],
-    "capital" "Asunción",
-    altSpellings: [
-    "PY",
-    "Republic of Paraguay",
-    "República del Paraguay",
-    "Tetã Paraguái"
-    ],
-    sub"region": "South America",
+    "callingCode": "595",
+    "capital" :"Asunción",
     "region": "Americas",
     "population": 7132530,
-    latlng: [
-    -23,
-    -58
-    ],
-    demonym: "Paraguayan",
-    area: 406752,
-    gini: 45.7,
-    "timezones": [
-    "UTC-04:00"
-    ],
-    borders: [
-    "ARG",
-    "BOL",
-    "BRA"
-    ],
-    nativeName: "Paraguay",
-    numericCode: "600",
+    "timezones": "UTC-04:00",
     "flags": {
     "svg": "https://flagcdn.com/py.svg",
     "png": "https://flagcdn.com/w320/py.png"
     },
-    "currency": [
-    {
-    code: "PYG",
-    "name": "Paraguayan guaraní",
-    symbol: "₲"
-    }
-    ],
-    "language": [
-    {
-    iso639_1: "es",
-    iso639_2: "spa",
-    "name": "Spanish",
-    nativeName: "Español"
+    "currency": "₲-PYG",
+    "language":"Spanish"
     },
-    {
-    iso639_1: "gn",
-    iso639_2: "grn",
-    "name": "Guaraní",
-    nativeName: "Avañe'ẽ"
-    }
-    ],
-    translations: {
-    br: "Paraguay",
-    pt: "Paraguai",
-    nl: "Paraguay",
-    hr: "Paragvaj",
-    fa: "پاراگوئه",
-    de: "Paraguay",
-    es: "Paraguay",
-    fr: "Paraguay",
-    ja: "パラグアイ",
-    it: "Paraguay",
-    hu: "Paraguay"
-    },
-    flag: "https://flagcdn.com/py.svg",
-    regionalBlocs: [
-    {
-    acronym: "USAN",
-    "name": "Union of South American Nations",
-    otherAcronyms: [
-    "UNASUR",
-    "UNASUL",
-    "UZAN"
-    ],
-    otherNames: [
-    "Unión de Naciones Suramericanas",
-    "União de Nações Sul-Americanas",
-    "Unie van Zuid-Amerikaanse Naties",
-    "South American Union"
-    ]
-    }
-    ],
-    cioc: "PAR",
-    independent: true
-    },
+    
     {
     "name": "Peru",
-    topLevelDomain: [
-    ".pe"
-    ],
-    alpha2Code: "PE",
     "alphaCode": "PER",
-    "callingCode": [
-    "51"
-    ],
-    "capital" "Lima",
-    altSpellings: [
-    "PE",
-    "Republic of Peru",
-    " República del Perú"
-    ],
-    sub"region": "South America",
+    "callingCode": "51",
+    "capital" :"Lima",
     "region": "Americas",
     "population": 32971846,
-    latlng: [
-    -10,
-    -76
-    ],
-    demonym: "Peruvian",
-    area: 1285216,
-    gini: 41.5,
-    "timezones": [
-    "UTC-05:00"
-    ],
-    borders: [
-    "BOL",
-    "BRA",
-    "CHL",
-    "COL",
-    "ECU"
-    ],
-    nativeName: "Perú",
-    numericCode: "604",
+    "timezones": "UTC-05:00",
     "flags": {
     "svg": "https://flagcdn.com/pe.svg",
     "png": "https://flagcdn.com/w320/pe.png"
     },
     "currency": [
-    {
-    code: "PEN",
-    "name": "Peruvian sol",
-    symbol: "S/."
-    }
+        {"code": "S/. -PEN"},
+        {"name": "Peruvian sol"}
     ],
-    "language": [
-    {
-    iso639_1: "es",
-    iso639_2: "spa",
-    "name": "Spanish",
-    nativeName: "Español"
-    }
-    ],
-    translations: {
-    br: "Perou",
-    pt: "Peru",
-    nl: "Peru",
-    hr: "Peru",
-    fa: "پرو",
-    de: "Peru",
-    es: "Perú",
-    fr: "Pérou",
-    ja: "ペルー",
-    it: "Perù",
-    hu: "Peru"
+    "language":"Spanish"
     },
-    flag: "https://flagcdn.com/pe.svg",
-    regionalBlocs: [
-    {
-    acronym: "PA",
-    "name": "Pacific Alliance",
-    otherNames: [
-    "Alianza del Pacífico"
-    ]
-    },
-    {
-    acronym: "USAN",
-    "name": "Union of South American Nations",
-    otherAcronyms: [
-    "UNASUR",
-    "UNASUL",
-    "UZAN"
-    ],
-    otherNames: [
-    "Unión de Naciones Suramericanas",
-    "União de Nações Sul-Americanas",
-    "Unie van Zuid-Amerikaanse Naties",
-    "South American Union"
-    ]
-    }
-    ],
-    cioc: "PER",
-    independent: true
-    },
+ 
     {
     "name": "Puerto Rico",
     topLevelDomain: [
@@ -1028,306 +539,47 @@
     "svg": "https://flagcdn.com/es.svg",
     "png": "https://flagcdn.com/w320/es.png"
     },
-    "currency": [
-    {
-    code: "EUR",
-    "name": "Euro",
-    symbol: "€"
-    }
-    ],
-    "language": [
-    {
-    iso639_1: "es",
-    iso639_2: "spa",
-    "name": "Spanish",
-    nativeName: "Español"
-    }
-    ],
-    translations: {
-    br: "Spagn",
-    pt: "Espanha",
-    nl: "Spanje",
-    hr: "Španjolska",
-    fa: "اسپانیا",
-    de: "Spanien",
-    es: "España",
-    fr: "Espagne",
-    ja: "スペイン",
-    it: "Spagna",
-    hu: "Spanyolország"
-    },
-    flag: "https://flagcdn.com/es.svg",
-    regionalBlocs: [
-    {
-    acronym: "EU",
-    "name": "European Union"
-    }
-    ],
-    cioc: "ESP",
-    independent: true
-    },
+    "currency":"€ -EUR",
+    "language": "Spanish"},
     {
     "name": "Uruguay",
-    topLevelDomain: [
-    ".uy"
-    ],
-    alpha2Code: "UY",
     "alphaCode": "URY",
-    "callingCode": [
-    "598"
-    ],
-    "capital" "Montevideo",
-    altSpellings: [
-    "UY",
-    "Oriental Republic of Uruguay",
-    "República Oriental del Uruguay"
-    ],
-    sub"region": "South America",
+    "callingCode":"598",
+    "capital" :"Montevideo",
     "region": "Americas",
     "population": 3473727,
-    latlng: [
-    -33,
-    -56
-    ],
-    demonym: "Uruguayan",
-    area: 181034,
-    gini: 39.7,
-    "timezones": [
-    "UTC-03:00"
-    ],
-    borders: [
-    "ARG",
-    "BRA"
-    ],
-    nativeName: "Uruguay",
-    numericCode: "858",
+    "timezones": "UTC-03:00",
     "flags": {
     "svg": "https://flagcdn.com/uy.svg",
     "png": "https://flagcdn.com/w320/uy.png"
     },
-    "currency": [
-    {
-    code: "UYU",
-    "name": "Uruguayan peso",
-    symbol: "$"
-    }
-    ],
-    "language": [
-    {
-    iso639_1: "es",
-    iso639_2: "spa",
-    "name": "Spanish",
-    nativeName: "Español"
-    }
-    ],
-    translations: {
-    br: "Uruguay",
-    pt: "Uruguai",
-    nl: "Uruguay",
-    hr: "Urugvaj",
-    fa: "اروگوئه",
-    de: "Uruguay",
-    es: "Uruguay",
-    fr: "Uruguay",
-    ja: "ウルグアイ",
-    it: "Uruguay",
-    hu: "Uruguay"
-    },
-    flag: "https://flagcdn.com/uy.svg",
-    regionalBlocs: [
-    {
-    acronym: "USAN",
-    "name": "Union of South American Nations",
-    otherAcronyms: [
-    "UNASUR",
-    "UNASUL",
-    "UZAN"
-    ],
-    otherNames: [
-    "Unión de Naciones Suramericanas",
-    "União de Nações Sul-Americanas",
-    "Unie van Zuid-Amerikaanse Naties",
-    "South American Union"
-    ]
-    }
-    ],
-    cioc: "URU",
-    independent: true
-    },
-    {
+    "currency": "$-UYU",
     "name": "Venezuela (Bolivarian Republic of)",
-    topLevelDomain: [
-    ".ve"
-    ],
-    alpha2Code: "VE",
-    "alphaCode": "VEN",
-    "callingCode": [
-    "58"
-    ],
-    "capital" "Caracas",
-    altSpellings: [
-    "VE",
-    "Bolivarian Republic of Venezuela",
-    "República Bolivariana de Venezuela"
-    ],
-    sub"region": "South America",
+    "callingCode": "58",
+    "capital" :"Caracas",
     "region": "Americas",
     "population": 28435943,
-    latlng: [
-    8,
-    -66
-    ],
-    demonym: "Venezuelan",
-    area: 916445,
-    gini: 44.8,
-    "timezones": [
-    "UTC-04:00"
-    ],
-    borders: [
-    "BRA",
-    "COL",
-    "GUY"
-    ],
-    nativeName: "Venezuela",
-    numericCode: "862",
+    "timezones": "UTC-04:00",
     "flags": {
     "svg": "https://flagcdn.com/ve.svg",
     "png": "https://flagcdn.com/w320/ve.png"
     },
-    "currency": [
-    {
-    code: "VEF",
-    "name": "Venezuelan bolívar",
-    symbol: "Bs S"
-    }
-    ],
-    "language": [
-    {
-    iso639_1: "es",
-    iso639_2: "spa",
-    "name": "Spanish",
-    nativeName: "Español"
-    }
-    ],
-    translations: {
-    br: "Venezuela",
-    pt: "Venezuela",
-    nl: "Venezuela",
-    hr: "Venezuela",
-    fa: "ونزوئلا",
-    de: "Venezuela",
-    es: "Venezuela",
-    fr: "Venezuela",
-    ja: "ベネズエラ・ボリバル共和国",
-    it: "Venezuela",
-    hu: "Venezuela"
-    },
-    flag: "https://flagcdn.com/ve.svg",
-    regionalBlocs: [
-    {
-    acronym: "USAN",
-    "name": "Union of South American Nations",
-    otherAcronyms: [
-    "UNASUR",
-    "UNASUL",
-    "UZAN"
-    ],
-    otherNames: [
-    "Unión de Naciones Suramericanas",
-    "União de Nações Sul-Americanas",
-    "Unie van Zuid-Amerikaanse Naties",
-    "South American Union"
-    ]
-    }
-    ],
-    cioc: "VEN",
-    independent: true
+    "currency": "Bs S VEF",
+    "language": "Spanish"
     },
     {
     "name": "Western Sahara",
-    topLevelDomain: [
-    ".eh"
-    ],
-    alpha2Code: "EH",
     "alphaCode": "ESH",
-    "callingCode": [
-    "212"
-    ],
-    "capital" "El Aaiún",
-    altSpellings: [
-    "EH",
-    "Taneẓroft Tutrimt"
-    ],
-    sub"region": "Northern Africa",
+    "callingCode": "212",
+    "capital" :"El Aaiún",
     "region": "Africa",
     "population": 510713,
-    latlng: [
-    24.5,
-    -13
-    ],
-    demonym: "Sahrawi",
-    area: 266000,
-    "timezones": [
-    "UTC+00:00"
-    ],
-    borders: [
-    "DZA",
-    "MRT",
-    "MAR"
-    ],
-    nativeName: "الصحراء الغربية",
-    numericCode: "732",
+    "timezones": "UTC+00:00",
     "flags": {
     "svg": "https://flagcdn.com/eh.svg",
     "png": "https://flagcdn.com/w320/eh.png"
     },
-    "currency": [
-    {
-    code: "MAD",
-    "name": "Moroccan dirham",
-    symbol: "د.م."
-    },
-    {
-    code: "DZD",
-    "name": "Algerian dinar",
-    symbol: "د.ج"
-    }
-    ],
-    "language": [
-    {
-    iso639_1: "es",
-    iso639_2: "spa",
-    "name": "Spanish",
-    nativeName: "Español"
-    }
-    ],
-    translations: {
-    br: "Sahara ar C'hornôg",
-    pt: "Saara Ocidental",
-    nl: "Westelijke Sahara",
-    hr: "Zapadna Sahara",
-    fa: "جمهوری دموکراتیک عربی صحرا",
-    de: "Westsahara",
-    es: "Sahara Occidental",
-    fr: "Sahara Occidental",
-    ja: "西サハラ",
-    it: "Sahara Occidentale",
-    hu: "Nyugat-Szahara"
-    },
-    flag: "https://flagcdn.com/eh.svg",
-    regionalBlocs: [
-    {
-    acronym: "AU",
-    "name": "African Union",
-    otherNames: [
-    "الاتحاد الأفريقي",
-    "Union africaine",
-    "União Africana",
-    "Unión Africana",
-    "Umoja wa Afrika"
-    ]
-    }
-    ],
-    independent: false
+    "currency": "د.م. MAD",
+    "language":"Spanish"
     }
     ]

@@ -3,12 +3,8 @@ import {TbPool, TbBeach, TbToolsKitchen } from 'react-icons/tb'
 import { GiIsland, GiCampingTent, GiGrandPiano, 
     GiFishingBoat, GiMountainCave, GiForestCamp, GiCastle, GiPaperWindmill, GiTreehouse } from 'react-icons/gi'
 import { MdCabin, MdOutlineSurfing, MdSportsGolf, MdDownhillSkiing } from 'react-icons/md';
-import { HiOutlineHomeModern } from 'react-icons/hi';
-import { SlCup } from 'react-icons/si';
 import style from '../styles/category.module.css'
 import Slider from "react-slick";
-import { BsFillMapFill } from 'react-icons/bs';
-import { IoMdHeartEmpty } from 'react-icons/io';
 import { CgOptions } from 'react-icons/cg';
 import { BiChevronLeft, BiChevronRight } from 'react-icons/bi';
 import { Modal } from 'antd';

@@ -16,6 +16,25 @@
 .arrowIcon{
     font-size: 20px;
     font-weight: 600;
+    cursor: pointer;
+}
+.modal{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    border-radius: 10px 10px 0 0;
+}
+.footerOption{
+    padding-bottom: -8px !important;
+    width: fit-content;
+    border-bottom: 1px solid transparent;
+    /* border-bottom: 1px solid black; */
+    transition: all 0.3s ease;
+}
+
+.footerOption:hover{
+    border-bottom: 1px solid black;
 }
 @media screen and (max-width: 1024px) {
     .footerMainContainer{

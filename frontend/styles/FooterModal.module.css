@@ -1,0 +1,15 @@
+.simpleDivider{
+    width: 100%;
+    height: 1px;
+    background-color: #dddddd;
+}
+.currencyContainer{
+    border: 1px solid #dddddd;
+    border-radius: 6px;
+    padding: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.currencyContainer:hover{
+    background-color: #dddddd;
+}
