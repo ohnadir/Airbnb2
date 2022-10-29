@@ -1,10 +1,35 @@
 import { TbWorld } from 'react-icons/tb';
 import { IoIosArrowUp } from 'react-icons/io';
-import styles from '../styles/footer.module.css'
-export default function Footer() {
+import styles from '../styles/footer.module.css';
+import { useRouter } from 'next/router'
+import { useEffect, useState } from 'react';
+import { FaFacebookF } from 'react-icons/fa';
+import { BsTwitter } from 'react-icons/bs';
+import { ImInstagram } from 'react-icons/im';
+export default function Footer({ children, href }) {
+    const [footerIcon, setFooterIcon] = useState("red");
+    const router = useRouter();
+    // const { asPath, pathname } = useRouter();
+    const demo = <>
+        <span>Support & resources</span> <IoIosArrowUp className={styles.arrowIcon}/>
+    </>
+    const demo2 = <>
+        <div className='flex gap-5'>
+            <FaFacebookF/>
+            <BsTwitter/>
+            <ImInstagram/>
+        </div>
+    </>
+    useEffect(() => {
+        if (router.pathname === '/place/id') {
+            setFooterIcon(demo2);
+        } else {
+            setFooterIcon(demo);
+        }
+    }, [router]);
     return (
-      <div>
-            <div className='max-w-7xl mx-auto  py-5'>
+        <div>
+            <div className='container mx-auto p-4'>
                 <div className="flex flex-col-reverse gap-3 lg:flex-row items-center justify-center lg:justify-between">
                     <div className="flex flex-col lg:flex-row items-center relative">
                         <p className='mb-0 pb-0 '>© 2022 Airbnb, Inc.</p>
@@ -21,8 +46,8 @@ export default function Footer() {
                         <div>
                             $ USD
                         </div>
-                        <div className={styles.support}>
-                            <span>Support & resources</span> <IoIosArrowUp className={styles.arrowIcon}/>
+                        <div className={styles.support} >
+                            {footerIcon}                            
                         </div>
                     </div>
                 </div>
