@@ -33,7 +33,7 @@ export default function Footer({ children, href }) {
                 <div className="flex flex-col-reverse gap-3 lg:flex-row items-center justify-center lg:justify-between">
                     <div className="flex flex-col lg:flex-row items-center relative">
                         <p className='mb-0 pb-0 '>© 2022 Airbnb, Inc.</p>
-                        <ul className="flex m-0 gap-5">
+                        <ul className="flex m-0 gap-8">
                             <li>Privacy</li>
                             <li>Terms</li>
                             <li>Sitemap</li>
@@ -46,9 +46,11 @@ export default function Footer({ children, href }) {
                         <div>
                             $ USD
                         </div>
-                        <div className={styles.support} >
-                            {footerIcon}                            
-                        </div>
+                        <div className='flex gap-5'>
+                            <FaFacebookF/>
+                            <BsTwitter/>
+                            <ImInstagram/>
+                        </div> 
                     </div>
                 </div>
             </div>

@@ -11,6 +11,11 @@
 .footerMainContainer{
     max-width: 1536px;
     margin: 0 auto ;
+    font-size: 15px;
+}
+.arrowIcon{
+    font-size: 20px;
+    font-weight: 600;
 }
 @media screen and (max-width: 1024px) {
     .footerMainContainer{
