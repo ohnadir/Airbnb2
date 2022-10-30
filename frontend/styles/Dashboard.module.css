@@ -1,48 +1,16 @@
 .aside{
-    height: 100%;
-    width: 160px;
-    z-index: 1;
-    top: 0;
-    position: fixed;
-    left: 0;
-    background-color: #111;
-    overflow-x: hidden;
-    color: white;
-    padding-top: 90px;
-    margin-left: 10%;
+    position: relative;
+    height: 90.5vh;
+    overflow: hidden ;
+    width: 140px;
+    background-color: #d1d5db;
 }
-.asideContainer{
-    /* margin-left: 28%; */
+.aside li{
+    font-size: 16px;
+    padding: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
-@media screen and  (max-width: 1536px) {
-    .aside{
-        margin-left: 5%;
-    }
-    .asideContainer{
-        margin-left: 0;
-    }
-}
-@media screen and  (max-width: 1280px) {
-    .aside{
-        margin-left: 5%;
-    }
-    .asideContainer{
-        margin-left: 28%;
-    }
-}
-@media screen and  (max-width: 1024px) {
-    .aside{
-        margin-left: 5%;
-    }
-}
-@media screen and  (max-width: 768px) {
-    .aside{
-        margin-left: 2%;
-    }
-    .asideContainer{
-        margin-left: 28%;
-    }
-}
-@media screen and  (max-width: 640px) {
-
+.aside li:hover{
+    background-color: red;
 }

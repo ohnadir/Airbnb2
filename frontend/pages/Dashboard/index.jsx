@@ -2,7 +2,7 @@ import React from 'react'
 import style from "../../styles/Dashboard.module.css";
 import DashboardLayout from '../../Components/Layouts/DashboardLayout';
 
-const Main = () => {
+const index = () => {
 
   return (
     <>
@@ -13,5 +13,5 @@ const Main = () => {
     </>
   )
 }
-Main.Layout= DashboardLayout;
-export default Main
+index.Layout= DashboardLayout;
+export default index
