@@ -7,15 +7,19 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { store, wrapper } from '../store'
 import { Provider } from "react-redux";
-import Layout from '../Components/Layout';
+import MainLayout from '../Components/Layouts/MainLayout';
+import Default from '../Components/Layouts/Default';
 
 function MyApp({ Component, pageProps }) {
+  const Layout = Component.Layout || Default;
   return (
     <>
       <Provider store={store}>
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
+        <MainLayout>
+          <Layout>
+            <Component {...pageProps} />
+          </Layout>
+        </MainLayout>
       </Provider>
     </>
   )

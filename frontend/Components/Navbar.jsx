@@ -300,7 +300,7 @@ const Navbar = () => {
                         <ul>
                             <li onClick={() => setAuthModal(!authModal)}>Signup</li>
                             <li onClick={() => setAuthModal(!authModal)}>Login</li>
-                            <li onClick={() => router.push('/dashboard')}>Dashboard</li>
+                            <li onClick={() => router.push('/Dashboard/Main')}>Dashboard</li>
                         </ul>
                         <p className={styles.dropDownHr}></p>
                         <ul>
