@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import style from "../../styles/FooterModal.module.css"
 import Currency from "../../language.json";
-import {addToCurrency} from "../../Components/LocalStorage"
+import { addToLanguage } from "../../Components/LocalStorage"
 
 const LanguageModal = () => {
     const [changeLanguage, setChangeLanguage] = useState("");
     
-    // const language = changeLanguage.language.concat(" ", changeLanguage.name);
+    const language = changeLanguage.language?.concat(" ", changeLanguage.countryCode);
     if(changeLanguage !== ""){
-        addToCurrency(language)
+        addToLanguage(language)
     }
     return (
         <div>

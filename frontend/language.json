@@ -118,7 +118,7 @@
             {"codeName" :"AUD"},
             {"name" :"Australian dollar"}
         ],
-        "language": "Australian English",
+        "language": "English",
         "countryCode" : "PE"
 
     },
@@ -144,7 +144,7 @@
             {"codeName" :"CAD"},
             {"name" :"Canadian dollar"}
         ],
-        "language": "English and French",
+        "language": "English",
         "countryCode" : "CA"
 
     },
@@ -235,7 +235,7 @@
             {"codeName" :"MAD"},
             {"name" :"Moroccan dirham"}
         ],
-        "language": "Arabic and Berber",
+        "language": "Arabic",
         "countryCode" : "MA"
 
     },
@@ -248,7 +248,7 @@
             {"codeName" :"TWD"},
             {"name" :"New Taiwan dollar"}
         ],
-        "language": "Mandarin Chinese",
+        "language": "Mandarin",
         "countryCode" : "TWN"
 
     },

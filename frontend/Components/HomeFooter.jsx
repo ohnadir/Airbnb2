@@ -7,23 +7,27 @@ import { RiCloseFill } from 'react-icons/ri';
 import SupportModal from "../Components/Modal/SupportModal"
 import CurrencyModal from "../Components/Modal/CurrencyModal"
 import LanguageModal from "../Components/Modal/LanguageModal";
-import {getToCurrency} from "../Components/LocalStorage"
+import {getToCurrency, getToLanguage} from "../Components/LocalStorage"
 
 const HomeFooter = () => {
     const [modalOpen, setModalOpen] = useState(false);
     const [options, setOptions] = useState("");
-    const [currency, setCurrency] = useState()
+    const [currency, setCurrency] = useState();
+    const [language, setLanguage] = useState()
     const handleOption = (name) => {
         setOptions(name);
         setModalOpen(true)
     };
     const value = getToCurrency(); 
+    const value1 = getToLanguage(); 
     useEffect(() => {
         setCurrency(value);
-    }, [value]);
-    console.log(currency)
+        setLanguage(value1);
+    }, [value, value1]);
     const code = currency?.split(" ")[0]
     const name = currency?.split(" ")[1]
+    const lang = language?.split(" ")[0]
+    const countryCode = language?.split(" ")[1]
     return (
     <div className={` ${style.footerContainer}`}>
         <div className={style.footerMainContainer}>
@@ -40,7 +44,8 @@ const HomeFooter = () => {
                     <div onClick={() => handleOption("language")} className='flex cursor-pointer items-center gap-2'>
                         <TbWorld />  
                         <div className={style.footerOption}>
-                            <span >English (US)</span>
+                            <span >{lang} </span>
+                            <span>({countryCode})</span>
                         </div>
                     </div>
                     <div className='cursor-pointer flex gap-1' onClick={() => handleOption("currency")}>
