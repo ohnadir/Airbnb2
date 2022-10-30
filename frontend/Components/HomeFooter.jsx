@@ -6,7 +6,8 @@ import {  Modal } from 'antd';
 import { RiCloseFill } from 'react-icons/ri';
 import SupportModal from "../Components/Modal/SupportModal"
 import CurrencyModal from "../Components/Modal/CurrencyModal"
-import LanguageModal from "../Components/Modal/LanguageModal"
+import LanguageModal from "../Components/Modal/LanguageModal";
+import {getToCurrency} from "../Components/LocalStorage"
 
 const HomeFooter = () => {
     const [modalOpen, setModalOpen] = useState(false);
@@ -16,15 +17,13 @@ const HomeFooter = () => {
         setOptions(name);
         setModalOpen(true)
     };
-    
-    
-    const handleCurrency = (currencyValue) => {
-        useEffect(() => {
-            setCurrency(currencyValue);
-        }, [currencyValue])
-    }
+    const value = getToCurrency(); 
+    useEffect(() => {
+        setCurrency(value);
+    }, [value]);
     console.log(currency)
-    
+    const code = currency?.split(" ")[0]
+    const name = currency?.split(" ")[1]
     return (
     <div className={` ${style.footerContainer}`}>
         <div className={style.footerMainContainer}>
@@ -45,21 +44,10 @@ const HomeFooter = () => {
                         </div>
                     </div>
                     <div className='cursor-pointer flex gap-1' onClick={() => handleOption("currency")}>
-                        {
-                            [0]?.code ?  
-                            <span>{[0]?.code}</span> 
-                            :
-                            <span>$</span>
-                        }
-                            
-                        {/* <span>$</span> */}
+                        
+                        <span>{code}</span> 
                         <div className={style.footerOption}>
-                        {
-                            ([1]?.name) ?  
-                            <span>{[1]?.name}</span> 
-                            :
-                            <span>USD</span>
-                        }
+                            <span>{name}</span>
                         </div>
                     </div>
                     <div onClick={() => handleOption("support")} className='flex gap-1 cursor-pointer items-center'>
@@ -91,7 +79,7 @@ const HomeFooter = () => {
                         </div>
                         <div className='px-5 mt-1'>
                             { options === "language" && <LanguageModal/> }
-                            { options === "currency" && <CurrencyModal handleCurrency={handleCurrency} /> }
+                            { options === "currency" && <CurrencyModal /> }
                             { options === "support" && <SupportModal/> }
                         </div>
                     </div>

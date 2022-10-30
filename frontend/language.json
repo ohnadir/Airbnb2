@@ -5,7 +5,8 @@
         "region": "Americas",
         "currency": [
             {"code" :"$"},
-            {"name" :" COP"}
+            {"codeName" :"COP"},
+            {"name" :"Colombian peso"}
         ],
         "language": "Spanish"
     },
@@ -15,7 +16,8 @@
         "region": "Americas",
         "currency": [
             {"code": "₡"},
-            {"name" :"CRC"}
+            {"codeName" :"CRC"},
+            {"name" :"Costa Rican colón"}
         ],
         "language":"Spanish"
     },
@@ -24,8 +26,9 @@
         "name": "Ecuador",
         "region": "Americas",
         "currency": [
-            {  "code":"$"},
-            {"name":"USD"}
+            { "code":"$"},
+            {"codeName":"USD"},
+            {"name":"United States Dollar"}
         ],
         "language": "Spanish"
     },
@@ -35,7 +38,8 @@
         "region": "Americas",
         "currency": [
             {"code":"L"},
-            {"name":"KHNL"}
+            {"codeName":"KHNL"},
+            {"name":"Honduran lempira"}
         ],
         "language" :"Spanish"
     },
@@ -45,7 +49,9 @@
         "region": "Americas",
         "currency":[
             {"code":"$"},
-            {"name":"MXN"}
+            {"codeName":"MXN"},
+            {"name":"Mexican peso"}
+
         ],
         "language": "Spanish"
     },
@@ -55,7 +61,8 @@
         "region": "Americas",
         "currency": [
             {"code":"$"},
-            {"name":"CLP"}
+            {"codeName":"CLP"},
+            {"name":"Chilean peso"}
         ],
         "language":"Spanish"
     },
@@ -65,7 +72,8 @@
         "region": "Americas",
         "currency": [
             {"code":"₲"},
-            {"name":"PYG"}
+            {"codeName":"PYG"},
+            {"name":"Paraguayan guaraní"}
         ],
         "language":"Spanish"
     },
@@ -75,9 +83,197 @@
         "region": "Americas",
         "currency": [
             {"code": "S/."},
-            {"name": "PEN"}
+            {"codeName": "PEN"},
+            {"name": "Sol"}
         ],
         "language":"Spanish"
+    },
+    {   
+        "id":"9",
+        "name": "Brazil",
+        "region": "Americas",
+        "currency": [
+            {"code" :"R$"},
+            {"codeName" :"BRL"},
+            {"name" :"Brazilian real"}
+        ],
+        "language": "Portuguese"
+    },
+{   
+        "id":"10",
+        "name": "Australian",
+        "region": "Americas",
+        "currency": [
+            {"code" :"$"},
+            {"codeName" :"AUD"},
+            {"name" :"Australian dollar"}
+        ],
+        "language": "Australian English"
+    },
+    {   
+        "id":"11",
+        "name": "Bulgaria",
+        "region": "Americas",
+        "currency": [
+            {"code" :"лв."},
+            {"codeName" :"BGN"},
+            {"name" :"Bulgarian lev"}
+        ],
+        "language": "Bulgarian"
+    },
+    {   
+        "id":"12",
+        "name": "Canada",
+        "region": "Americas",
+        "currency": [
+            {"code" :"$"},
+            {"codeName" :"CAD"},
+            {"name" :"Canadian dollar"}
+        ],
+        "language": "English and French"
+    },
+    {   
+        "id":"13",
+        "name": "China",
+        "region": "Americas",
+        "currency": [
+            {"code" :"￥"},
+            {"codeName" :"CNY"},
+            {"name" :"Chinese yuan"}
+        ],
+        "language": "Mandarin"
+    },
+    {   
+        "id":"14",
+        "name": "Croatia",
+        "region": "Americas",
+        "currency": [
+            {"code" :"kn"},
+            {"codeName" :"HRK"},
+            {"name" :"Croatian kuna"}
+        ],
+        "language": "Croatian"
+    },
+    {   
+        "id":"15",
+        "name": "Hong Kong",
+        "region": "Americas",
+        "currency": [
+            {"code" :"$"},
+            {"codeName" :"HKD"},
+            {"name" :"Hong Kong dollar"}
+        ],
+        "language": "Chinese"
+    },
+    {   
+        "id":"16",
+        "name": "India",
+        "region": "Americas",
+        "currency": [
+            {"code" :"₹"},
+            {"codeName" :"INR"},
+            {"name" :"Indian rupee"}
+        ],
+        "language": "Hindi"
+    },
+    {   
+        "id":"17",
+        "name": "Japan",
+        "region": "Americas",
+        "currency": [
+            {"code" :"¥"},
+            {"codeName" :"JPY"},
+            {"name" :"Janapese yen"}
+        ],
+        "language": "Nihongo"
+    },
+    {   
+        "id":"18",
+        "name": "Malaysia",
+        "region": "Americas",
+        "currency": [
+            {"code" :"RM"},
+            {"codeName" :"MRY"},
+            {"name" :"Malaysian ringgit"}
+        ],
+        "language": "Malay"
+    },
+    {   
+        "id":"19",
+        "name": "Morocco",
+        "region": "Americas",
+        "currency": [
+            {"code" :" "},
+            {"codeName" :"MAD"},
+            {"name" :"Moroccan dirham"}
+        ],
+        "language": "Arabic and Berber"
+    },
+    {   
+        "id":"20",
+        "name": "Taiwan",
+        "region": "Americas",
+        "currency": [
+            {"code" :"$"},
+            {"codeName" :"TWD"},
+            {"name" :"New Taiwan dollar"}
+        ],
+        "language": "Mandarin Chinese"
+    },
+    {   
+        "id":"21",
+        "name": "New Zealand",
+        "region": "Americas",
+        "currency": [
+            {"code" :"$"},
+            {"codeName" :"NZD"},
+            {"name" :"New Zealand dollar"}
+        ],
+        "language": "Māori"
+    },
+    {   
+        "id":"22",
+        "name": "Norway",
+        "region": "Americas",
+        "currency": [
+            {"code" :"kr"},
+            {"codeName" :"NOK"},
+            {"name" :"Norwegian krone"}
+        ],
+        "language": "Norwegian"
+    },
+    {   
+        "id":"23",
+        "name": "Philippine",
+        "region": "Americas",
+        "currency": [
+            {"code" :"₱"},
+            {"codeName" :"PHP"},
+            {"name" :"Philippine peso"}
+        ],
+        "language": "Filipino"
+    },
+    {   
+        "id":"24",
+        "name": "Romania",
+        "region": "Americas",
+        "currency": [
+            {"code" :"lei"},
+            {"codeName" :"RON"},
+            {"name" :"Romanian leu"}
+        ],
+        "language": "Romanian"
+    },
+    {   
+        "id":"25",
+        "name": "Saudi Arabia",
+        "region": "Americas",
+        "currency": [
+            {"code" :"SR"},
+            {"codeName" :"SAR"},
+            {"name" :"Saudi Arabian riyal"}
+        ],
+        "language": "Arabic"
     }
 
 ]
