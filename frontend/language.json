@@ -8,7 +8,8 @@
             {"codeName" :"COP"},
             {"name" :"Colombian peso"}
         ],
-        "language": "Spanish"
+        "language": "Spanish",
+        "countryCode" : "CO"
     },
     {
         "id":"2",
@@ -19,7 +20,8 @@
             {"codeName" :"CRC"},
             {"name" :"Costa Rican colón"}
         ],
-        "language":"Spanish"
+        "language":"Spanish",
+        "countryCode" : "CR"
     },
     {
         "id":"3",
@@ -30,7 +32,8 @@
             {"codeName":"USD"},
             {"name":"United States Dollar"}
         ],
-        "language": "Spanish"
+        "language": "Spanish",
+        "countryCode" : "EC"
     },
     {
         "id":"4",
@@ -41,7 +44,8 @@
             {"codeName":"KHNL"},
             {"name":"Honduran lempira"}
         ],
-        "language" :"Spanish"
+        "language" :"Spanish",
+        "countryCode" : "HN"
     },
     {
         "id":"5",
@@ -53,7 +57,8 @@
             {"name":"Mexican peso"}
 
         ],
-        "language": "Spanish"
+        "language": "Spanish",
+        "countryCode" : "MX"
     },
     {
         "id":"6",
@@ -64,7 +69,8 @@
             {"codeName":"CLP"},
             {"name":"Chilean peso"}
         ],
-        "language":"Spanish"
+        "language":"Spanish",
+        "countryCode" : "CHL"
     },
     {
         "id":"7",
@@ -75,7 +81,8 @@
             {"codeName":"PYG"},
             {"name":"Paraguayan guaraní"}
         ],
-        "language":"Spanish"
+        "language":"Spanish",
+        "countryCode" : "PRY"
     },
     {
         "id":"8",
@@ -86,7 +93,8 @@
             {"codeName": "PEN"},
             {"name": "Sol"}
         ],
-        "language":"Spanish"
+        "language":"Spanish",
+        "countryCode" : "PE"
     },
     {   
         "id":"9",
@@ -97,7 +105,9 @@
             {"codeName" :"BRL"},
             {"name" :"Brazilian real"}
         ],
-        "language": "Portuguese"
+        "language": "Portuguese",
+        "countryCode" : "BR"
+
     },
 {   
         "id":"10",
@@ -108,7 +118,9 @@
             {"codeName" :"AUD"},
             {"name" :"Australian dollar"}
         ],
-        "language": "Australian English"
+        "language": "Australian English",
+        "countryCode" : "PE"
+
     },
     {   
         "id":"11",
@@ -119,7 +131,9 @@
             {"codeName" :"BGN"},
             {"name" :"Bulgarian lev"}
         ],
-        "language": "Bulgarian"
+        "language": "Bulgarian",
+        "countryCode" : "BG "
+
     },
     {   
         "id":"12",
@@ -130,7 +144,9 @@
             {"codeName" :"CAD"},
             {"name" :"Canadian dollar"}
         ],
-        "language": "English and French"
+        "language": "English and French",
+        "countryCode" : "CA"
+
     },
     {   
         "id":"13",
@@ -141,7 +157,9 @@
             {"codeName" :"CNY"},
             {"name" :"Chinese yuan"}
         ],
-        "language": "Mandarin"
+        "language": "Mandarin",
+        "countryCode" : "CN"
+
     },
     {   
         "id":"14",
@@ -152,7 +170,9 @@
             {"codeName" :"HRK"},
             {"name" :"Croatian kuna"}
         ],
-        "language": "Croatian"
+        "language": "Croatian",
+        "countryCode" : "HR"
+
     },
     {   
         "id":"15",
@@ -163,7 +183,9 @@
             {"codeName" :"HKD"},
             {"name" :"Hong Kong dollar"}
         ],
-        "language": "Chinese"
+        "language": "Chinese",
+        "countryCode" : "HK"
+
     },
     {   
         "id":"16",
@@ -174,7 +196,9 @@
             {"codeName" :"INR"},
             {"name" :"Indian rupee"}
         ],
-        "language": "Hindi"
+        "language": "Hindi",
+        "countryCode" : "IND"
+
     },
     {   
         "id":"17",
@@ -185,7 +209,9 @@
             {"codeName" :"JPY"},
             {"name" :"Janapese yen"}
         ],
-        "language": "Nihongo"
+        "language": "Nihongo",
+        "countryCode" : "JP"
+
     },
     {   
         "id":"18",
@@ -196,7 +222,9 @@
             {"codeName" :"MRY"},
             {"name" :"Malaysian ringgit"}
         ],
-        "language": "Malay"
+        "language": "Malay",
+        "countryCode" : "MY"
+
     },
     {   
         "id":"19",
@@ -207,7 +235,9 @@
             {"codeName" :"MAD"},
             {"name" :"Moroccan dirham"}
         ],
-        "language": "Arabic and Berber"
+        "language": "Arabic and Berber",
+        "countryCode" : "MA"
+
     },
     {   
         "id":"20",
@@ -218,7 +248,9 @@
             {"codeName" :"TWD"},
             {"name" :"New Taiwan dollar"}
         ],
-        "language": "Mandarin Chinese"
+        "language": "Mandarin Chinese",
+        "countryCode" : "TWN"
+
     },
     {   
         "id":"21",
@@ -229,7 +261,9 @@
             {"codeName" :"NZD"},
             {"name" :"New Zealand dollar"}
         ],
-        "language": "Māori"
+        "language": "Māori",
+        "countryCode" : "NZ"
+
     },
     {   
         "id":"22",
@@ -240,10 +274,11 @@
             {"codeName" :"NOK"},
             {"name" :"Norwegian krone"}
         ],
-        "language": "Norwegian"
+        "language": "Norwegian",
+        "countryCode" : "NO"
     },
     {   
-        "id":"23",
+        "id":"",
         "name": "Philippine",
         "region": "Americas",
         "currency": [
@@ -251,7 +286,9 @@
             {"codeName" :"PHP"},
             {"name" :"Philippine peso"}
         ],
-        "language": "Filipino"
+        "language": "Filipino",
+        "countryCode" : "Ph"
+
     },
     {   
         "id":"24",
@@ -262,7 +299,9 @@
             {"codeName" :"RON"},
             {"name" :"Romanian leu"}
         ],
-        "language": "Romanian"
+        "language": "Romanian",
+        "countryCode" : "RO"
+
     },
     {   
         "id":"25",
@@ -273,7 +312,8 @@
             {"codeName" :"SAR"},
             {"name" :"Saudi Arabian riyal"}
         ],
-        "language": "Arabic"
-    }
+        "language": "Arabic",
+        "countryCode" : "SA"
 
+    }
 ]

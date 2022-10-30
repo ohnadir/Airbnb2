@@ -10,8 +10,16 @@ const getToCurrency=()=>{
 }
 
 
-
-
+const addToLanguage=(name)=>{
+    localStorage.setItem('language', name);
+}
+const getToLanguage=()=>{
+    let value
+    if (typeof window !== 'undefined') {
+        value = localStorage.getItem('language');
+    }
+    return value;
+}
 
 
 
@@ -41,4 +49,4 @@ const getStoredCart = () => {
 
 }
 
-export { addToDb, getStoredCart, addToCurrency, getToCurrency };
+export { addToDb, getStoredCart, addToCurrency, getToCurrency, addToLanguage, getToLanguage };
