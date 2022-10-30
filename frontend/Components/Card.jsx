@@ -11,8 +11,10 @@ import { useDispatch, useSelector } from 'react-redux'
 import { useEffect, useState } from "react";
 import { getProducts, clearErrors } from '../actions/productActions'
 import { Spin } from 'antd';
+import { useRouter } from 'next/router'
 
 export default function Card() {
+    const router = useRouter()
     const [page, setPage] = useState('');
     const [show, setShow] = useState(true);
     const dispatch = useDispatch();
@@ -80,8 +82,6 @@ export default function Card() {
         :
         
         <div className="container mx-auto px-4 mt-8 mb-8">
-
-            {/* <Category/> */}
             <section style={{display: show === false ? "block" : "none"}}>
                 <div className={style.locationTiger}>
                     <div className={style.location} >Show map <BsFillMapFill /></div>
@@ -90,35 +90,33 @@ export default function Card() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:grid-cols-2">
                 {
                     products?.data?.map((item)=> 
-                        <Link   href={`place/${item.id}`}  key={item.id}>
-                            <div key={item.id} className={style.cardItem}>
-                                <div className="relative">
-                                    <div style={{"zIndex":"1"}} className="absolute  text-white transition-all hover:text-[#717175] right-2 top-2">
-                                        <IoMdHeartEmpty className="text-2xl" onClick={handleWish}/>
-                                    </div>
-                                    <Slider {...settings}>
-                                        {
-                                            item.img.map((another)=>
-                                            <img key={another.id} className=" rounded-xl" src={another} alt="" />
-                                            )
-                                        }
-                                    </Slider>
+                        <div onClick={() => router.push(`place/${item.id}`)} key={item.id} className={style.cardItem}>
+                            <div className="relative">
+                                <div style={{"zIndex":"1"}} className="absolute  text-white transition-all hover:text-[#717175] right-2 top-2">
+                                    <IoMdHeartEmpty className="text-2xl" onClick={handleWish}/>
                                 </div>
-                                <div className="flex mt-3 items-center justify-between  font-bold">
-                                    <p style={{"fontSize":"16px"}}  className="m-0">{item.name}</p>
-                                    <div className="flex items-center gap-1">
-                                        <FaStar className="text-[13px]"/>
-                                        <span className="text-[14px] font-semibold">{item.rating}</span>
-                                    </div>
-                                </div>
-                                <p style={{"fontSize":"15px", "color": "#717175"}} className="m-0">3,390 kilometers away</p>
-                                <p style={{"fontSize":"15px", "color": "#717175"}} className="m-0">Nov 7-12</p>
+                                <Slider {...settings}>
+                                    {
+                                        item.img.map((another)=>
+                                        <img key={another.id} className=" rounded-xl" src={another} alt="" />
+                                        )
+                                    }
+                                </Slider>
+                            </div>
+                            <div className="flex mt-3 items-center justify-between  font-bold">
+                                <p style={{"fontSize":"16px"}}  className="m-0">{item.name}</p>
                                 <div className="flex items-center gap-1">
-                                    <span className="text-[16px] font-bold">${item.price} AUD</span>
-                                    <span>night {products?.length}</span>
+                                    <FaStar className="text-[13px]"/>
+                                    <span className="text-[14px] font-semibold">{item.rating}</span>
                                 </div>
                             </div>
-                        </Link>
+                            <p style={{"fontSize":"15px", "color": "#717175"}} className="m-0">3,390 kilometers away</p>
+                            <p style={{"fontSize":"15px", "color": "#717175"}} className="m-0">Nov 7-12</p>
+                            <div className="flex items-center gap-1">
+                                <span className="text-[16px] font-bold">${item.price} AUD</span>
+                                <span>night {products?.length}</span>
+                            </div>
+                        </div>
                     )
                 }
             </div>
@@ -128,12 +126,12 @@ export default function Card() {
                         <div className="flex gap-10">
                             {
                                 icon.map((item)=>(
-                                    <Link href={`/${page}`}>
+                                    <div onClick={() => router.push(`/${page}`)}>
                                         <div  style={{color :page === item.name  ? "#ff385c" : "#b0b0b0"}} onClick={()=>setPage(item.name) }>
                                             <div style={{color :page === item.name  ? "#ff385c" : "#b0b0b0"}} className=' flex justify-center text-2xl'>{item.icon}</div>
                                             <p style={{color :page === item.name  ? "black" : "#b0b0b0"}} className='m-0 '>{item.name}</p>
                                         </div>
-                                    </Link>
+                                    </div>
                                 ))
                             }
                         </div>

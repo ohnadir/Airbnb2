@@ -50,9 +50,9 @@ const HomeFooter = () => {
                     </div>
                     <div className='cursor-pointer flex gap-1' onClick={() => handleOption("currency")}>
                         
-                        <span>{code}</span> 
-                        <div className={style.footerOption}>
-                            <span>{name}</span>
+                        <span className='text-center'>{code}</span> 
+                        <div className={` ${style.footerOption}`}>
+                            <span className='text-center'>{name}</span>
                         </div>
                     </div>
                     <div onClick={() => handleOption("support")} className='flex gap-1 cursor-pointer items-center'>

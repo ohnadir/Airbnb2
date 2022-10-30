@@ -13,10 +13,12 @@ import { BiSearch } from 'react-icons/bi';
 import { Modal } from 'antd';
 import { RiCloseFill } from 'react-icons/ri';
 import AuthModal from "./authModal";
+import { useRouter } from 'next/router'
 
 
 
 const Navbar = () => {
+    const router = useRouter()
     // const navigate = useNavigate();
     const [open, setOpen] = useState(false);
     const [authModal, setAuthModal] = useState(false)
@@ -58,13 +60,12 @@ const Navbar = () => {
                 <div className='hidden md:block'>
                     <div className='flex items-center justify-between text-black '>
                         <div className='flex justify-start'>
-                            <Link href="/">
                                 <Image
+                                    onClick={() => router.push('/')}
                                     className="cursor-pointer"
                                     src={logo}
                                     alt="Picture of the author"
-                                /> 
-                            </Link>
+                                />
                         </div>
                     <div>
                         {
@@ -299,6 +300,7 @@ const Navbar = () => {
                         <ul>
                             <li onClick={() => setAuthModal(!authModal)}>Signup</li>
                             <li onClick={() => setAuthModal(!authModal)}>Login</li>
+                            <li onClick={() => router.push('/dashboard')}>Dashboard</li>
                         </ul>
                         <p className={styles.dropDownHr}></p>
                         <ul>
