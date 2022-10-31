@@ -4,7 +4,7 @@ import {  Modal } from 'antd';
 import { RiCloseFill } from 'react-icons/ri';
 import AddressModal from './AddressModal';
 const Address = () => {
-  const [modalOpen, setModalOpen] = useState(false);
+  const [addressModalOpen, setAddressModalOpen] = useState(false);
   return (
     <div>
       <div className='border max-w-max p-3'>
@@ -13,7 +13,7 @@ const Address = () => {
             <p className='m-0'>Nadir Ahmed</p>
             <p className='m-0'>(+880) 1756953936</p>
           </div>
-          <BiEditAlt onClick={()=>setModalOpen(true)} className=' w-7 h-7 hover:bg-gray-300  transition-all cursor-pointer rounded-full p-1 ' />
+          <BiEditAlt onClick={()=>setAddressModalOpen(true)} className=' w-7 h-7 hover:bg-gray-300  transition-all cursor-pointer rounded-full p-1 ' />
         </div>
         <p className='m-0'>Dhaka, Dhaka-South, Khilgaon, H-256/1, R-02, Shantipur, Khilgaon</p>
         <div className='flex gap-6 text-xs mt-3'>
@@ -23,9 +23,10 @@ const Address = () => {
         </div>
       </div>
       {
-        modalOpen &&  
+        addressModalOpen &&  
           <Modal
-              open={modalOpen}
+              open={addressModalOpen}
+              centered
               width={670}
               closable={false}
               footer={false}
@@ -35,13 +36,10 @@ const Address = () => {
                 padding:0
               }}
               >
-              <div className=' '>
-                  <div className='mb-0 px-5 border py-2 bg-white flex items-center justify-between'>
-                    <span>Edit Address</span><RiCloseFill onClick={() => setModalOpen(false)} className='w-8 h-8  rounded-full hover:bg-gray-100 p-1 cursor-pointer'/>
-                  </div>
-                  <div  className=''>
-                    <AddressModal/>
-                  </div>
+              <div className=''>
+                <div  className=''>
+                  <AddressModal setAddressModalOpen={setAddressModalOpen} />
+                </div>
               </div>
           </Modal>
         }
