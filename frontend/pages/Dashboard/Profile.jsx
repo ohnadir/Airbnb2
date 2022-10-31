@@ -1,9 +1,53 @@
-import React from 'react';
+import React, { useState } from 'react';
 import DashboardLayout from '../../Components/Layouts/DashboardLayout';
+import { BiEditAlt } from 'react-icons/bi';
+import { HiOutlineCamera } from 'react-icons/hi';
+import style from "../../styles/Dashboard.module.css"
+import { useRouter } from 'next/router';
+import Address from "../../Components/Profile/Address"
+import Orders from "../../Components/Profile/Orders"
+import UserMessage from "../../Components/Profile/UserMessage"
 
 const Profile = () => {
+  const [options, setOptions] = useState("");
+  const handleOption = (name) => {
+    setOptions(name);
+};
   return (
-    <div>profile</div>
+    <div className='mt-10'>
+      <div className='relative'>
+        <img style={{borderRadius:"50%", width:"20%"}} className=' mx-auto ' src="https://res.cloudinary.com/dcmvctoz3/image/upload/v1667206841/young-girl_hrpmk9.jpg" alt="" />
+        <HiOutlineCamera style={{right: "41.5%"}} className='mx-auto cursor-pointer absolute bg-gray-300 w-7 h-7 rounded-full p-1  top-3/4' />
+      </div>
+      <section className="name text-center mt-2">
+        <div className='flex items-center gap-2 justify-center'>
+          <p className='m-0 text-base font-semibold'>Nadir Ahmed</p> 
+          <BiEditAlt className=' w-6 h-6 hover:bg-gray-300  transition-all cursor-pointer rounded-full p-1' />
+        </div>
+        <p className='m-0 '>qx.nadir@gmail.com</p>
+      </section>
+      <nav>
+        <div className={style.tab}>
+          <ul className='flex gap-10 justify-center m-0 p-0'>
+            <li style={{backgroundColor: options === "address" ? "#D1D5DB" : ""}} onClick={() => handleOption("address")}>Address</li>
+            <li style={{backgroundColor: options === "orders" ? "#D1D5DB" : ""}} onClick={() => handleOption("orders")}>Orders</li>
+            <li style={{backgroundColor: options === "message" ? "#D1D5DB" : ""}} onClick={() => handleOption("message")}>Message</li>
+            <li style={{backgroundColor: options === "message" ? "#D1D5DB" : ""}} onClick={() => handleOption("message")}>Message</li>
+          </ul>
+        </div>
+        <div>
+          { options === "" ?
+            <h1 className='text-center mt-5 text-xl'>Thanks for using Airbnb</h1>
+          : 
+            <div className='mt-5 text-center'>
+              {options === "address" ? <Address/> : ""}
+              {options === "orders" ? <Orders/> : ""}
+              {options === "message" ? <UserMessage/> : ""}
+            </div>
+          }
+        </div>
+      </nav>
+    </div>
   )
 }
 Profile.Layout = DashboardLayout;

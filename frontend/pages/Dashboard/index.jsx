@@ -6,10 +6,7 @@ const index = () => {
 
   return (
     <>
-
-      <h1 className="text-4xl py-4 text-center">
-        Select a team member to get started
-      </h1>
+      <h1 className="text-4xl py-4 text-center">Welcome to Dashboard</h1>
     </>
   )
 }

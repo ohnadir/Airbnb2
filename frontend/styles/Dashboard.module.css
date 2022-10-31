@@ -14,3 +14,17 @@
 .aside li:hover{
     background-color: red;
 }
+.tab{
+    background-color: #9CA3AF;
+    margin-top: 40px;
+}
+.tab li {
+    padding: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+.tab li:hover {
+    background-color: #D1D5DB;
+}
