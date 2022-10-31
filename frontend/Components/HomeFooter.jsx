@@ -16,7 +16,7 @@ const HomeFooter = () => {
     const [language, setLanguage] = useState()
     const handleOption = (name) => {
         setOptions(name);
-        setModalOpen(true)
+        setModalOpen(false)
     };
     const value = getToCurrency(); 
     const value1 = getToLanguage(); 

@@ -17,7 +17,7 @@ const Profile = () => {
     <div className='mt-10'>
       <div className='relative'>
         <img style={{borderRadius:"50%", width:"20%"}} className=' mx-auto ' src="https://res.cloudinary.com/dcmvctoz3/image/upload/v1667206841/young-girl_hrpmk9.jpg" alt="" />
-        <HiOutlineCamera style={{right: "41.5%"}} className='mx-auto cursor-pointer absolute bg-gray-300 w-7 h-7 rounded-full p-1  top-3/4' />
+        <HiOutlineCamera style={{right: "41.5%", color:"white"}} className='mx-auto cursor-pointer absolute bg-gray-300 w-7 h-7 rounded-full p-1  top-3/4' />
       </div>
       <section className="name text-center mt-2">
         <div className='flex items-center gap-2 justify-center'>
@@ -39,7 +39,7 @@ const Profile = () => {
           { options === "" ?
             <h1 className='text-center mt-5 text-xl'>Thanks for using Airbnb</h1>
           : 
-            <div className='mt-5 text-center'>
+            <div className='mt-5 ml-5'>
               {options === "address" ? <Address/> : ""}
               {options === "orders" ? <Orders/> : ""}
               {options === "message" ? <UserMessage/> : ""}
