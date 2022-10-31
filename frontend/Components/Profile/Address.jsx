@@ -37,9 +37,7 @@ const Address = () => {
               }}
               >
               <div className=''>
-                <div  className=''>
-                  <AddressModal setAddressModalOpen={setAddressModalOpen} />
-                </div>
+                <AddressModal setAddressModalOpen={setAddressModalOpen} />
               </div>
           </Modal>
         }

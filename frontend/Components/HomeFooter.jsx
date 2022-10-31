@@ -10,13 +10,12 @@ import LanguageModal from "../Components/Modal/LanguageModal";
 import {getToCurrency, getToLanguage} from "../Components/LocalStorage"
 
 const HomeFooter = () => {
-    const [modalOpen, setModalOpen] = useState(false);
     const [options, setOptions] = useState("");
     const [currency, setCurrency] = useState();
     const [language, setLanguage] = useState()
     const handleOption = (name) => {
         setOptions(name);
-        setModalOpen(false)
+        // setOptions("")
     };
     const value = getToCurrency(); 
     const value1 = getToLanguage(); 
@@ -28,6 +27,7 @@ const HomeFooter = () => {
     const name = currency?.split(" ")[1]
     const lang = language?.split(" ")[0]
     const countryCode = language?.split(" ")[1]
+    
     return (
     <div className={` ${style.footerContainer}`}>
         <div className={style.footerMainContainer}>
@@ -65,10 +65,10 @@ const HomeFooter = () => {
             </div>
         </div>
         {
-            modalOpen &&  
+            options &&  
                 <Modal
                     centered
-                    open={modalOpen}
+                    open={options}
                     width={870}
                     closable={false}
                     footer={false}
@@ -80,12 +80,14 @@ const HomeFooter = () => {
                     >
                     <div className=' pt-5'>
                         <div className='mb-0 px-4 '>
-                            <RiCloseFill onClick={() => setModalOpen(false)} className='w-8 h-8  rounded-full hover:bg-gray-100 p-1 cursor-pointer'/>
+                            <RiCloseFill onClick={() => setOptions("")} className='w-8 h-8  rounded-full hover:bg-gray-100 p-1 cursor-pointer'/>
                         </div>
                         <div className='px-5 mt-1'>
-                            { options === "language" && <LanguageModal/> }
-                            { options === "currency" && <CurrencyModal /> }
-                            { options === "support" && <SupportModal/> }
+                            { 
+                                options === "language" && <LanguageModal/>  ||
+                                options === "currency" && <CurrencyModal /> || 
+                                options === "support" && <SupportModal/> 
+                            }
                         </div>
                     </div>
                 </Modal>
