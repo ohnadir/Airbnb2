@@ -5,8 +5,8 @@ import style from "../../styles/Dashboard.module.css"
 const DashboardLayout = ({ children }) => {
   const router = useRouter();
   return (
-    <div className='max-w-screen-2xl mx-auto px-4 flex justify-between'>
-      <aside className={style.aside}>
+    <div className='max-w-screen-2xl mx-auto  px-4 flex justify-between'>
+      <aside style={{position:"sticky" , top:"86px"}} className={style.aside}>
         <div >
           <ul>
             <li onClick={()=> router.push('/Dashboard/Profile')}>Profile</li>

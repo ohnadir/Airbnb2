@@ -28,3 +28,28 @@
 .tab li:hover {
     background-color: #D1D5DB;
 }
+.prev, .next{
+    top: 45%;
+    height: 26px;
+    width: 26px;
+    padding: 0 3px;
+    background-color: #f2f2f2;
+    border-radius: 50%;
+    font-size: 20px;
+    position: absolute;
+    z-index: 1 !important;
+}
+.prev{
+    float: left;
+    left: 5px;
+}
+.prev:hover{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.next{
+    float: right;
+    right: 5px;
+}
+.next:hover{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
