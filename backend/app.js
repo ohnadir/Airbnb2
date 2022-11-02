@@ -4,6 +4,7 @@ const csrf = require('csurf');
 const cookieParser = require('cookie-parser');
 const bodyParser = require("body-parser");
 const morgan = require('morgan');
+const cookieSession = require("cookie-session");
 const passport = require("passport");
 const { readdirSync } = require('fs');
 
@@ -30,7 +31,11 @@ readdirSync('./src/api/v1/routes').map((route) =>
 );
 
 app.use(csrfProtection);
-
+app.use(
+  cookieSession({ name: "session", keys: ["nadir"], maxAge: 24 * 60 * 60 * 100 })
+);
+app.use(passport.initialize());
+app.use(passport.session());
 // Handle Middleware Error
 app.use(errorMiddleware)
 
