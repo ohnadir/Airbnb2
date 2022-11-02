@@ -4,10 +4,12 @@ import { useDispatch, useSelector } from 'react-redux';
 import { BiEditAlt } from 'react-icons/bi';
 import { AiFillEye } from 'react-icons/ai';
 import { BsTrash } from 'react-icons/bs';
+import { RiErrorWarningLine } from 'react-icons/ri';
 import Loader from "../../Components/Loading"
 import {  Modal } from 'antd';
 import { RiCloseFill } from 'react-icons/ri';
 import PlaceViewModal from '../../Components/Modal/PlaceViewModal';
+import PlaceUpdateModal from '../../Components/Modal/PlaceUpdateModal';
 const Place = () => {
   const [modal, setModal] = useState()
   const { loading, products, error } = useSelector(state => state.products);
@@ -30,7 +32,7 @@ const Place = () => {
                   <div className='flex items-center gap-2  cursor-pointer'>
                     <AiFillEye onClick={()=>setModal([item.id, "view"])} className='w-7 h-7 hover:bg-gray-200 rounded-full p-1'/>
                     <BiEditAlt onClick={()=>setModal([item.id, "edit"])} className='w-7 h-7 hover:bg-gray-200 rounded-full p-1'/>
-                    <BsTrash onClick={()=>setModal([item.id, "delete"])} className='w-6 h-6 hover:bg-gray-200 rounded-full p-1'/>
+                    <BsTrash onClick={()=>setModal([item.id, "delete", item.name])} className='w-6 h-6 hover:bg-gray-200 rounded-full p-1'/>
                   </div>
                 </div>
 
@@ -62,10 +64,23 @@ const Place = () => {
                       
                       : "" || 
                       modal[1]==="edit" ? 
-                      <h1>Nadir2 {modal[0]}</h1> 
+                      <PlaceUpdateModal id={modal[0]} />
                       : "" ||
                       modal[1]==="delete" ? 
-                      <h1>Nadir3 {modal[0]}</h1> 
+                      <div>
+                        <div className=' flex items-center gap-2'>
+                          <RiErrorWarningLine className='text-2xl' style={{color: "#FAB52A"}} />
+                          <span className='text-base font-semibold'>
+                            Are you sure delete {modal[2]}?
+                          </span>
+                        </div>
+                        <span>If you delete this place . It will delete permanently and it never getting back</span>
+
+                        <div className='flex items-center gap-3 justify-end mt-5'>
+                          <button className='bg-gray-100 px-5 py-1 font-semibold'>Cancel</button>
+                          <button style={{color:"#FF385C", border: "1px solid #FF385C"}} className='font-semibold px-5 py-1'>Confirm</button>
+                        </div>
+                      </div>
                       : ""
                     }
                   </div>

@@ -3,7 +3,7 @@ import React from 'react'
 const Default = ({ children }) => {
   return (
     <div>
-        { children }
+      { children }
     </div>
   )
 }
