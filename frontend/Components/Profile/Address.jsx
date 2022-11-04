@@ -5,6 +5,11 @@ import { RiCloseFill } from 'react-icons/ri';
 import AddressModal from './AddressModal';
 const Address = () => {
   const [addressModalOpen, setAddressModalOpen] = useState(false);
+  const google=()=> {
+    window.open("http://localhost:5001/api/v1/users/google", "_blank", 
+    " width=500,height=500"
+    );
+};
   return (
     <div>
       <div className='border max-w-max p-3'>
@@ -17,7 +22,7 @@ const Address = () => {
         </div>
         <p className='m-0'>Dhaka, Dhaka-South, Khilgaon, H-256/1, R-02, Shantipur, Khilgaon</p>
         <div className='flex gap-6 text-xs mt-3'>
-          <div className='px-2 py-1' style={{backgroundColor: "#EBF4F6", color:"#007787"}}>Home</div>
+          <div onClick={google} className='px-2 py-1' style={{backgroundColor: "#EBF4F6", color:"#007787"}}>Home</div>
           <div className='px-2 py-1' style={{backgroundColor: "#EEEEEE"}}>Default Shipping Address</div>
           <div className='px-2 py-1' style={{backgroundColor: "#EEEEEE"}}>Default Billing Address</div>
         </div>

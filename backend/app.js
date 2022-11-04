@@ -5,8 +5,10 @@ const cookieParser = require('cookie-parser');
 const bodyParser = require("body-parser");
 const morgan = require('morgan');
 const cookieSession = require("cookie-session");
+const passportSetup = require("./passport");
 const passport = require("passport");
 const { readdirSync } = require('fs');
+const authRoute = require("../backend/auth");
 
 const errorMiddleware = require('./src/api/v1/middleware/errors')
 
@@ -19,9 +21,7 @@ app.use(cors());
 app.use(express.json());
 app.use(cookieParser());
 app.use(morgan('dev'));
-// app.use(passport.initialize());
-// app.use(passport.session());
-
+app.use("/auth", authRoute);
 
 readdirSync('./src/api/v1/routes').map((route) =>
   app.use(
@@ -31,11 +31,22 @@ readdirSync('./src/api/v1/routes').map((route) =>
 );
 
 app.use(csrfProtection);
+
 app.use(
   cookieSession({ name: "session", keys: ["nadir"], maxAge: 24 * 60 * 60 * 100 })
 );
 app.use(passport.initialize());
 app.use(passport.session());
+
+/* app.use(
+  cors({
+    origin: "http://localhost:3000",
+    methods: "GET,POST,PUT,DELETE",
+    credentials: true,
+  })
+); */
+
+
 // Handle Middleware Error
 app.use(errorMiddleware)
 

@@ -1,10 +1,27 @@
 import React, { useState } from 'react'
 import { FiChevronDown } from 'react-icons/fi'
 import style from '../styles/authModal.module.css'
+import { message } from 'antd';
+import { useEffect } from 'react';
 
 const authModal = () => {
     const [countryCode, setCountryCode] = useState(false);
-    const [number, setNumber] = useState(false)
+    const [number, setNumber] = useState(false);
+    
+
+    const google=()=> {
+        window.open("http://localhost:5001/auth/google",  "_blank", 
+        " width=500,height=500");
+    };
+    const github = () => {
+        window.open("http://localhost:5001/auth/github",  "_blank", 
+        " width=500,height=500");
+    };
+    
+    const facebook = () => {
+        window.open("http://localhost:5001/auth/facebook", "_blank", 
+        " width=500,height=500");
+    }; 
     
   return (
     <div className='px-5 pb-2 mt-6'>
@@ -47,7 +64,7 @@ const authModal = () => {
             <span className='text-xs'>We’ll call or text you to confirm your number. Standard message and data rates apply. <span className='underline font-bold'>Privacy Policy</span></span>    
         </section>
         <section className="btn mt-4">
-            <button className={style.authBtn}>Continue</button>
+            <button  className={style.authBtn}>Continue</button>
         </section>
         <section className="divider">
             <div className='flex items-center gap-6'>
@@ -63,15 +80,15 @@ const authModal = () => {
             </div>
         </section>
         <section className="socialAuth">
-            <div className={style.socialIcon}>
+            <div onClick={facebook}  className={style.socialIcon}>
                 <img className={style.icon} src="https://res.cloudinary.com/dcmvctoz3/image/upload/v1666711218/facebook_iukumb.png" alt="" />
                 <h2 className='m-0'>Continue with Facebook</h2>
             </div>
-            <div className={style.socialIcon}>
-                <img className={style.icon} src="https://res.cloudinary.com/dcmvctoz3/image/upload/v1666711180/search_nlfgqn.png" alt="" />
+            <div onClick={google} className={style.socialIcon}>
+                <img  className={style.icon} src="https://res.cloudinary.com/dcmvctoz3/image/upload/v1666711180/search_nlfgqn.png" alt="" />
                 <h2 className='m-0'>Continue with Google</h2>
             </div>
-            <div className={style.socialIcon}>
+            <div onClick={github} className={style.socialIcon}>
                 <img className={style.icon} src="https://res.cloudinary.com/dcmvctoz3/image/upload/v1666717428/apple_ouqww9.png" alt="" />
                 <h2 className='m-0'>Continue with Apple</h2>
             </div>

@@ -380,7 +380,9 @@ const Navbar = () => {
                                 <p className='m-0 mx-auto font-bold text-lg '>Log in or sign up</p>
                             </div>
                         </div>
-                        <AuthModal/>
+                        
+                        <AuthModal/> 
+                        
                         
                     </div>
                     </Modal>
