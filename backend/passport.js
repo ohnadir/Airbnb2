@@ -1,6 +1,7 @@
 const GoogleStrategy = require("passport-google-oauth20").Strategy;
 const GithubStrategy = require("passport-github2").Strategy;
 const FacebookStrategy = require("passport-facebook").Strategy;
+const AppleStrategy = require('passport-apple').Strategy;
 const passport = require("passport");
 
 const GOOGLE_CLIENT_ID =
@@ -54,6 +55,22 @@ passport.use(
     }
   )
 );
+
+passport.use(
+  new AppleStrategy(
+    {
+      clientID: "tyiutyute4y",
+      teamID: "etyuetyutey",
+      callbackURL: "/auth/apple/callback",
+      keyID: "tyuetyuety",
+      privateKeyLocation: ""
+    }, 
+    function(req, accessToken, refreshToken, idToken, profile , cb) {
+      if (req.body && req.body.user) {
+        console.log(req.body.user);
+      }
+      cb(null, idToken);
+}));
 
 passport.serializeUser((user, done) => {
   console.log(user);

@@ -1,6 +1,6 @@
 [
     {   
-        "id":"1",
+        
         "name": "Borgarnes, Iceland",
         "img":[
             "https://a0.muscache.com/im/pictures/c1fa3691-1287-4334-981d-ef9a9a8f5a56.jpg?im_w=720",
@@ -13,7 +13,7 @@
         "rating":"2.5"
     },
     {   
-        "id":"2",
+        
         "name": "Blue Ridge, Georgia, US",
         "img":[
             "https://a0.muscache.com/im/pictures/prohost-api/Hosting-52254969/original/f826ef61-77a8-4324-9f63-2da3d1d6906b.jpeg?im_w=720",
@@ -26,7 +26,7 @@
         "rating":"3.5"
     },
     {  
-         "id":"3",
+        
         "name": "Machachi, Ecuador",
         "img":[
             "https://a0.muscache.com/im/pictures/miso/Hosting-33996825/original/ae88e614-cd39-4503-b16c-e2a7a98556f5.jpeg?im_w=720",
@@ -38,7 +38,7 @@
         "price":"348",
         "rating":"2.5"
     },
-    {   "id":"4",
+    {  
         "name": "Saint-Jorioz, France",
         "img":[
             "https://a0.muscache.com/im/pictures/miso/Hosting-33996825/original/919efcde-3f23-4dea-a50b-63a9421ad4ed.jpeg?im_w=720",
@@ -50,7 +50,7 @@
         "price":"1356",
         "rating":"3.5"
     },
-    {   "id":"5",
+    {   
         "name": "Blue Ridge, Georgia, US",
         "img":[
             "https://a0.muscache.com/im/pictures/71160080/385d6dff_original.jpg?im_w=720",
@@ -62,7 +62,7 @@
         "price":"402",
         "rating":"4"
     },
-    {  "id":"6",
+    {  
         "name": "krasna Lipa, Czechia",
         "img":[
             "https://a0.muscache.com/im/pictures/ae3661dc-e6d2-4ee9-a7b9-2a68f6ffce3e.jpg?im_w=720",
@@ -74,7 +74,7 @@
         "price":"160",
         "rating":"5"
     },
-    {   "id":"7",
+    {   
         "name": "Maggie Valley, North Carolina",
         "img":[
             "https://a0.muscache.com/im/pictures/a43b6d2b-5821-4b21-8716-e53bbf60f40e.jpg?im_w=720",
@@ -86,7 +86,7 @@
         "price":"398",
         "rating":"4.5"
     },
-    {   "id":"8",
+    {   
         "name": "Blue Ridge, Georgia, US",
         "img":[
             "https://a0.muscache.com/im/pictures/miso/Hosting-38998240/original/1efa2126-7afc-48d7-8798-7e04b800485a.jpeg?im_w=720",
@@ -98,7 +98,7 @@
         "price":"402",
         "rating":"2.5"
     },
-    {   "id":"9",
+    {   
         "name": "Melbourne, Arkansas, US",
         "img":[
             "https://a0.muscache.com/im/pictures/prohost-api/Hosting-48621341/original/140070ad-312a-4980-bb6b-98abe44e54e9.jpeg?im_w=720",
@@ -110,7 +110,7 @@
         "price":"306",
         "rating":"5"
     },
-    {   "id":"10",
+    {   
         "name": "Innsbruck, Austria",
         "img":[
             "https://a0.muscache.com/im/pictures/0b830b93-4695-4470-82fd-d810ae5e80cc.jpg?im_w=720",
@@ -122,7 +122,7 @@
         "price":"358",
         "rating":"3"
     },
-    {   "id":"11",
+    {   
         "name": "Manigod, France",
         "img":[
             "https://a0.muscache.com/im/pictures/prohost-api/Hosting-15189922/original/bb91d77f-ba82-4339-ba8e-dbeb4e7c0c39.jpeg?im_w=720",
@@ -134,7 +134,7 @@
         "price":"1479",
         "rating":"2.5"
     },
-    {   "id":"12",
+    {   
         "name": "Zakopane, Poland",
         "img":[
             "https://a0.muscache.com/im/pictures/841f687e-4932-4c17-9b03-e6897746badb.jpg?im_w=720",
@@ -146,7 +146,7 @@
         "price":"132",
         "rating":"3.5"
     },
-    {   "id":"13",
+    {   
         "name": "Nedre Eggedal, Norway",
         "img":[
             "https://a0.muscache.com/im/pictures/fc3b782f-dac1-42b3-af75-21d1b2fc7490.jpg?im_w=720",
@@ -158,7 +158,7 @@
         "price":"174",
         "rating":"4"
     },
-    {   "id":"14",
+    {   
         "name": "Holbaek, Denmark",
         "img":[
             "https://a0.muscache.com/im/pictures/miso/Hosting-14393977/original/c4ae9b1f-0945-4b6b-b769-6cab5cf87768.jpeg?im_w=720",
@@ -170,7 +170,7 @@
         "price":"402",
         "rating":"5"
     },
-    {   "id":"15",
+    {   
         "name": "Mille-Isles, Canada",
         "img":[
             "https://a0.muscache.com/im/pictures/miso/Hosting-31956623/original/6dc27428-e295-41e6-a30f-eaa850ce3c68.jpeg?im_w=720",
@@ -182,7 +182,7 @@
         "price":"637",
         "rating":"4.5"
     },
-    {   "id":"16",
+    {   
         "name": "Ponta Delgada, Portugal",
         "img":[
             "https://a0.muscache.com/im/pictures/miso/Hosting-5264493/original/10d2c21f-84c2-46c5-b20b-b51d1c2c971a.jpeg?im_w=720",

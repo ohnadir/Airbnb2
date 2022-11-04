@@ -55,5 +55,12 @@ router.get(
     failureRedirect: "/login/failed",
   })
 );
-
+router.get("/apple", passport.authenticate('apple'));
+router.get(
+  "/apple/callback",
+  passport.authenticate("apple", {
+    successRedirect: CLIENT_URL,
+    failureRedirect: "/login/failed",
+  })
+);
 module.exports = router
