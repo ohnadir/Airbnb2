@@ -160,6 +160,9 @@
     margin: 0;
     font-size: 12px;
 }
+.countryNameContainer{
+    position: relative;
+}
 .countryNameContainer li{
     padding: 12px 0;
     font-size: 16px;

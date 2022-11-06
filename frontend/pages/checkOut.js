@@ -92,7 +92,7 @@ export default function checkOut() {
                     </div>
                     <div className="grid col-span-1 gap-5">
                         <div className="mt-2">
-                            <div onClick={()=>setPaymentOptions(!paymentOptions)} style={{border:"1px solid #B0B0B0", borderRadius:"8px", padding: "0 15px"}} className="flex justify-between items-center gap-2 cursor-pointer">
+                            <div onClick={()=>setPaymentOptions(!paymentOptions)} style={{border:"1px solid #B0B0B0", borderRadius:"8px", height: "52px"}} className="flex justify-between items-center gap-2 cursor-pointer px-4">
                                 <div className="flex items-center gap-2">
                                     <img className="w-10 opacity-20" src="https://res.cloudinary.com/dcmvctoz3/image/upload/v1667591354/credit-card-payment_rhxbzn.png" alt=""/>
                                     <h1 className="m-0 text-xl">Credit or debit card</h1>
@@ -117,16 +117,16 @@ export default function checkOut() {
                         </div>
                         <div className={style.addressContainer} >
                             <div style={{borderBottom:"1px solid #B0B0B0"}} className={style.formBox}>
-                                <input className={style.formInput}  type="text" placeholder="0000 0000 0000" />
+                                <input className={style.formInput}  type="text" />
                                 <label  for="" className={style.formLabel}>Street Address</label>
                             </div>
                             <div className="flex">
                                 <div className={style.formBox}>
-                                    <input className={style.formInput}  type="text" placeholder="MM / YY" />
+                                    <input className={style.formInput}  type="text" />
                                     <label  for="" className={style.formLabel}>Expiration</label>
                                 </div>
                                 <div className={style.formBox} style={{borderLeft:"1px solid #B0B0B0"}}>
-                                    <input className={style.formInput} type="text" placeholder="123" />
+                                    <input className={style.formInput} type="text"  />
                                     <label  for="" className={style.formLabel}>CVV</label>
                                 </div>
                             </div>
@@ -229,23 +229,21 @@ export default function checkOut() {
             </div>
         </div>
         <Footer/>
-        {/* <Footer/> */}
 
         {
             openModal && 
             <Modal
                 visible={openModal}
                 centered
-                style ={{borderRadius:"15px", overflow:"auto"}}
+                style ={{borderRadius:"15px", overflow:"auto" }}
                 width={570}
-                height={500}
                 closable={false}
                 footer={false}
                 className={{borderRadius:"30px"}}
-                bodyStyle={{margin:"0", border:"none", padding:0 }}
+                bodyStyle={{margin:"0", border:"none", padding:0, overflowY: 'auto', maxHeight: 'calc(100vh - 200px)' }}
             >
                 <div className={style.countryNameContainer}>
-                    <div style ={{borderBottom:"1px solid #EAEAEA"}}>
+                    <div className="absolute sticky top-0 bg-white" style ={{borderBottom:"1px solid #EAEAEA"}}>
                         <div className='flex items-center px-4 py-5'>
                             <RiCloseFill onClick={() => setOpenModal(false)} className='w-8 h-8  rounded-full hover:bg-gray-100 p-1 cursor-pointer'/>
                             <p className='m-0 mx-auto font-bold text-lg '>Country / Region</p>
