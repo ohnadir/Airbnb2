@@ -365,7 +365,7 @@ const Navbar = () => {
                 {
                     authModal && <Modal
                     centered
-                    style ={{borderRadius:"15px",overflow:"auto"}}
+                    style ={{borderRadius:"15px", overflow:"auto"}}
                     open={authModal}
                     width={570}
                     closable={false}

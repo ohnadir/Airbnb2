@@ -34,7 +34,6 @@ const authModal = () => {
                         <h2 className='m-0'>United State (+1)</h2>
                         
                     </div>
-                    
                     <FiChevronDown className='text-2xl' />
                 </div>
                 {
@@ -61,7 +60,7 @@ const authModal = () => {
                     }
                 </div>
             </div>
-            <span className='text-xs'>We’ll call or text you to confirm your number. Standard message and data rates apply. <span className='underline font-bold'>Privacy Policy</span></span>    
+            <span className='text-xs'>We'll call or text you to confirm your number. Standard message and data rates apply. <span className='underline font-bold'>Privacy Policy</span></span>    
         </section>
         <section className="btn mt-4">
             <button  className={style.authBtn}>Continue</button>
