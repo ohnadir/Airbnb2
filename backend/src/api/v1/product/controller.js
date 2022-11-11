@@ -5,13 +5,12 @@ const APIFeatures = require('../utils/APIFeatures');
 const product = require('../firebaseConfig')
 
 exports.addProduct = catchAsyncErrors(async (req, res, next) => {
-  const { name, img, price, rating, quantity } = req.body;
+  const { name, img, price, rating } = req.body;
   await product.add({
     name,
     img,
     price,
-    rating,
-    quantity
+    rating
   });
 
   res.status(200).json({

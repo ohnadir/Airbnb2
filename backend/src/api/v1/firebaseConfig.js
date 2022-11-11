@@ -1,15 +1,14 @@
 const firebase = require("firebase");
 const firebaseConfig = {
-    apiKey: "AIzaSyD_6nkC6-WVaQDtAo24a_6jcARH104-k3c",
-    authDomain: "airbnb-453c6.firebaseapp.com",
-    databaseURL: "https://airbnb-453c6-default-rtdb.asia-southeast1.firebasedatabase.app",
-    projectId: "airbnb-453c6",
-    storageBucket: "airbnb-453c6.appspot.com",
-    messagingSenderId: "1062546089286",
-    appId: "1:1062546089286:web:983b38a3e89cd7cb877147",
-    measurementId: "G-DEJEP2PNLF"
-  };
+  apiKey: "AIzaSyAxMb7WbqiwOYltC5jSwzoAed9kImVosiI",
+  authDomain: "eminent-booking-367518.firebaseapp.com",
+  projectId: "eminent-booking-367518",
+  storageBucket: "eminent-booking-367518.appspot.com",
+  messagingSenderId: "660636084968",
+  appId: "1:660636084968:web:35b47744a1516a7370b75d",
+  measurementId: "G-HT3FEHTB6S"
+};
 firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore();
-const Products = db.collection("Products");
+const Products = db.collection("Places");
 module.exports = Products;

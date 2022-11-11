@@ -25,6 +25,7 @@ export default function Book() {
     const [showCard, setShowCard] = useState(false)
     const router = useRouter()
     const { id } = router.query;
+    console.log(id);
     const dispatch = useDispatch();
     const [open, setOpen] = useState(false);
     const [service, setService] = useState(false);
@@ -73,12 +74,15 @@ export default function Book() {
             window.removeEventListener('scroll', controlNavbar)
         }
     }, []);
+    const handleRouter=()=>{
+        router.push(`/checkout/${product.id}`)
+    }
     return (
         <>
             { 
                 loading ? <Spin className={style.spinContainer} /> :
             
-                <div className="container mx-auto px-4 mt-5">
+                <div className="container mx-auto px-4 mt-5 relative">
                     <MetaData title={'Book'} />
                     <section className='topNavbar hidden md:block'>
                         {
@@ -110,7 +114,7 @@ export default function Book() {
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <button className={style.showCardReserveBtn}>Reserve</button>
+                                                <button  className={style.showCardReserveBtn}>Reserve</button>
                                             </div>
                                         }
                                     </div>
@@ -325,7 +329,7 @@ export default function Book() {
                                     </div>
                                     <div>
                                         <button className={style.reserveBtn} type="">Check availability</button>
-                                        <button className={style.reserveBtn} type="">Reserve</button>
+                                        <button onClick={handleRouter} className={style.reserveBtn} type="">Reserve</button>
                                     </div>
                                     <div>
                                         <h1 className='mt-2 text-center'>You won't be charged yet</h1>
